@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>拖拽与收藏夹</title>
+</head>
+
+<body>
+    <!--图片默认是允许拖动的-->
+    <img id="pic"
+        src="https://upload-images.jianshu.io/upload_images/12014150-9c737e54d56bc427.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"
+        style="width: 200px; height: 170px;" />
+
+    <p id="text" draggable="true">这里是一个文字</p>
+
+    <!--收藏夹-->
+    <div>
+        <img id="favorites" class="favorites"
+            src="https://upload-images.jianshu.io/upload_images/12014150-dd7e1b70111fdaa9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"
+            style="width: 120px;height: 95px;" 
+            draggable="false" />
+    </div>
+</body>
+
+<script>
+    const EMPTY = 0; //收藏夹为空
+    const HAVE = 1; //收藏夹中有东西
+
+    var favorites_flag = EMPTY;
+
+    //有对象开始拖动
+    document.addEventListener("dragstart", function (event) {
+        //获取对象的id
+        console.log(event.target.id)
+
+        //dataTransfer.setData()方法设置数据类型和拖动的数据 
+        event.dataTransfer.setData("Text", event.target.id);
+
+        //修改拖动元素的透明度 
+        event.target.style.opacity = "0.4";
+    });
+
+    //拖拽结束(松手时)
+    document.addEventListener("dragend", function (event) {
+        // 当拖完p元素重置透明度 
+        event.target.style.opacity = "1";
+    });
+
+    // 被拖拽对象放到目标对象上时
+    document.addEventListener("dragenter", function (event) {
+        if (event.target.className == "favorites") {
+            console.log("it is above me...")
+        }
+    });
+
+    // 被拖拽物体放下时
+    document.addEventListener("drop", function (event) {
+
+        event.preventDefault(); //防止浏览器的默认处理数据(在drop中链接是默认打开) 
+
+        if (event.target.className == "favorites") {
+            if (favorites_flag == EMPTY) {
+                favorites_flag = HAVE;
+                //更换收藏夹图标
+                event.target.src =
+                    "https://upload-images.jianshu.io/upload_images/12014150-383ad52c8d75dfbb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"
+
+            }
+
+            var data = event.dataTransfer.getData("Text"); //利用dataTransfer.getData()方法获得拖放数据 
+            console.log("传递的数据是: ", data)
+        }
+    });
+
+    // 默认情况下,数据/元素不能在其他元素中被拖放。对于drop我们必须防止元素的默认处理 
+    document.addEventListener("dragover", function (event) {
+        event.preventDefault();
+    });
+</script>
+
+</html>
