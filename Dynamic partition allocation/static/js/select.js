@@ -1,14 +1,8 @@
 $(function () {
     selectModel();
-    $("#btn").click(function () {
-        $("#showSelectVal").html($("#box").attr("data-value"));
-    });
 });
 
-/**
- * 模拟网页中所有下拉列表select
- * @return {[type]} [description]
- */
+/*下拉列表选择*/
 function selectModel() {
     var $box = $('div.model-box');
     var $option = $('ul.model-select-option', $box);
@@ -47,6 +41,10 @@ function selectModel() {
             init($(this));
         });
         $(this).addClass('selected data-selected').siblings('li').removeClass('selected data-selected');
+
+        //输出选择的算法
+        console.log($("#box").attr("data-value"))
+
         return false;
     }).mouseover(function () {
         $(this).addClass('selected').siblings('li').removeClass('selected');
