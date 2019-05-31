@@ -7,32 +7,26 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dynamic partition allocation</title>
 
-    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>        
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="static/css/style.css">
     <link rel="stylesheet" type="text/css" href="static/css/range.css">
     <script src="static/js/RangeSlider.js"></script>
-
+    <script src="static/js/randColor.js"></script>
+    <script src="static/js/nextAssingment.js"></script>
+    <script src="static/js/clear.js"></script>
 </head>
 
 <body>
 
-    <!-- <div class="divcss5-b">DIVCSS5测试内容，欢迎来到DIVCSS5学习DIV+CSS技术。大家可以通
-        过DIVCSS5主站上的所有免费CSS教程足可学会DIV CSS技术 - 如果需要深入系统学习、较短时间达到
-        理想学习效果可参加DIV+CSS培训班学习。</div> -->
-    <div class="container" style="margin-top: 10%;text-align: center;font-size: 35px;">
+    <!--项目标题-->
+    <div class="container" style="margin-top: 8%;text-align: center;font-size: 35px;">
         <strong>动态分区分配方式模拟</strong>
     </div>
 
+    <!--模拟内存(可以动态调节大小 & 动态增加作业)-->
     <div class="container">
         <center>
-            <div class="memory">
-
-                <div class="memory-proj" style="width: 150px;background-color: rgb(96, 244, 212);">
-                    first
-                </div>
-                <div class="memory-proj" style="width: 150px;background-color: sandybrown;">
-                    second
-                </div>
+            <div class="memory" id="memory">
 
             </div>
         </center>
@@ -41,40 +35,64 @@
     <div class="container" style="display: flex; margin-top: 3%;margin-left: 20%;">
         <div class="algorithm"">
             <div>请选择分区分配算法</div>
-            <div class="model-box" style="width:180px; margin-top: 5px;">
-                <div id="box" class="model-select-text" data-value="">--请选择分区分配算法--</div>
-                <ul class="model-select-option">
-                    <li data-option="1">首次适应算法</li>
-                    <li data-option="2">最佳适应算法</li>
-                </ul>
-                <br>
-                <button id="btn">获取值</button>
-                <br />
-                <span id="showSelectVal"></span>
-            </div>
+                <div class=" model-box" style="width:180px; margin-top: 5px;">
+                    <div id="box" class="model-select-text" data-value="">--请选择分区分配算法--</div>
+                    
+                    <ul class="model-select-option">
+                        <li data-option="首次适应算法">首次适应算法</li>
+                        <li data-option="最佳适应算法">最佳适应算法</li>
+                    </ul>
+                </div>
         </div>
 
-        <div class="memory-size" style="margin-left: 100px;">
-            <div>请选择内存空间大小</div>
-            
-            <div>
-                <input type="range" value="640" min="200" max="1000" step="20">
-            </div>
+    <!--滑动条(动态调节内存大小)-->
+    <div class="memory-size" style="margin-left: 100px;">
+        <div style="display: inline-flex;">请选择内存空间大小&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            <div id="current-size">200</div>
+            K</div>
+
+        <div class="range-slider" style="margin-top: 10px;">
+            <input type="range" value="200" min="200" max="1000" step="20">
         </div>
     </div>
 
+    <!--执行下一指令-->
+    <div class="next-btn" style="margin-left: 100px">
+        <button style="border-color: rgb(50, 196, 233);background-color: rgb(50, 196, 233);
+                height: 45px; width: 70px;" onclick="nextAssignment()">
+            下一步
+        </button>
+    </div>
+
+    <!--清空内存-->
+    <div class="clear-btn">
+        <button style="border-color: rgb(252, 0, 0);background-color: rgb(252, 0, 0);
+                    height: 45px; width: 70px;" onclick="clearbtnClick()">
+            清空内存
+        </button>
+    </div>
+    </div>
+
     <script>
-            var change = function($input) {
-                /*内容可自行定义*/
-                console.log($input.value)
-            }
- 
-            $('input').RangeSlider({ min: 0,   max: 100,  step: 0.1,  callback: change});
- 
-        </script>
+        var change = function ($input) {
+            /*内容可自行定义*/
+            console.log($input.value)
+            //将slider的值进行函数映射
+            document.getElementById('current-size').innerHTML = $input.value;
+            document.getElementById('memory').style.width = String($input.value) + "px";
+        }
+
+        $('input').RangeSlider({
+            min: 200,
+            max: 1000,
+            step: 20,
+            callback: change
+        });
+    </script>
 
 </body>
 
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
 <script src="static/js/select.js"></script>
+
 </html>
