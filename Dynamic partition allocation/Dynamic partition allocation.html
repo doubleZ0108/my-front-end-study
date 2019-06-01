@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dynamic partition allocation</title>
+    <link rel="icon" href="memory.png" >
 
     <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="static/css/style.css">
@@ -27,16 +28,17 @@
     <div class="container">
         <center>
             <div class="memory" id="memory">
-
+                
             </div>
         </center>
     </div>
 
-    <div class="container" style="display: flex; margin-top: 3%;margin-left: 20%;">
+    <div class="container" style="display: flex; margin-top: 3%;margin-left: 16%;">
+        <!--下拉框(选择分区算法)-->
         <div class="algorithm"">
             <div>请选择分区分配算法</div>
                 <div class=" model-box" style="width:180px; margin-top: 5px;">
-                    <div id="box" class="model-select-text" data-value="">--请选择分区分配算法--</div>
+                    <div id="box" class="model-select-text" data-value="首次适应算法">首次适应算法</div>
                     
                     <ul class="model-select-option">
                         <li data-option="首次适应算法">首次适应算法</li>
@@ -45,35 +47,46 @@
                 </div>
         </div>
 
-    <!--滑动条(动态调节内存大小)-->
-    <div class="memory-size" style="margin-left: 100px;">
-        <div style="display: inline-flex;">请选择内存空间大小&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-            <div id="current-size">200</div>
-            K</div>
+        <!--滑动条(动态调节内存大小)-->
+        <div class="memory-size" id="memory-size" style="margin-left: 100px;">
+            <div style="display: inline-flex;">请选择内存空间大小&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <div id="current-size">200</div>
+                K</div>
 
-        <div class="range-slider" style="margin-top: 10px;">
-            <input type="range" value="200" min="200" max="1000" step="20">
+            <div class="range-slider" style="margin-top: 10px;">
+                <input id="slider" type="range" value="200" min="200" max="1000" step="20">
+            </div>
+        </div>
+
+        <!--执行下一指令-->
+        <div class="next-btn" style="margin-left: 100px">
+            <button style="border-color: rgb(50, 196, 233);background-color: rgb(50, 196, 233);
+                    height: 45px; width: 70px;" onclick="nextAssignment()">
+                下一步
+            </button>
+        </div>
+
+        <!--清空内存-->
+        <div class="clear-btn">
+            <button style="border-color: rgb(252, 0, 0);background-color: rgb(252, 0, 0);
+                        height: 45px; width: 70px;" onclick="clearbtnClick()">
+                清空内存
+            </button>
         </div>
     </div>
 
-    <!--执行下一指令-->
-    <div class="next-btn" style="margin-left: 100px">
-        <button style="border-color: rgb(50, 196, 233);background-color: rgb(50, 196, 233);
-                height: 45px; width: 70px;" onclick="nextAssignment()">
-            下一步
-        </button>
-    </div>
-
-    <!--清空内存-->
-    <div class="clear-btn">
-        <button style="border-color: rgb(252, 0, 0);background-color: rgb(252, 0, 0);
-                    height: 45px; width: 70px;" onclick="clearbtnClick()">
-            清空内存
-        </button>
-    </div>
+    <!--日志信息滚动窗口-->
+    <div class="container" style="margin-top: 3%;">
+        <center>
+            <div>日志信息</div>
+            <div id="board" style="height: 150px;width: 500px;background-color: #C1BDA3;
+            overflow:auto; ">
+            </div>
+        </center>
     </div>
 
     <script>
+        //滑动条改变触发事件
         var change = function ($input) {
             /*内容可自行定义*/
             console.log($input.value)
