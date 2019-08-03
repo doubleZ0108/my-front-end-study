@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        h2,h3,p{
+            color: white;
+        }
+        img{
+            height: 50px;
+            width: 80px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body background="Resources/img/forest.jpg">
+<h2>背景图片</h2>
+<hr />
+
+<h2>GIF动图</h2>
+<img src="Resources/img/siri.gif" alt="Siri"/>
+<hr />
+
+
+<h2>对齐方式</h2>
+<p>图像<img src="Resources/img/her.jpg" align="top" />在文字上方</p>
+<p>图像<img src="Resources/img/her.jpg" align="middle" />在文字中间</p>
+<p>图像<img src="Resources/img/her.jpg" align="bottom" />在文字下方(默认)</p>
+
+<p>
+    <img src="Resources/img/her.jpg" align="left" />
+    图片图片图片图片图片图片图片图片图片图片图片图片图片图片图片图片图片图片图片图片图片图片图片图片图片图片图片图片图片
+    图片图片图片图片图片图片图片图片图片图片图片。。。。。。。。。。。。。。。。。。。。。。。。。。。。浮于文字的左边👈
+</p>
+<p>
+    <img src="Resources/img/her.jpg" align="right" />
+    图片图片图片图片图片图片图片图片图片图片图片图片图片图片图片图片图片图片图片图片图片图片图片图片图片图片图片图片图片
+    图片图片图片图片图片图片图片图片图片图片图片。。。。。。。。。。。。。。。。。。。。。。。。。。。。浮于文字的右边👉
+</p>
+<hr />
+
+
+<!--用来指定无法载入图片时的文本，有助于更好的显示信息，并且对使用纯文本浏览器的人很重要-->
+<h2>替换文本 -> alt</h2>
+<img src="Resources/this.jpg" alt="该图片无法显示时显示的文本"/>
+<hr />
+
+<h2>图片链接🔗</h2>
+<p>点击改图跳转到xx网页<a href="https://github.com/doubleZ0108"><img src="Resources/img/icon.jpg" /></a></p>
+
+
+<h2>图像映射 -> 点击不同区域实现不同跳转</h2>
+<h3>usemap 创建图像映射</h3>
+<img src="Resources/img/icon.jpg" style="height: auto;width: auto;" usemap="#mymap"/>
+<!--由于兼容性等原因，<map>标签的id和name都要写-->
+<map id="mymap" name="mymap">
+    <area shape="circle" coords="320,320,100" href="https://github.com/doubleZ0108" target="_blank" onclick="circleClick();" />
+    <area shape="rect" coords="0,0,100,100" href="other.html" target="_blank" onclick="rectClick();"/>
+</map>
+<br />
+
+<h3>ismap 把图片转换为图像映射</h3>
+<!--跳转界面的url处会携带点击的位置坐标-->
+<a href="other.html"><img src="Resources/img/her.jpg" alt="her" style="height: 50%;width: 50%;" ismap /></a>
+<br />
+
+<script>
+    function circleClick() {
+        console.log('you click the circle area')
+    }
+    function rectClick() {
+        console.log('you click the rectangle area')
+    }
+</script>
+
+</body>
+</html>
