@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+<h2>表格</h2>
+<p>tr是行  |  td是列</p>
+<p>td表示表格数据，可以包含文本、图片、列表、段落、表单、水平线等等</p>
+<hr />
+
+<h2>表格的属性</h2>
+<p>cellpadding为单元格行距 | cellspacing为单元格间距 | bgcolor背景颜色 | background背景图片 | align单元格内容⬅️/居中/➡️</p>
+<table border="1" cellpadding="50" cellspacing="5">
+    <caption>这里是标题</caption>
+    <tr>
+        <td align="left">00</td>
+        <td background="Resources/img/forest.jpg">01</td>
+    </tr>
+    <tr>
+        <td bgcolor="#7fffd4">10</td>
+        <td>11</td>
+    </tr>
+</table>
+
+<p>box | ablve | below | hsides(↕️边） | vsides(↔️边)</p>
+<table frame="hsides" width="400px" height="200px">
+    <tr>
+        <td>00</td>
+        <td>01</td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>11</td>
+    </tr>
+</table>
+<hr />
+
+
+
+<!--border数字的大小决定边框的粗细-->
+<h2>边框</h2>
+<h3>窄边框</h3>
+<table border="1">
+    <tr>
+        <td>00</td>
+        <td>01</td>
+        <td>02</td>
+        <td>03</td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>11</td>
+        <td>12</td>
+        <td>13</td>
+    </tr>
+</table>
+
+<h3>宽边框</h3>
+<table border="5">
+    <tr>
+        <td>00</td>
+        <td>01</td>
+        <td>02</td>
+        <td>03</td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>11</td>
+        <td>12</td>
+        <td>13</td>
+    </tr>
+</table>
+<hr />
+
+
+
+<h2>表格中的标签</h2>
+<table border="1">
+    <tr>
+        <td>
+            <img src="Resources/img/icon.jpg" style="height: 50px;"/>
+        </td>
+        <td>
+            <p>这里会一个段落</p>
+            <p>这里是另一个段落</p>
+        </td>
+    </tr>
+    <tr>
+        <td>表格里包含另一个表格
+            <table border="1">
+                <tr>
+                    <td>00</td>
+                    <td>01</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>11</td>
+                </tr>
+            </table>
+        </td>
+        <td>这里是一个列表
+            <ul>
+                <li>第一项</li>
+                <li>第二项</li>
+                <li>第三项</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+<hr />
+
+
+<h2>表头</h2>
+<p>表头会粗体居中</p>
+<table border="1">
+    <tr>
+        <th>姓名</th>
+        <th>成绩</th>
+    </tr>
+    <tr>
+        <td>zzzzzz</td>
+        <td>9999999999</td>
+    </tr>
+    <tr>
+        <td>ytytytyt</td>
+        <td>8888888888</td>
+    </tr>
+</table>
+
+<br />
+
+<table border="1">
+    <tr>
+        <th>姓名</th>
+        <td>zz</td>
+        <td>yt</td>
+    </tr>
+    <tr>
+        <th>成绩</th>
+        <td>99</td>
+        <td>85</td>
+    </tr>
+    <tr>
+        <th>年龄</th>
+        <td>19</td>
+        <td>19</td>
+    </tr>
+</table>
+<hr />
+
+<h2>🈳️单元格</h2>
+<p>最好加一个空格占位符，防止边框消失</p>
+<table border="1">
+    <tr>
+        <td>00</td>
+        <td>01</td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td>11</td>
+    </tr>
+</table>
+<hr />
+
+
+<h2>跨行/跨列</h2>
+<table border="1">
+    <tr>
+        <th>姓名</th>
+        <th colspan="2">☎️</th>
+    </tr>
+    <tr>
+        <td>zz</td>
+        <td>12345</td>
+        <td>67890</td>
+    </tr>
+</table>
+
+<br />
+
+<table border="1">
+    <tr>
+        <th>姓名</th>
+        <td>zz</td>
+    </tr>
+    <tr>
+        <th rowspan="2">☎️</th>
+        <td>12345</td>
+    </tr>
+    <tr>
+        <td>67890</td>
+    </tr>
+</table>
+
+</body>
+</html>
