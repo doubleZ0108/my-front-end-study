@@ -5,14 +5,13 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <style>
-        .header {
+        header {
             background-color: black;
             color: white;
             padding: 10px;
             text-align: center;
         }
-
-        #nav {
+        nav {
             background-color: gray;
             width: 15%;
             height: 500px;
@@ -21,15 +20,13 @@
             line-height: 30px;  /*间距*/
             float: left;
         }
-
-        #section {
+        section {
             width: 75%;     /*这里不能等于(1 - nav的width)是因为还有padding, 加起来就超过100%了*/
             height: 500px;
             padding: 20px;
             float: left;
         }
-
-        .footer {
+        footer {
             background-color: gold;
             text-align: center;
             clear: both;
@@ -39,17 +36,17 @@
 </head>
 
 <body>
-    <div class="header">
+    <header>
         <h1>City Gallery</h1>
-    </div>
+    </header>
 
-    <div id="nav">
+    <nav>
         Shanghai<br />
         Tonghua<br />
         Taiyuan<br />
-    </div>
+    </nav>
 
-    <div id="section">
+    <section>
         <h2>Shanghai</h2>
         <p>
             上海市，简称“沪”，是中华人民共和国省级行政区。上海是中国共产党诞生地、国家历史文化名城，中国经济、金融、贸易、航运、科技创新中心。
@@ -63,11 +60,11 @@
         <p>
             截至2018年末，上海市常住人口总数为2423.78万人。实现地区生产总值（GDP）32679.87亿元，比上年增长6.6%
         </p>
-    </div>
+    </section>
 
-    <div class="footer">
+    <footer>
         Copyright © double Z
-    </div>
+    </footer>
 </body>
 
 </html>
