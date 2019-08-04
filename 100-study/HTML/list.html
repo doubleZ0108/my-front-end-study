@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        ul,
+        ol {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>列表</h1>
+    <p>列表项内部可以使用段落,图片,链接</p>
+    <hr />
+
+
+    <h2>无序列表</h2>
+    <p>type: disc | circleu | square</p>
+    <ul type="disc">
+        <li>001...</li>
+        <li>002...</li>
+        <li>003...</li>
+    </ul>
+
+    <ul type="circle">
+        <li>001...</li>
+        <li>002...</li>
+        <li>003...</li>
+    </ul>
+
+    <ul type="square">
+        <li>001...</li>
+        <li>002...</li>
+        <li>003...</li>
+    </ul>
+    <hr />
+
+
+    <h2>有序列表</h2>
+    <p>start决定从哪个数字开始</p>
+    <p>type: A | a | I | i</p>
+    <ol start="35">
+        <li>035...</li>
+        <li>036...</li>
+        <li>037...</li>
+    </ol>
+    <ol type="A">
+        <li>iPhone</li>
+        <li>iPad</li>
+        <li>MacBook</li>
+    </ol>
+    <ol type="a">
+        <li>iPhone</li>
+        <li>iPad</li>
+        <li>MacBook</li>
+    </ol>
+    <ol type="I">
+        <li>iPhone</li>
+        <li>iPad</li>
+        <li>MacBook</li>
+    </ol>
+    <ol type="i">
+        <li>iPhone</li>
+        <li>iPad</li>
+        <li>MacBook</li>
+    </ol>
+    <hr />
+
+
+    <h2>嵌套列表</h2>
+    <ul style="display:block">
+        <li>iPhone</li>
+        <li>iPad
+            <ul style="display:block;">
+                <li>iPad Air</li>
+                <li>iPad Pro
+                    <ul style="display:block;">
+                        <li>2017</li>
+                        <li>2018</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>MacBook
+            <ul style="display:block;">
+                <li>MacBook Air</li>
+                <li>MacBook Pro</li>
+            </ul>
+        </li>
+    </ul>
+    <hr />
+
+    <h2>自定义列表</h2>
+    <dl>
+        <dt>Coffee</dt>
+        <dd>001</dd>
+        <dd>002</dd>
+        <dt>Milk</dt>
+        <dd>003</dd>
+        <dd>004</dd>
+    </dl>
+</body>
+
+</html>
