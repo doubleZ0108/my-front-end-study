@@ -6,24 +6,49 @@
 
 <!--    HTML中的样式，对HTML进行格式化: 单个文件-->
     <style>
+        /*内置标签*/
         h1{
             color: red;
         }
         p{
             color: blue;
         }
+        
+        /*class*/
+        .header {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        /*id*/
+        #footer {
+            background-color: gold;
+            text-align: center;
+            clear: both;
+            padding: 5px;
+        }
+
     </style>
 
 <!--    链接到外部样式表：多个界面-->
     <link rel="stylesheet" type="text/css" href="static/css/style.css" />
 </head>
 <body>
-
+    
+<div class="header">
+    <h1>This is the header</h1>
+</div>
+    
 <h1>这里是一号标题 -> HTML中的样式</h1>
 <h2>这里是二号标题 -> 链接的外部样式表</h2>
 
 <!--样式属性： 个别元素-->
 <a href="https://github.com/doubleZ0108" style="text-decoration: none;">这是一个没有下划线的链接 -> 样式属性</a>
 
+<div id="footer">
+    Copyright © double Z
+</div>
+    
 </body>
 </html>
