@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .header {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #nav {
+            background-color: gray;
+            width: 15%;
+            height: 500px;
+            text-align: center;
+            padding: 20px;
+            line-height: 30px;  /*间距*/
+            float: left;
+        }
+
+        #section {
+            width: 75%;     /*这里不能等于(1 - nav的width)是因为还有padding, 加起来就超过100%了*/
+            height: 500px;
+            padding: 20px;
+            float: left;
+        }
+
+        .footer {
+            background-color: gold;
+            text-align: center;
+            clear: both;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>City Gallery</h1>
+    </div>
+
+    <div id="nav">
+        Shanghai<br />
+        Tonghua<br />
+        Taiyuan<br />
+    </div>
+
+    <div id="section">
+        <h2>Shanghai</h2>
+        <p>
+            上海市，简称“沪”，是中华人民共和国省级行政区。上海是中国共产党诞生地、国家历史文化名城，中国经济、金融、贸易、航运、科技创新中心。
+        </p>
+        <p> 
+            上海位于中国华东地区，界于东经120°52′-122°12′，北纬30°40′-31°53′之间，地处长江入海口，东隔东中国海与日本九州岛相望，南濒杭州湾，北、西与江苏、浙江两省相接，上海市总面积6340.5平方千米。
+        </p>
+        <p>
+            上海地处太平洋西岸，亚洲大陆东岸，长江三角洲前缘，中国南北弧形海岸线中部，位于长江三角洲冲积平原，平均海拔高度4米。西部有天马山、薛山、凤凰山等残丘，天马山为陆境海拔最高点。上海地跨长江口、淀山湖、黄浦江、吴淞江四大水系，境内江、河、湖、塘相间。上海属亚热带季风性气候，温和湿润，四季分明，日照充分，雨量充沛。
+        </p>
+        <p>
+            截至2018年末，上海市常住人口总数为2423.78万人。实现地区生产总值（GDP）32679.87亿元，比上年增长6.6%
+        </p>
+    </div>
+
+    <div class="footer">
+        Copyright © double Z
+    </div>
+</body>
+
+</html>
