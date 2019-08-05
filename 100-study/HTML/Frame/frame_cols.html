@@ -1,0 +1,22 @@
+<html>
+
+<!--
+使用框架，可以在同一个浏览器窗口中显示多个界面
+    1. frameset的属性可以为 cols | rows 表示纵向排列或是横向排列
+    2. 用户可以拖动边框来改变每个窗口的大小
+    3. 正常来讲frameset和body不能同时使用，不过可以放在noframes中用于浏览器无法渲染框架时显示提示信息
+-->
+<!---->
+<frameset cols="25%,50%,25%">
+
+    <frame src="a.html" noresize="noresize">    <!--添加noresize属性使得窗口不能改变大小-->
+    <frame src="b.html">
+    <frame src="c.html">
+
+
+    <noframes>
+        <body>你的浏览器无法处理框架！</body>
+    </noframes>
+</frameset>
+
+</html>
