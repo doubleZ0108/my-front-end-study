@@ -3,13 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <style>
+        iframe{
+            height: 400px;
+            width: 600px;
+        }
+    </style>
 </head>
 <body>
 
-<h2>内联框架</h2>
-<iframe src="a.html" style="height: 400px;width: 600px;"></iframe>
+<h1>内联框架</h1>
+<p>frameborder取消边框</p>
 
-<p>这里是该界面的一些其他的内容</p>
+<iframe src="a.html"></iframe>
+<iframe src="a.html" frameborder="0"></iframe>
+<br />
+
+<p style="background-color: aquamarine;height: 200px;">这里是该界面的一些其他的内容</p>
+
+<br />
+
+<h2>内联框架🉑️作为链接的目标</h2>
+<p>默认显示的是a界面，点击🔗后动态更改为b界面</p>
+<iframe src="a.html" name="iframe_dynamic"></iframe> <br />
+<a href="b.html" target="iframe_dynamic">点击这里动态更改iframe</a>
 
 </body>
 </html>
