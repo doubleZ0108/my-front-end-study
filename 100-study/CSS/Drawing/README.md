@@ -8,4 +8,4 @@
 
 ## 报纸 & 杂志
 
-![报纸 杂志](./Screenshots/报纸 杂志.png)
+![newspaper_magazine](Screenshots/newspaper_magazine.png)
