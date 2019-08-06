@@ -10,6 +10,7 @@
 - [list 列表](#list)
 - [class 类(样式)](#class)
 - [block & inline 块元素和内联元素](#block&inline)
+- [head 中的标签(title/link/style/script/base/meta)](#head)
 
 <a name="text"></a>
 
@@ -55,4 +56,10 @@
 
 <a name="block&inline"></a>
 
-## block & inline 块元素和内联元素![block_inline](ScreenShots/block_inline.png)
+## block & inline 块元素和内联元素
+![block_inline](ScreenShots/block_inline.png)
+
+<a name="head"></a>
+
+## head 中的标签(title/link/style/script/base/meta)
+![head](ScreenShots/head.png)
