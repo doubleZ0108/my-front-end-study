@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+<h1>表单</h1>
+<p>用于搜集不同类型的用户输入</p>
+<p>表单元素包括 input | 复选框 | 单选按钮 | 提交按钮</p>
+<hr />
+
+
+<h2>input</h2>
+<h3>text 文本输入</h3>
+<p>文字字段的默认宽度是20个字符</p>
+<form>
+    请输入昵称：<br />
+    <input type="text" name="nickname" />
+    <br />
+    请输入学校：<br />
+    <input type="text" name="school" />
+    <br />
+</form>
+<hr />
+
+<h3>radio 单选按钮</h3>
+<p>同name的radio互斥 | checked指定默认选项</p>
+<form>
+    请选择性别：<br />
+    <input type="radio" name="sex" value="male" checked>male
+    <br />
+    <input type="radio" name="sex" value="female">female
+    <br />
+</form>
+<hr />
+
+<h3>submit 提交按钮</h3>
+<p>向 表单处理程序 提交表单的按钮</p>
+<p>action属性中指定表单处理程序，会向这个程序传递表单的数据</p>
+<p>method指定提交表单时所用的HTTP方法: 使用get时表单数据在地址栏中可见, <label style="color: red">post安全性🔐更佳，应使用这种方法</label><br />
+每个输入字段必须设置一个name属性，才能正确的提交，如果某个input没有name，则它不会被提交</p>
+<form action="a.html" method="post">
+    <input type="text" name="nickname" />
+    <br />
+    <input type="submit" value="提交信息" />
+    <br />
+</form>
+<hr />
+
+
+<h2>fieldset 组合表单数据</h2>
+<form>
+    <fieldset>
+        <legend>Personal information:</legend>
+        请输入昵称:<br />
+        <input type="text" name="nickname" />
+        <br />
+        请选择性别：<br />
+        <input type="radio" name="sex" value="male" checked>male
+        <br />
+        <input type="radio" name="sex" value="female">female
+        <br />
+        <input type="submit" value="提交组合表单">
+    </fieldset>
+</form>
+
+
+</body>
+</html>
