@@ -23,7 +23,7 @@
 
 ## img 图片
 
-![inline](ScreenShots/inline.png)
+![inline](ScreenShots/img.png)
 
 <a name="link"></a>
 
