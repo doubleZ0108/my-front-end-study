@@ -43,6 +43,16 @@
     <hr />
 
 
+    <h3>file 文件</h3>
+    <p>multiple属性允许用户上传多个文件</p>
+    <form>
+        请选择文件：<br />
+        <input type="file" multiple/>
+        <br />
+    </form>
+    <hr />
+
+
     <h3>number 数字字段</h3>
     <form>
         请输入(选择)重量：1～5之间<br />
@@ -82,7 +92,7 @@
 
 
 
-    <h2>datalist 为input元素规定预定义选项列表</h2>
+    <h3>datalist 为input元素规定预定义选项列表</h3>
     <p>用户在输入数据时可以看到预定义选项的下拉列表</p>
     <p>input元素的list属性必须引用datalist元素的id属性</p>
     <form>
@@ -127,7 +137,7 @@
     <p>向 表单处理程序 提交表单的按钮</p>
     <p>action属性中指定表单处理程序，会向这个程序传递表单的数据</p>
     <p>method指定提交表单时所用的HTTP方法: 使用get时表单数据在地址栏中可见, <label style="color: red">post安全性🔐更佳，应使用这种方法</label><br />
-    每个输入字段必须设置一个name属性，才能正确的提交，如果某个input没有name，则它不会被提交</p>
+        每个输入字段必须设置一个name属性，才能正确的提交，如果某个input没有name，则它不会被提交</p>
     <form action="a.html" method="post">
         <input type="text" name="nickname" />
         <br />
