@@ -3,6 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <style>
+        .input{
+            background-color: #719ea0;
+            padding: 20px;
+            margin: 5px;
+        }
+        .select{
+            background-color: #9fa054;
+            padding: 20px;
+            margin: 5px;
+        }
+        .textarea{
+            background-color: #9c78a0;
+            padding: 20px;
+            margin: 5px;
+        }
+        .button{
+            background-color: white;
+            padding: 20px;
+            margin: 5px;
+        }
+        .fileset{
+            background-color: #a0555f;
+            padding: 20px;
+            margin: 5px;
+        }
+
+
+    </style>
+
 </head>
 <body>
 
@@ -11,61 +41,181 @@
 <p>表单元素包括 input | 复选框 | 单选按钮 | 提交按钮</p>
 <hr />
 
+<div class="input">
 
-<h2>input</h2>
-<h3>text 文本输入</h3>
-<p>文字字段的默认宽度是20个字符</p>
-<form>
-    请输入昵称：<br />
-    <input type="text" name="nickname" />
-    <br />
-    请输入学校：<br />
-    <input type="text" name="school" />
-    <br />
-</form>
-<hr />
-
-<h3>radio 单选按钮</h3>
-<p>同name的radio互斥 | checked指定默认选项</p>
-<form>
-    请选择性别：<br />
-    <input type="radio" name="sex" value="male" checked>male
-    <br />
-    <input type="radio" name="sex" value="female">female
-    <br />
-</form>
-<hr />
-
-<h3>submit 提交按钮</h3>
-<p>向 表单处理程序 提交表单的按钮</p>
-<p>action属性中指定表单处理程序，会向这个程序传递表单的数据</p>
-<p>method指定提交表单时所用的HTTP方法: 使用get时表单数据在地址栏中可见, <label style="color: red">post安全性🔐更佳，应使用这种方法</label><br />
-每个输入字段必须设置一个name属性，才能正确的提交，如果某个input没有name，则它不会被提交</p>
-<form action="a.html" method="post">
-    <input type="text" name="nickname" />
-    <br />
-    <input type="submit" value="提交信息" />
-    <br />
-</form>
-<hr />
-
-
-<h2>fieldset 组合表单数据</h2>
-<form>
-    <fieldset>
-        <legend>Personal information:</legend>
-        请输入昵称:<br />
+    <h2>input</h2>
+    <h3>text 文本输入</h3>
+    <p>单行输入，文字字段的默认宽度是20个字符</p>
+    <form>
+        请输入昵称：<br />
         <input type="text" name="nickname" />
         <br />
+        请输入学校：<br />
+        <input type="text" name="school" />
+        <br />
+    </form>
+    <hr />
+
+    <h3>password 密码</h3>
+    <form>
+        请输入密码：<br />
+        <input type="password" name="psw" />
+        <br />
+    </form>
+    <hr />
+
+
+    <h3>number 数字字段</h3>
+    <form>
+        请输入(选择)重量：1～5之间<br />
+        <input type="number" max="5" min="1" value="3"/>
+        <br />
+        <input type="submit" />
+    </form>
+    <hr />
+
+
+    <h3>email 邮箱📮</h3>
+    <p>输入错误提示：请在电子邮箱地址中包括"@"。"xxx"中缺少"@"。</p>
+    <form>
+        请输入邮箱：<br />
+        <input type="email" />
+        <label>示例：12345678@xx.com</label>
+        <br />
+        <input type="submit" />
+    </form>
+    <hr />
+
+    <h3>data 日期📅</h3>
+    <form>
+        请选择日期：<br />
+        <input type="date" />
+        <br />
+    </form>
+    <hr />
+
+    <h3>color 颜色</h3>
+    <form>
+        请输入颜色：<br />
+        <input type="color" />
+        <br />
+    </form>
+    <hr />
+
+
+
+    <h2>datalist 为input元素规定预定义选项列表</h2>
+    <p>用户在输入数据时可以看到预定义选项的下拉列表</p>
+    <p>input元素的list属性必须引用datalist元素的id属性</p>
+    <form>
+        <input list="apple" name="apple" />
+        <datalist id="apple">
+            <option value="iPhone"></option>
+            <option value="iPad"></option>
+            <option value="iWatch"></option>
+            <option value="MacBook"></option>
+        </datalist>
+    </form>
+    <hr />
+
+
+    <h3>radio 单选按钮</h3>
+    <p>同name的radio互斥 | checked指定默认选项</p>
+    <form>
         请选择性别：<br />
         <input type="radio" name="sex" value="male" checked>male
         <br />
         <input type="radio" name="sex" value="female">female
         <br />
-        <input type="submit" value="提交组合表单">
-    </fieldset>
-</form>
+    </form>
+    <hr />
 
+
+    <h3>checkbox 复选框</h3>
+    <p>允许用户选择0个或多个</p>
+    <form action="a.html">
+        请选择考试科目：<br />
+        <input type="checkbox" name="subject" value="Chinese" />语文
+        <br />
+        <input type="checkbox" name="subject" value="Math" />数学
+        <br />
+        <input type="checkbox" name="subject" value="English" />英语
+        <br />
+    </form>
+    <hr />
+
+
+    <h3>submit 提交按钮</h3>
+    <p>向 表单处理程序 提交表单的按钮</p>
+    <p>action属性中指定表单处理程序，会向这个程序传递表单的数据</p>
+    <p>method指定提交表单时所用的HTTP方法: 使用get时表单数据在地址栏中可见, <label style="color: red">post安全性🔐更佳，应使用这种方法</label><br />
+    每个输入字段必须设置一个name属性，才能正确的提交，如果某个input没有name，则它不会被提交</p>
+    <form action="a.html" method="post">
+        <input type="text" name="nickname" />
+        <br />
+        <input type="submit" value="提交信息" />
+        <br />
+    </form>
+    <hr />
+
+</div>
+
+<div class="select">
+
+    <h2>select 下拉列表</h2>
+    <p>selected指定预选项，如果不写默认是第一个</p>
+    <form>
+        <select name="school">
+            <option value="qinghua">清华大学</option>
+            <option value="tongji" selected>同济大学</option>
+            <option value="fudan">复旦大学</option>
+        </select>
+        <br />
+    </form>
+    <hr />
+
+</div>
+
+<div class="textarea">
+
+    <h2>textarea 文本域</h2>
+    <form>
+        <textarea name="message"cols="60" rows="10">这里可以输入多行文字......</textarea>
+    </form>
+    <hr />
+
+</div>
+
+<div class="button">
+
+    <h2>button 按钮</h2>
+    <button type="button" onclick="alert('Hello world!')">我是一个按钮</button>
+    <hr />
+
+</div>
+
+<div class="fileset">
+
+    <h2>fieldset 组合表单数据</h2>
+    <form>
+        <fieldset>
+            <legend>Personal information:</legend>
+            请输入昵称:<br />
+            <input type="text" name="nickname" />
+            <br />
+            请选择性别：<br />
+            <input type="radio" name="sex" value="male" checked>male
+            <br />
+            <input type="radio" name="sex" value="female">female
+            <br />
+            <input type="submit" value="提交组合表单">
+        </fieldset>
+    </form>
+    <hr />
+
+</div>
 
 </body>
+
+
 </html>
