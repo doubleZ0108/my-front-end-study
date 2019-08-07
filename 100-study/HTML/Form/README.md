@@ -14,6 +14,7 @@
 
 - [filedset 组合表单数据](#fileset)
 
+- [attribute 表单的属性](#attribute)
   
 
 <a name="input"></a>
@@ -51,4 +52,10 @@
 ## filedset 组合表单数据
 
 ![filedset](Screenshots/filedset.png)
+
+<a name="attribute"></a>
+
+## attribute 表单的属性
+
+![attribute](Screenshots/attribute.png)
 
