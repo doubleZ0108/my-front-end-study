@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>attribute</title>
+</head>
+<body>
+
+<form action="a.html">
+    <h1>Form表单的输入属性</h1>
+
+    <h2>form中设置 novalidate 则提交表单时不做任何数据验证</h2>
+    <hr />
+
+
+    <h2>placeholder 描述输入字段预期值的提示</h2>
+    <p>会在用户输入值之前显示在输入字段中</p>
+    请输入大学:<br />
+    <input type="text" name="school" placeholder="同济大学" />
+    <hr />
+
+
+    <h2>disabled 这个输入框被禁用了</h2>
+    <p>被禁用的属性不会被提交</p>
+    请输入昵称:<br />
+    <input type="text" name="nickname" value="zz" disabled />
+    <hr />
+
+
+    <h2>pattern 将输入进行正则表达式检查</h2>
+    <p>如果不符合要求，则显示"请与所请求的格式保持一致"</p>
+    请输入身份证号：<br />
+    <input type="text" pattern="\d{17}[\d|x]|\d{15}" />
+    <hr />
+
+
+    <h2>readonly 这是一个只读的输入框</h2>
+    <input type="text" readonly value="这些内容你只能看👀"/>
+    <hr />
+
+    <h2>required 必需填写的字段</h2>
+    <p>不填写就提交会显示"请填写此字段"</p>
+    <input type="text" required/>
+    <hr />
+
+
+    <h2>autocomplete 字段是否应该自动完成</h2>
+    <p>当自动完成开启，浏览器会基于用户之前的输入值自动填写值，默认是on状态</p>
+    请输入昵称（自动完成打开）：<br />
+    <input type="text" autocomplete="on" name="nickname"/>
+    <br />
+    请输入昵称（自动完成关闭）：<br />
+    <input type="text" autocomplete="off" name="nickname"/>
+    <hr />
+
+    <h2>autofocus 页面加载时自动获️🉐️焦点</h2>
+    <input type="text" autofocus />
+    <hr />
+
+
+
+
+    <h2>formaction 规定提交表单时处理程序的URL</h2>
+    <p>会覆盖form中的action属性，可以实现以管理员身份提交则跳转到另一个处理程序</p>
+    <input type="submit" formaction="b.html" value="以管理员身份提交"/>
+
+    <input type="submit" value="正常提交表单" />
+</form>
+
+</body>
+</html>
