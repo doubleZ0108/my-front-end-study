@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>range</title>
+
+    <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="range.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="range.css" type="text/css">
+
+</head>
+<body>
+
+<h3>range 滑动条</h3>
+
+<form>
+    请选择评分：<br />
+    <input type="range" id="GRADE_slider" class="slider-normal" name="grade"
+           min="0" max="100" step="1" value="60" />
+    <label id="grade"></label>
+    <br />
+    <input type="submit" />
+</form>
+
+<br /><hr /><br />
+
+<form>
+    请选择GPA：<br />
+    <input type="range" id="GPA_slider" class="slider-rounded" name="gpa"
+           min="0" max="5" step="0.01" value="2.21" />
+    <label id="gpa"></label>
+    <br />
+    <input type="submit" />
+</form>
+
+
+</body>
+<script>
+
+    $('#GRADE_slider').RangeSlider({min:0, max:100, step:1, callback:'', text:'#grade'})
+    $('#GPA_slider').RangeSlider({min:0, max:5, step:0.01, callback:'', text:'#gpa'});
+
+</script>
+</html>
