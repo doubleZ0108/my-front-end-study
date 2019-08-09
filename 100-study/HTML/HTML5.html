@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        html,body {
+            scroll-behavior: smooth;
+        }
+        mySchool{
+            display: block;     /*设置为块级元素*/
+            background-color: cadetblue;
+            height: 300px;
+            width: 50%;
+            text-align: center;
+        }
+        header{
+            background-color: gold;
+        }
+        section{
+            background-color: bisque;
+        }
+        article {
+            background-color: cornflowerblue;
+        }
+        footer{
+            background-color: darksalmon;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>HTML5 新特性</h1>
+</header>
+
+
+<div>
+    <h2>颜色代表的含义：</h2>
+    <span style="background-color: gold;">header</span>
+    <span style="background-color: bisque;">section</span>
+    <span style="background-color: cornflowerblue;">article</span>
+    <span style="background-color: cadetblue;">自定义元素</span>
+    <span style="background-color: darksalmon;">footer</span>
+    <hr />
+</div>
+
+
+
+<header>
+    <h2 id="header">header 文章或节的页眉</h2>
+</header>
+<p>应被用作介绍性内容的容器，一个文档中可以有多个header</p>
+<hr />
+
+
+<header>
+    <h2 id="nav">nav 导航链接集合</h2>
+</header>
+<nav>
+    <a href="#header">header</a> |
+    <a href="#nav">nav</a> |
+    <a href="#section">section</a> |
+    <a href="#article">article</a> |
+    <a href="#footer">footer</a> |
+</nav>
+<hr />
+
+
+<header>
+    <h2 id="section">section 文章的节</h2>
+</header>
+<p>节是有主题的内容组， 通常具有标题</p>
+<p>可以将网站首页划分为简介、内容、联系信息等节</p>
+<section>
+    <h3>简介</h3>
+    <p>
+        同济大学（Tongji University）简称“同济”，是中华人民共和国教育部直属并由教育部、国家海洋局和上海市共建的全国重点大学，中央直管副部级高校，历史悠久、声誉卓著的综合性、研究型、国际化大学，国家“双一流”、“211工程”、“985工程”建设高校；入选珠峰计划、2011计划、111计划、卓越工程师教育培养计划、卓越法律人才教育培养计划、卓越医生教育培养计划、国家大学生创新性实验计划、国家建设高水平大学公派研究生项目、中国政府奖学金来华留学生接收院校、国家级大学生创新创业训练计划、国家创新人才培养示范基地、新工科研究与实践项目、全国深化创新创业教育改革示范高校、中美“10+10”计划，全球环境与可持续发展大学合作联盟、国际设计艺术院校联盟、21世纪学术联盟、卓越大学联盟、中俄工科大学联盟、中欧工程教育平台、国际绿色校园联盟、同济—伯克利工程联盟成员。 [1-2]
+        同济大学的前身是1907年德国医生埃里希·宝隆在上海创办的德文医学堂；翌年改名同济德文医学堂；1912年与创办不久的同济德文工学堂合并，更名为同济德文医工学堂；1923年正式定名同济大学；1927年成为国立同济大学，是中国最早的七所国立大学之一。
+        截至2019年5月，学校设有29个专业学院，8家附属医院。有四平路、嘉定、沪西、沪北等4个校区，占地面积3810亩，建筑面积180余万平方米。有全日制本科生17757人，硕士研究生12852人，博士研究生5246人。另有国际留学生3468人。校友中有150余人当选两院院士。 [2-4]
+    </p>
+</section>
+<section>
+    <h3>学校精神</h3>
+    <ul>
+        <li>同济大学的学校精神：同舟共济，自强不息</li>
+        <li>同济大学的办学理念：济世兴邦，爱国奉献</li>
+        <li>同济大学的学术风格：脚踏实地，不鹜虚名</li>
+    </ul>
+</section>
+<hr />
+
+
+<header>
+    <h2 id="article">article 规定独立的自包含内容</h2>
+</header>
+<p>文档可独立于网页其他内容进行阅读</p>
+<article>
+    <h3>同济大学软件学院</h3>
+    <p>
+        成立于2001年9月，是国家教育部与原国家计委联合批准成立的国家示范性软件学院。
+        中国科学院院士、我国首台银河巨型计算机主机系统总设计师周兴铭教授担任首任院长，自2017年3月起担任名誉院长。
+        学院不仅拥有一流教学和实验环境，而且拥有一支以专职教师为核心，专职与兼职相结合，高校与企业相结合，国内与国外相结合的结构多元化的特色师资队伍。
+        同时，学院致力于国际交流和企业合作，与瑞典、丹麦、西班牙、美国、英国、法国和境外香港、台湾等高校建立合作关系。
+        学院按照周兴铭院士提出的“前沿化、工程化、国际化、基础理论与实践技能协调发展”的办学指导思想，以“基于软件工程科学，面向国家和产业发展需求，
+        培养基础理论扎实深厚、具有创新潜力，工程型、复合型、国际化的多层次、创新型卓越工程人才培养”为培养目标秉承“勤奋、改革、开放、创新”的学院文化，
+        力争建设成为有一定国际知名度的软件学院。
+    </p>
+</article>
+<hr />
+
+
+<header>
+    <h2 id="aside">aside 祝内容之外的某些内容</h2>
+</header>
+<p>具体就不在这写了，跟其他东西的用法一样</p>
+<hr />
+
+
+<header>
+    <h2>添加新元素</h2>
+</header>
+<xmp>
+    自定义了mySchool标签，<mySchool>My School Tag</mySchool>
+</xmp>
+<mySchool>My School Tag</mySchool>
+<hr />
+
+
+
+<header>
+    <h2 id="footer">footer 文档或节的页脚</h2>
+</header>
+<p>通常包含作者、版权信息、使用条款链接、联系信息等</p>
+<footer>
+    <p>Powered by: double Z</p>
+    <p>Contact Information: <a href="mailto:doubleZ0108@163.com">doubleZ0108@163.com</a></p>
+    <p style="text-align: center;">Copyright &copy; double Z. All Right Reversed.</p>
+</footer>
+
+</body>
+</html>
