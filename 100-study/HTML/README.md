@@ -12,6 +12,8 @@
 - [block & inline 块元素和内联元素](#block&inline)
 - [head 中的标签(title/link/style/script/base/meta)](#head)
 - [Entity Characters 实体字符](#EntityCharacters)
+- [HTML5 新特性](#HTML5)
+
 
 <a name="text"></a>
 
@@ -70,3 +72,7 @@
 ## Entity Characters 实体字符
 ![EntityCharacters](ScreenShots/EntityCharacters.png)
 
+<a name="HTML5"></a>
+
+## HTML5 新特性
+![HTML5](ScreenShots/HTML5.png)
