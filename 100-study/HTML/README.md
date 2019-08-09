@@ -77,7 +77,7 @@
 ## HTML5 新特性
 ![HTML5](ScreenShots/HTML5.png)
 
-<a name="HTML5"></a>
+<a name="figure_figcaption"></a>
 
 ## figure figcaption 为图片添加标题(可见的解释)
 ![figure figcaption 为图片添加标题(可见的解释)](ScreenShots/figure_figcaption.png)
