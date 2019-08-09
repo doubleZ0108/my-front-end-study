@@ -13,7 +13,7 @@
 - [head 中的标签(title/link/style/script/base/meta)](#head)
 - [Entity Characters 实体字符](#EntityCharacters)
 - [HTML5 新特性](#HTML5)
-
+- [figure figcaption 为图片添加标题(可见的解释)](#figure_figcaption)
 
 <a name="text"></a>
 
@@ -76,3 +76,8 @@
 
 ## HTML5 新特性
 ![HTML5](ScreenShots/HTML5.png)
+
+<a name="HTML5"></a>
+
+## figure figcaption 为图片添加标题(可见的解释)
+![figure figcaption 为图片添加标题(可见的解释)](ScreenShots/figure_figcaption.png)
