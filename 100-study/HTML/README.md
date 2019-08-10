@@ -14,6 +14,7 @@
 - [Entity Characters 实体字符](#EntityCharacters)
 - [HTML5 新特性](#HTML5)
 - [figure figcaption 为图片添加标题(可见的解释)](#figure_figcaption)
+- [HTML5 样式指南和代码规定](#guide)
 
 <a name="text"></a>
 
@@ -81,3 +82,8 @@
 
 ## figure figcaption 为图片添加标题(可见的解释)
 ![figure figcaption 为图片添加标题(可见的解释)](ScreenShots/figure_figcaption.png)
+
+<a name="guide"></a>
+
+## HTML5 样式指南和代码规定
+![HTML5 样式指南和代码规定](ScreenShots/guide.png)
