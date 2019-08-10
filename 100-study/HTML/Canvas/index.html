@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas | 画布</title>
+
+    <script src="static/js/canvas.js"></script>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+<h1>Canvas 画布</h1>
+<p>画布是矩形区域，可以控制每一个像素</p>
+<p>canvas元素本身没有绘图能力，所有绘图工作通过JavaScript实现</p>
+<p>
+    ➡️为x轴正向<br />
+    ⬇️为y轴正向<br />
+</p>
+<hr />
+
+<h2>矩形</h2>
+<section>
+    <xmp>cxt.fillRect(5,20,175,50);</xmp>
+    起始点为(5,20)<br />
+    矩形的 长为175 宽为50
+</section>
+<canvas id="RectCanvas" height="200" width="400"></canvas>
+<hr />
+
+
+<h2>线🧵</h2>
+<section>
+    <xmp>cxt.lineTo(300,150);</xmp>
+    从cxt当前位置做直线到（300，150）
+</section>
+<canvas id="LineCanvas" height="200" width="400"></canvas>
+<hr />
+
+
+<h2>圆</h2>
+<section>
+    <xmp>cxt.arc(200,100, 40, 0,2*Math.PI, true);</xmp>
+    圆心坐标（200，100）<br />
+    半径 40<br />
+    起始角 0 * Math.PI<br />
+    结束角 2 * Math*PI<br />
+    逆时针 true<br />
+</section>
+<canvas id="CircleCanvas" height="200" width="400"></canvas>
+<hr />
+
+
+<h2>渐变</h2>
+<section>
+<xmp>
+let grd = cxt.createLinearGradient(20,40,
+    300,150);
+grd.addColorStop(0,'#e72a23');
+grd.addColorStop(1,'#fff063');
+cxt.fillStyle = grd;
+</xmp>
+    从cxt当前位置做直线到（300，150）
+</section>
+<canvas id="ShadeCanvas" height="200" width="400"></canvas>
+<hr />
+
+
+<h2>图像</h2>
+<section>
+    <xmp>cxt.lineTo(300,150);</xmp>
+    从cxt当前位置做直线到（300，150）
+</section>
+<canvas id="ImgCanvas" height="200" width="400"></canvas>
+<hr />
+
+
+</body>
+</html>

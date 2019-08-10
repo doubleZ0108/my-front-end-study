@@ -1,0 +1,12 @@
+h2{
+    clear: both;
+}
+canvas{
+    margin: 20px;
+    background-color: #009af9;
+}
+section{
+    float: left;
+    margin: 20px;
+    width: 300px;
+}
