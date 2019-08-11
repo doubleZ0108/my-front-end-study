@@ -98,7 +98,7 @@
 <a name="audio"></a>
 
 ## audio 音频
-Safari
+### Safari
 ![audio 音频](ScreenShots/audio_safari.png)
-Chorme
-<img src="ScreenShots/audio_chorme.png" style="height:300px;width:200px />
+### Chorme
+![audio 音频](ScreenShots/audio_chorme.png)
