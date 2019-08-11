@@ -17,6 +17,7 @@
 - [HTML5 样式指南和代码规定](#guide)
 - [SVG 矢量图(简略)](#SVG)
 - [audio 音频](#audio)
+- [video 视频](#video)
 
 <a name="text"></a>
 
@@ -102,3 +103,8 @@
 ![audio 音频](ScreenShots/audio_safari.png)
 ### Chorme
 ![audio 音频](ScreenShots/audio_chorme.png)
+
+<a name="video"></a>
+
+## video 视频
+![video 视频](ScreenShots/video.png)
