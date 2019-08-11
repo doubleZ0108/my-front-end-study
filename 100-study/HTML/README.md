@@ -101,4 +101,4 @@
 Safari
 ![audio 音频](ScreenShots/audio_safari.png)
 Chorme
-![audio 音频](ScreenShots/audio_chorme.png)
+<img src="ScreenShots/audio_chorme.png" style="height:300px;width:200px />
