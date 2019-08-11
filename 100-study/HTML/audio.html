@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>多媒体</title>
+</head>
+<body>
+
+<h1>多媒体</h1>
+
+<h2>音频</h2>
+
+<h3>使用audio标签</h3>
+<audio controls="controls">
+    <source src="Resources/audio/music.ogg" type="audio/ogg" />
+    Your browser does not support this audio format.
+</audio>
+<hr />
+
+
+<h3>使用外部内容容器 embed</h3>
+<p>在Safari中不支持</p>
+<embed height="200" width="500" src="Resources/audio/music.mp3" />
+<hr />
+
+
+<h3>使用外部内容容器 object</h3>
+<p>在Safari中不支持</p>
+<object height="200" width="500" data="Resources/audio/music.mp3"></object>
+<hr />
+
+
+<div  style="background-color: lightpink">
+    <h3>最好的解决方案</h3>
+    <p>先尝试以mp3或ogg来播放音频；如果失败，尝试<embed>元素</p>
+    <audio controls="controls" height="200" width="500">
+        <source src="Resources/audio/music.mp3" type="audio/mp3" />
+        <source src="Resources/audio/music.ogg" type="audio/ogg" />
+        <embed height="200" width="500" src="Resources/audio/music.mp3" />
+    </audio>
+</div>
+<hr />
+
+<div style="background-color: cornflowerblue">
+    <h3>最简单的方法</h3>
+    <p>使用雅虎的媒体播放器完成歌曲播放工作</p>
+    <p>其实不加那行script，直接用🔗标签播放效果是一样的，浏览器会启动"辅助应用程序"播放🎵</p>
+    <a href="Resources/audio/music.mp3">Play music.mp3</a>
+    <script type="text/javascript" src="http://mediaplayer.yahoo.com/js"></script>
+</div>
+</body>
+</html>
