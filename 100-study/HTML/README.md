@@ -16,6 +16,7 @@
 - [figure figcaption 为图片添加标题(可见的解释)](#figure_figcaption)
 - [HTML5 样式指南和代码规定](#guide)
 - [SVG 矢量图(简略)](#SVG)
+- [audio 音频](#audio)
 
 <a name="text"></a>
 
@@ -93,3 +94,11 @@
 
 ## SVG 矢量图(简略)
 ![SVG 矢量图(简略)](ScreenShots/SVG.png)
+
+<a name="audio"></a>
+
+## audio 音频
+Safari
+![audio 音频](ScreenShots/audio_safari.png)
+Chorme
+![audio 音频](ScreenShots/audio_chorme.png)
