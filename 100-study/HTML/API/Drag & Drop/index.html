@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>drag & drop</title>
+
+    <style>
+        .mydiv{
+            height: 270px;
+            width: 364px;
+            padding: 10px;
+            margin: 10px;
+            border: black solid 1px;
+            float: left;
+        }
+        #myimg{
+            height: 270px;
+            width: 364px;
+        }
+    </style>
+    <script src="static/js/Drag_Drop.js"></script>
+</head>
+<body>
+
+<h1>拖放</h1>
+
+<p>可图片拖入矩形中，并可在两个矩形框中互相拖拽</p>
+<p>可实现 剪切拖拽 & 复制拖拽</p>
+<div class="mydiv" ondragover="allowDrop(event);" ondrop="drop(event);">
+</div>
+<div class="mydiv" ondragover="allowDrop(event);" ondrop="drop(event);">
+</div>
+
+
+<br />
+
+<!--设置元素为可拖放的-->
+<div style="clear: both; margin: 10px;">
+    <img id="myimg" src="Resources/img/her.jpg" draggable="true" ondragstart="drag(event);" />
+</div>
+
+</body>
+</html>

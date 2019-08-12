@@ -7,6 +7,8 @@
 
 ## 拖放
 
+![drag_drop](ScreenShots/drag_drop.png)
+
 ![drag_drop_cut](ScreenShots/drag_drop_cut.gif)
 
 ![drag_drop_copy](ScreenShots/drag_drop_copy.gif)
