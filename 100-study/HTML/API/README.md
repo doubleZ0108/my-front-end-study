@@ -4,6 +4,7 @@
 - [拖放 Drag & Drop](#drag&drop)
 - [本地存储 Local Storage](#LocalStorage)
 - [应用程序缓存 Application Cache](#ApplicationCache)
+- [后台运行脚本 Web Worker](#WebWorker)
 
 <a name="drag&drop"></a>
 
@@ -33,3 +34,8 @@
 
 
 
+<a name="WebWorker"></a>
+
+## 后台运行脚本 Web Worker
+
+![后台运行脚本 Web Worker](ScreenShots/WebWorker.png)

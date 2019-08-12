@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Worker</title>
+
+    <script src="static/js/button.js"></script>
+    <script src="static/js/WebWorker.js"></script>
+</head>
+<body>
+
+<h1>Web Worker</h1>
+<p>运行在后台的JavaScript，不影响页面的性能</p>
+<p>当HTML页面执行脚本时，页面时不可响应的，直到脚本完成</p>
+<p>Web Worker时运行在后台的脚本，独立于其他脚本，可以继续做任何事情，不影响页面的性能</p>
+
+
+<p>计数：<output id="result"></output> </p>
+<button onclick="startClick();">开始后台计数🧮</button>
+<button onclick="endClick();">停止后台计数🧮</button>
+
+
+</body>
+</html>
