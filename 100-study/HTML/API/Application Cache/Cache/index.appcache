@@ -1,0 +1,9 @@
+CHCHE MANIFEST
+/Resources/img/siri.gif
+
+NETWORK:
+*                        # 星号表示所有其他资源都需要因特网连接
+
+FALLBACK:
+/html/ /404.html        # 如果无法建立因特网连接，则用404.html替代/html/目录中的所有文件
+                        # 第一个URL是资源，第二个是替补

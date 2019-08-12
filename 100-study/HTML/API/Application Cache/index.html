@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" manifest="Cache/index.appcache">
+<head>
+    <meta charset="UTF-8">
+    <title>Application Cache</title>
+</head>
+<body>
+
+<h1>应用程序缓存 Application Cache</h1>
+<p>通过创建 cache manifest文件📃</p>
+<h2>优点：</h2>
+<ul>
+    <li>可离线浏览</li>
+    <li>已缓存资源加载更快</li>
+    <li>减少服务器负载：浏览器只从服务器下载更新过的资源</li>
+</ul>
+<hr />
+
+
+<h2>manifest文件</h2>
+<p>需要设置正确的MIME-type：text/cache-manifest，必须在web服务器上进行配置</p>
+<p>
+    三个部分<br />
+    <ul>
+        <li>CACHE MANIFEST：在此标题下列出的文件将在首次下载后进行缓存</li>
+        <li>NETWORK：在此标题下列出的文件需要与服务器的链接，不会被缓存</li>
+        <li>FALLBACK：在此标题下列出的文件规定当前界面无法访问时的回退界面（比如404界面）</li>
+    </ul>
+</p>
+<hr />
+
+
+
+<h2>更新缓存</h2>
+<ul>
+    <li>用户清空浏览器缓存</li>
+    <li>manifest文件被修改</li>
+    <li>有程序来更新应用缓存</li>
+</ul>
+
+</body>
+</html>
