@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Local Storage</title>
+    <style>
+        div{
+            margin: 20px;
+        }
+    </style>
+    <script src="static/js/LocalStorage.js"></script>
+</head>
+<body>
+
+<h1>本地存储 Local Storage</h1>
+<p>存储的内容始终为字符串，注意转换成其他数据类型</p>
+<h2>优点：</h2>
+<ul>
+    <li>本地存储更安全（相比于cookie），信息不会被传输到服务器</li>
+    <li>不硬系那个网站性能的前提下，能将大量数据存储于本地</li>
+    <li>所有界面，从起源地，都能够存储和访问相同的数据</li>
+</ul>
+<h2>本地存储对象</h2>
+<ul>
+    <li>window.localStorage: 存储没有截止日期的数据</li>
+    <li>window.sessionStorage: 针对一个会话来存储数据（关闭浏览器标签时数据会丢失）</li>
+</ul>
+<hr />
+
+
+<div id="local_result" style="background-color: lightpink;"></div>
+<div id="session_result" style="background-color: cornflowerblue;"></div>
+
+
+
+</body>
+</html>
