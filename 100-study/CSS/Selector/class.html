@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>class选择器</title>
+    <link rel="stylesheet" href="static/css/style.css" />
+</head>
+<body>
+
+<h3>类选择器</h3>
+<p>以 . 定义，类名不能以数字开头</p>
+<xmp>
+    .center{
+    text-align: center;
+    }
+
+    <h6 class="center">This H6 will be center-aligned.</h6>
+    <p class="center">This paragraph will also be center-aligned.</p>
+</xmp>
+<h6 class="center">This H6 will be center-aligned.</h6>
+<p class="center">This paragraph will also be center-aligned.</p>
+<p>类选择器也经常与派生选择器共同使用</p>
+<xmp>
+    类名为center的更大元素内部的表格单元的样式
+    .center td{
+    ...
+    }
+</xmp>
+<p>类选择器还常基于元素选择</p>
+<xmp>
+    只有类名为center的表格单元生效，类名为center的段落标签不受影响
+    td.center{
+    ...
+    }
+</xmp>
+<hr />
+
+</body>
+</html>
