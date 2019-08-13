@@ -1,0 +1,51 @@
+li strong{
+    font-style: italic;     /*只有li后面的strong会拥有这个属性*/
+}
+
+#redp{
+    color: red;
+}
+
+.center{
+    text-align: center;
+}
+
+[words]{
+    color: blue;
+}
+
+[school=tongji]{
+    color: lightblue;
+}
+
+[title~=hello]{
+    color: green;
+}
+
+[content|=en]{
+    color: coral;
+}
+
+[dict^=man]{
+    color: deeppink;
+}
+
+[list$=boy]{
+    color: navy;
+}
+
+[set*=child]{
+    color: yellowgreen;
+}
+
+
+input[type="text"]{
+    display: block;
+    background-color: yellow;
+    margin-bottom: 10px;
+}
+input[type="button"]{
+    display: block;
+    background-color: aqua;
+    margin-left: 10px;
+}
