@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fondation</title>
+    <style>
+        body{
+            font-family: "Apple Braille";
+        }
+
+        p{
+            font-family: "Weibei TC";
+        }
+    </style>
+</head>
+<body>
+
+<h2>多重样式层叠</h2>
+<p>上层的会覆盖下层的</p>
+<ol>
+    <li>内联样式（HTML元素内部）</li>
+    <li>内部样式表（head中的样式）</li>
+    <li>外部样式表</li>
+    <li>浏览器缺省值</li>
+</ol>
+<hr />
+
+
+<h2>分组</h2>
+<p>被分组的选择器可以共享相同的声明</p>
+<xmp>
+    h1,h1,h3,h4,h5,h6{
+    color: red;
+    }
+</xmp>
+<hr />
+
+
+<h2>继承</h2>
+<p>子元素会继承最高级元素的属性，如果要取消就要针对子元素创建特定的规则</p>
+<xmp>
+    body{
+    font-family: "Apple Braille";   /*则文档里所有的字体都会变成这个*/
+    }
+
+    p{
+    font-family: "Weibei TC";       /*段落是另一种字体*/
+    }
+</xmp>
+<hr />
+
+</body>
+</html>
