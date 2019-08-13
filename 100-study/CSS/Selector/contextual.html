@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>派生选择器</title>
+    <link rel="stylesheet" href="static/css/style.css" />
+</head>
+<body>
+
+<h3>派生选择器（上下文选择器）</h3>
+<xmp>
+    li strong{
+    font-style: italic;     /*只有li后面的strong会拥有这个属性*/
+    }
+
+    <p><strong>我是粗体字，不是斜体字，因为我不在列表中，这个规则对我不起作用</strong></p>
+    <ul>
+        <li><strong>我是斜体字，因为strong位于li元素中</strong></li>
+        <li>我是正常的字体</li>
+    </ul>
+</xmp>
+<p><strong>我是粗体字，不是斜体字，因为我不在列表中，这个规则对我不起作用</strong></p>
+<ul>
+    <li><strong>我是斜体字，因为strong位于li元素中</strong></li>
+    <li>我是正常的字体</li>
+</ul>
+<hr />
+
+</body>
+</html>
