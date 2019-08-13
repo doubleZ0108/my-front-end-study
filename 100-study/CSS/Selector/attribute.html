@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性选择器</title>
+    <link rel="stylesheet" href="static/css/style.css" />
+</head>
+<body>
+
+<h3>属性选择器</h3>
+<xmp>
+    [words]{
+    color: blue;
+    }
+
+    <p words="这个段落有words属性">这个段落有words属性</p>
+    <a words="这个链接有words属性" href="https://github.com/doubleZ0108/">这个链接有words属性</a>
+</xmp>
+<p words="">这个段落有words属性</p>
+<a words="" href="https://github.com/doubleZ0108/">这个链接有words属性</a>
+<hr />
+
+
+<h3>属性和值选择器</h3>
+<xmp>
+    [school=tongji]{
+    color: lightblue;
+    }
+
+    <p school="tongji">这是带tongji属性值的段落</p>
+    <a school="tongji" href="https://github.com/doubleZ0108/">这是带tongji属性值的链接</a>
+    <p school="qinghua">这个不带tongji属性值</p>
+</xmp>
+<p school="tongji">这是带tongji属性值的段落</p>
+<a school="tongji" href="https://github.com/doubleZ0108/">这是带tongji属性值的链接</a>
+<p school="qinghua">这个不带tongji属性值</p>
+<hr />
+
+
+<h3>属性和值选择器 - 多个值</h3>
+<ul>
+    <li>选择属性值中包含指定词汇的属性
+        <xmp>
+            [title~=hello]{
+            color: green;
+            }
+
+            <p title="hello world">hello world</p>
+            <a title="欢迎你来到 hello" href="https://github.com/doubleZ0108/">欢迎你来到 hello</a>
+        </xmp>
+        <p title="hello world">hello world</p>
+        <a title="欢迎你来到 hello" href="https://github.com/doubleZ0108/">欢迎你来到 hello</a>
+    </li>
+    <li>选择属性值以指定开头的属性，盖茨必须是这个那个单词
+        <xmp>
+            [content|=en]{
+            color: coral;
+            }
+
+            <p content="en">en</p>
+            <p content="en-our">en-our</p>
+            <p content="en this">en this</p>
+            <p content="us-en">us-en</p>
+        </xmp>
+        <p content="en">en</p>
+        <p content="en-our">en-our</p>
+        <p content="en this">en this</p>
+        <p content="us-en">us-en</p>
+    </li>
+    <li>匹配属性值以指定值开头的元素
+        <xmp>
+            [dict^=man]{
+            color: deeppink;
+            }
+
+            <p dict="man">man</p>
+            <p dict="man-this">man-this</p>
+            <p dict="man this">man this</p>
+        </xmp>
+        <p dict="man">man</p>
+        <p dict="man-this">man-this</p>
+        <p dict="man this">man this</p>
+    </li>
+    <li>匹配属性值以指定值结尾的元素
+        <xmp>
+            [list$=boy]{
+            color: navy;
+            }
+
+            <p list="boy">boy</p>
+            <p list="this-boy">this-boy</p>
+            <p list="this boy">this boy</p>
+        </xmp>
+        <p list="boy">boy</p>
+        <p list="this-boy">this-boy</p>
+        <p list="this boy">this boy</p>
+    </li>
+    <li>匹配属性值包含指定值
+        <xmp>
+            [set*=child]{
+            color: yellowgreen;
+            }
+
+            <p set="this-child-that">this-child-that</p>
+            <p set="this-child">this-child</p>
+            <p set="child-that">child-that</p>
+        </xmp>
+        <p set="this-child-that">this-child-that</p>
+        <p set="this-child">this-child</p>
+        <p set="child-that">child-that</p>
+    </li>
+</ul>
+<hr />
+
+
+<h3>表单的样式</h3>
+<xmp>
+    input[type="text"]{
+    display: block;
+    background-color: yellow;
+    margin-bottom: 10px;
+    }
+    input[type="button"]{
+    display: block;
+    background-color: aqua;
+    margin-left: 10px;
+    }
+
+    <input type="text" />
+    <input type="button" value="这是表单中的按钮" />
+</xmp>
+<input type="text" placeholder="这是表单中的文本框"/>
+<input type="button" value="这是表单中的按钮" />
+
+</body>
+</html>
