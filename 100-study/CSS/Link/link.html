@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>link</title>
+    <style>
+        label{
+            font-weight: bold;
+            font-size: large;
+            display: block;
+        }
+    </style>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+<h1>链接🔗</h1>
+<h2>链接的状态</h2>
+
+
+<label style="clear: both;">为了使定义生效，a:link、a:visited 之后才能放 a:hover，再之后才能放 a:active</label>
+<ul>
+    <li>a:link - 普通的、未被访问的链接</li>
+    <li>a:visited - 用户已访问的链接</li>
+    <li>a:hover - 鼠标位于链接上方</li>
+    <li>a:active - 链接被点击的时刻</li>
+</ul>
+<hr />
+
+
+<h2>text-decoration 去掉链接的下划线</h2>
+<label>平时的时候没有下划线，鼠标放在上面的时候出现下划线</label>
+<xmp>
+a:link{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+</xmp>
+<hr />
+
+
+<h2>font-size 鼠标放上去的时候放大</h2>
+<xmp>
+a:hover{
+    font-size: 150%;
+}
+</xmp>
+<hr />
+
+
+<h2>background-color 鼠标放上去的时候有背景颜色</h2>
+<xmp>
+a:hover{
+    background-color: aquamarine;
+}
+</xmp>
+<hr />
+
+<a href="https://bilibili.com" target="_blank" >这是个链接</a>
+<hr />
+
+<h2>链接框</h2>
+<a class="link-frame" href="https://jianshu.com/" target="_blank">这是个链接框</a>
+
+</body>
+</html>
