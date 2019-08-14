@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>list</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+<h1>列表</h1>
+
+<h2>将所有属性写在一个声明中</h2>
+<xmp>
+    li{
+        list-style: url("xxx.jpg") square inside;
+    }
+</xmp>
+<hr />
+
+
+<div style="background-color: #8abfff">
+    <h2>list-style-type 列表类型</h2>
+    <div>
+        <xmp>
+    默认
+        </xmp>
+        <ul>
+            <li>disc</li>
+        </ul>
+        <hr />
+
+        <xmp>
+    ul.circle{
+        list-style-type: circle;
+    }
+        </xmp>
+        <ul class="circle">
+            <li>circle</li>
+        </ul>
+        <hr />
+
+        <xmp>
+    ul.square{
+        list-style-type: square;
+    }
+        </xmp>
+        <ul class="square">
+            <li>square</li>
+        </ul>
+        <hr />
+    </div>
+    <hr />
+    <div>
+        <xmp>
+    大/小写罗马数字
+    ol.lower-roman{
+        list-style-type: lower-roman;
+    }
+        </xmp>
+        <ol class="lower-roman">
+            <li>lower-roman</li>
+            <li>lower-roman</li>
+            <li>lower-roman</li>
+        </ol>
+        <hr />
+
+        <xmp>
+    大/小写字母
+    ol.upper-alpha{
+        list-style-type: upper-alpha;
+    }
+        </xmp>
+        <ol class="upper-alpha">
+            <li>upper-alpha</li>
+            <li>upper-alpha</li>
+            <li>upper-alpha</li>
+        </ol>
+        <hr />
+
+        <xmp>
+    小写希腊字母
+    ol.lower-greek{
+        list-style-type: lower-greek;
+    }
+        </xmp>
+        <ol class="lower-greek">
+            <li>lower-greek</li>
+            <li>lower-greek</li>
+            <li>lower-greek</li>
+        </ol>
+        <hr />
+    </div>
+</div>
+
+<div style="background-color: bisque">
+    <h2>list-style-image 列表项图片</h2>
+    <xmp>
+    ul.ul-image li{
+        list-style-image: url("../../Resources/img/flower_icon.png");
+    }
+    </xmp>
+    <ul class="ul-image">
+        <li>00001</li>
+        <li>00002</li>
+    </ul>
+</div>
+
+<div style="background-color: gold">
+    <h2>list-style-position 列表标识位置</h2>
+    <xmp>
+    ul.inside{
+        list-style-position: inside;
+    }
+    </xmp>
+    <ul class="inside">
+        <li>inside</li>
+        <li>inside</li>
+    </ul>
+    <hr />
+    <xmp>
+    ul.outside{
+        list-style-position: outside;
+    }
+    </xmp>
+    <ul class="outside">
+        <li>outside</li>
+        <li>outside</li>
+    </ul>
+</div>
+
+</body>
+</html>
