@@ -1,0 +1,84 @@
+/*缩进*/
+p.inner{
+    text-indent: 4em;
+}
+p.outer{
+    text-indent: -4em;
+    padding-left: 4em;
+}
+p.percentage{
+    text-indent: 20%;   /*缩进父元素的20%*/
+}
+
+
+/*对齐*/
+p.justify{
+    text-align: justify;    /*水平对齐*/
+    /*text-align: left;       !*默认为左对齐*!*/
+    /*text-align: center;     !*居中对齐*!*/
+}
+
+
+/*字间距*/
+h4{
+    letter-spacing: 20px;
+}
+/*词间距*/
+h5{
+    word-spacing: 20px;
+}
+
+
+/*字符转换*/
+p.upper{
+    text-transform: uppercase;
+}
+p.lower{
+    text-transform: lowercase;
+}
+p.capitalize{
+    text-transform: capitalize;
+}
+
+
+/*字符修饰*/
+p.underline{
+    text-decoration: underline;
+}
+p.overline{
+    text-decoration: overline;
+}
+p.line-through{
+    text-decoration: line-through;
+}
+p.blink{
+    text-decoration: blink;     /*Chrome 和 Safari好像都显示不了*/
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/*处理空白符*/
+p.normal{
+    white-space: normal;
+}
+p.pre{
+    white-space: pre;
+}
+p.nowrap{
+    white-space: nowrap;
+}
+p.pre-wrap{
+    white-space: pre-wrap;
+}
+p.pre-line{
+    white-space: pre-line;
+}
+
+
+/*文本方向*/
+p.rtl{
+    direction: rtl;
+}
