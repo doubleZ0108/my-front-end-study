@@ -1,0 +1,30 @@
+/*列表类型*/
+ul.circle{
+    list-style-type: circle;
+}
+ul.square{
+    list-style-type: square;
+}
+
+ol.lower-roman{
+    list-style-type: lower-roman;
+}
+ol.upper-alpha{
+    list-style-type: upper-alpha;
+}
+ol.lower-greek{
+    list-style-type: lower-greek;
+}
+
+/*列表项图片*/
+ul.ul-image li{
+    list-style-image: url("../../Resources/img/flower_icon.png");
+}
+
+/*列表标识位置*/
+ul.inside{
+    list-style-position: inside;
+}
+ul.outside{
+    list-style-position: outside;
+}
