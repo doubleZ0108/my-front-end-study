@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>background</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+<h2>background</h2>
+<label>所有背景属性都不能继承</label>
+<hr />
+
+<section style="background-color: lightpink;color: blue;padding: 20px;">
+    <h3>将所有属性写在一个声明中</h3>
+    <xmp>
+        background: #ff0000 url("../../Resources/img/forest.jpg") no-repeat fixed center;
+    </xmp>
+</section>
+<hr />
+
+
+<h3>background-color</h3>
+<ul>
+    <li>默认值是transparent</li>
+    <li>一个元素没有指定背景色，那么背景就是透明的，这样其祖先元素的背景才能看见</li>
+</ul>
+<p>I have a background color.</p>
+<p class="padding">And I have a padding. Look nice!</p>
+<hr />
+
+
+
+<h3>background-image</h3>
+<h4>背景重复</h4>
+<xmp>
+    background-repeat: no-repeat;       /*不允许图像在任何方向上平铺*/
+    background-repeat: repeat;          /*在水平垂直方向都平铺*/
+    background-repeat: repeat-x;        /*只在水平方向平铺*/
+    background-repeat: repeat-y;        /*只在垂直方向平铺*/
+</xmp>
+<hr />
+
+<h4>背景关联</h4>
+<label>滚动屏幕的时候背景图片不会随之滚动；滚动到超过图像位置时图像也不会消失</label>
+<xmp>
+    background-repeat: no-repeat;
+    background-attachment: fixed;       /*背景相对于可视区是固定的*/
+</xmp>
+
+<h4>背景定位</h4>
+<label>需要把background-attachment设置为fixed才能让某些浏览器正常定位</label>
+<div>
+    <div style="float: left">
+        <ul>
+            <li>关键字定位
+                <xmp>
+                    background-position: center;        /*让图像居中显示，两端填充*/
+                    background-position: right top;     /*可以使用两个关键词*/
+                    background-position: right;         /*如果只有一个，另一个默认为center*/
+                </xmp>
+            </li>
+            <li>百分数值定位
+                <xmp>
+                    background-position: 0% 0%;             /*默认处于左上角*/
+                    background-position: 50% 50%;           /*图像居中*/
+                    background-position: 66% 33%;           /*水平2/3，垂直1/3处*/
+                </xmp>
+            </li>
+            <li>长度值定位
+                <xmp>
+                    background-position: 50px 100px;    /*图像的左上角将在元素内边距左上角👉50像素，👇100像素*/
+                </xmp>
+            </li>
+        </ul>
+    </div>
+
+    <div style="float: left;margin-left: 20px;">
+        <p class="flower">在段落右上角出现图像</p>
+    </div>
+</div>
+<div style="clear: both"></div>
+<hr />
+
+
+<h4>背景图片的应用</h4>
+<p class="siri">This is a paragraph for Siri. And I have a background image.</p>
+<br />
+
+<a class="her" href="https://github.com/doubleZ0108">I am a link and I have a background image.</a>
+<br />
+
+<form style="margin-top: 40px;">
+    <textarea placeholder="I am a textarea and I have a background image."></textarea>
+</form>
+
+</body>
+</html>
