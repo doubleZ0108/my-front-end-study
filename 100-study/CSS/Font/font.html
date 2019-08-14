@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>font</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <style>
+        label{
+            font-weight: bold;
+            font-size: large;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<h1>字体</h1>
+<ul>
+    <li>通用字体系列
+        <ul>
+            <li>Serif</li>
+            <li>Sans-serif</li>
+            <li>Monospace</li>
+            <li>Cursive</li>
+            <li>Fantasy</li>
+        </ul>
+    </li>
+    <li>特定字体系列</li>
+</ul>
+<hr />
+
+<div style="background-color: #ff5b3f;color: white;">
+    <h2>将所有属性写在一个声明里</h2>
+    <xmp>
+        p.text{
+            font: italic bold 12px arial, sans-serif;
+        }
+    </xmp>
+    <p class="text">This is a text</p>
+</div>
+<hr />
+
+<div style="background-color: #76c4c6;">
+    <h2>font-family 使用字体系列</h2>
+    <ul>
+        <li>使用通用字体系列
+            <label>会从这个通用字体系列中选择一个字体显示</label>
+<xmp>
+body{
+    font-family: sans-serif;
+}
+</xmp>
+        </li>
+        <li>使用指定字体系列
+            <label>如果用户没有指定的字体，会使用后面的通用字体中的一种来显示</label>
+<xmp>
+h1{
+    font-family: Georgia, serif;
+}
+</xmp>
+        </li>
+        <li>指定一系列类似的字体作为备选
+            <label>会按照从前到后的优先级查找这些字体，匹配第一个可以使用的；如果都不可用，就会选择serif中的一种</label>
+            <label>只有当字体名中有空格，或者字体名包含#和$之类的符号，则需要加引号</label>
+<xmp>
+p{
+    font-family: Times, "Times New Roman", "New Century Schoolbook", Georgia, 'New York', serif;
+}
+</xmp>
+        </li>
+    </ul>
+</div>
+<hr />
+
+<div style="background-color: gold">
+    <h2>font-style 字体风格</h2>
+    <label>斜体italic是一种简单的字体风格，对每个字母的结构有一些小改动；倾斜oblique是正常竖直文本的倾斜版本</label>
+    <xmp>
+p.italic{
+    font-style: italic;
+}
+p.oblique{
+    font-style: oblique;
+}
+    </xmp>
+    <p class="normal">normal</p>
+    <p class="italic">italic</p>
+    <p class="oblique">oblique</p>
+</div>
+<hr />
+
+<div style="background-color: greenyellow">
+    <h2>font-varient 字体变形</h2>
+    <xmp>
+p.small-caps{
+    font-variant: small-caps;
+}
+    </xmp>
+    <p class="small-caps">small-caps</p>
+</div>
+<hr />
+
+<div style="background-color: #ff988c">
+    <h2>font-weight 字体粗细</h2>
+    <xmp>
+p.bold{
+    font-width: bold;
+}
+p.thinnest{
+    font-weight: 100;
+}
+p.thickest{
+    font-weight: 900;
+}
+    </xmp>
+    <p class="bold">bold</p>
+    <p class="thinnest">thinnest</p>
+    <p class="thickest">thickest</p>
+    <label>bolder设置比所继承值更粗一个单位；lighter比所继承值浅一个单位</label>
+    <xmp>
+p.bolder{
+    font-weight: bolder;
+}
+p.lighter{
+    font-weight: lighter;
+}
+    </xmp>
+    <p class="bolder">bolder</p>
+    <p class="lighter">lighter</p>
+</div>
+<hr />
+
+<div style="background-color: #87bbff;">
+    <h2>font-size 字体大小</h2>
+    <ul>
+        <li>绝对值
+            <ul>
+                <li>将文本设置为指定的大小</li>
+                <li>不允许用户改变文字大小</li>
+                <li>绝对大小在确定了输出的物理尺寸时很有用</li>
+            </ul>
+        </li>
+        <li>相对值
+            <ul>
+                <li>相对于周围元素来设置大小</li>
+                <li>允许用户在浏览器中改变文字大小</li>
+            </ul>
+        </li>
+    </ul>
+    <hr />
+    <ul>
+        <li>像素
+            <xmp>
+p.pixel{
+    font-size: 16px;
+}
+            </xmp>
+            <p class="pixel">16 pixel</p>
+        </li>
+        <li>em
+            <label>W3C推荐用em尺寸</label>
+            <label>1em等于当前此村，如果一个元素字体大小为16px，那么对于该元素，1em==16px；设置字体大小时，em的值会相对于夫元素的字体大小改变</label>
+            <xmp>
+p.em-larger{
+    font-size: 2.5em;
+}
+p.em-smaller{
+    font-size: 0.6em;
+}
+            </xmp>
+            <p class="em-larger">2.5 em</p>
+            <p class="em-smaller">0.6 em</p>
+        </li>
+        <li>百分比和em
+            <label>将body的大小设为100%，再使用em</label>
+            <xmp>
+body{
+    font-size: 100%;
+}
+p{
+    font-size: 1.5em;
+}
+            </xmp>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>
