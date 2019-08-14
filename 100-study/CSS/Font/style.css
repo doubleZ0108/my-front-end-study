@@ -1,0 +1,65 @@
+/*将所有属性写在一个声明里*/
+p.text{
+    font: italic bold 12px arial, sans-serif;
+}
+
+/*指定字体系列*/
+body{
+    font-family: sans-serif;
+}
+h1{
+    font-family: Georgia, serif;
+}
+p{
+    font-family: Times, "Times New Roman", "New Century Schoolbook", Georgia, 'New York', serif;
+}
+
+
+/*字体风格*/
+p.normal{
+    font-style: normal;
+}
+p.italic{
+    font-style: italic;
+}
+p.oblique{
+    font-style: oblique;
+}
+
+
+/*字体变形*/
+p.small-caps{
+    font-variant: small-caps;
+}
+
+
+
+/*字体粗细*/
+p.bold{
+    font-width: bold;
+}
+p.thinnest{
+    font-weight: 100;
+}
+p.thickest{
+    font-weight: 900;
+}
+
+p.bolder{
+    font-weight: bolder;
+}
+p.lighter{
+    font-weight: lighter;
+}
+
+
+/*字体大小*/
+p.pixel{
+    font-size: 16px;
+}
+p.em-larger{
+    font-size: 2.5em;
+}
+p.em-smaller{
+    font-size: 0.6em;
+}
