@@ -1,0 +1,39 @@
+p{
+    border: red solid 1px;
+    width: 30%;
+    height: 50px;
+}
+
+p.outline-dotted{
+    outline: blue dotted 3px;
+}
+
+p.outline-dashed{
+    outline-color: blue;
+    outline-style: dashed;
+    outline-width: 3px;
+}
+
+p.outline-solid{
+    outline: blue solid 3px;
+}
+
+p.outline-double{
+    outline: blue double 3px;
+}
+
+p.outline-groove{
+    outline: blue groove 3px;
+}
+
+p.outline-ridge{
+    outline: blue ridge 3px;
+}
+
+p.outline-inset{
+    outline: blue inset 3px;
+}
+
+p.outline-outset{
+    outline: blue outset 3px;
+}
