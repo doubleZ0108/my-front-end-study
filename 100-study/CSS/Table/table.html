@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>table</title>
+    <style>
+        label{
+            font-weight: bold;
+            font-size: large;
+            display: block;
+        }
+    </style>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+<h1>表格</h1>
+
+<div style="background-color: bisque">
+    <h2>border 表格边框</h2>
+    <label>默认是双线条边框，因为table，tr，td都有独立的边框</label>
+    <xmp>
+table.border, table.border th, table.border td{
+    border: blue solid 1px;
+}
+    </xmp>
+    <table class="border">
+        <tr>
+            <td>00</td>
+            <td>01</td>
+            <td>02</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+        </tr>
+    </table>
+    <hr />
+
+    <h2>collapse 折叠</h2>
+    <label>单线条边框(折叠边框)</label>
+    <xmp>
+table#collapse{
+    border-collapse: collapse;      /*显示为单线条边框*/
+}
+    </xmp>
+    <table id="collapse" class="border">
+        <tr>
+            <td>00</td>
+            <td>01</td>
+            <td>02</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+        </tr>
+    </table>
+</div>
+<hr />
+
+<div style="background-color: #84baed">
+    <h2>height width 表格宽度和高度</h2>
+    <label>设置表格的高度 和 表头的高度</label>
+    <table class="frame" border="1">
+        <tr>
+            <th>Name</th>
+            <th>School</th>
+        </tr>
+        <tr>
+            <td>zz</td>
+            <td>tongji university</td>
+        </tr>
+        <tr>
+            <td>gf</td>
+            <td>suzhou university</td>
+        </tr>
+    </table>
+</div>
+<hr />
+
+<div style="background-color: gold">
+    <h2>text-align vertical-align 文本对齐</h2>
+    <label>例.水平方向右对齐，垂直方向下对齐</label>
+    <xmp>
+table.position td{
+    text-align: right;          /*水平方向对齐方式*/
+    vertical-align: bottom;     /*垂直方向对齐方式*/
+}
+    </xmp>
+    <table class="position" border="1">
+        <tr>
+            <th>Name</th>
+            <th>School</th>
+        </tr>
+        <tr>
+            <td>zz</td>
+            <td>tongji university</td>
+        </tr>
+        <tr>
+            <td>gf</td>
+            <td>suzhou university</td>
+        </tr>
+    </table>
+</div>
+<hr />
+
+<div style="background-color: lightpink">
+    <h2>padding 表格内容与边框的距离</h2>
+    <xmp>
+没加距离的普通情况
+    </xmp>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>School</th>
+        </tr>
+        <tr>
+            <td>zz</td>
+            <td>tongji university</td>
+        </tr>
+        <tr>
+            <td>gf</td>
+            <td>suzhou university</td>
+        </tr>
+    </table>
+
+    <hr />
+
+    <xmp>
+table.padding td{
+    padding: 15px;
+}
+    </xmp>
+    <table class="padding" border="1">
+        <tr>
+            <th>Name</th>
+            <th>School</th>
+        </tr>
+        <tr>
+            <td>zz</td>
+            <td>tongji university</td>
+        </tr>
+        <tr>
+            <td>gf</td>
+            <td>suzhou university</td>
+        </tr>
+    </table>
+</div>
+<hr />
+
+<div style="background-color: #c1ffd3">
+    <h2>background-color 表格颜色</h2>
+    <table class="color" border="1">
+        <tr>
+            <th>Name</th>
+            <th>School</th>
+        </tr>
+        <tr>
+            <td>zz</td>
+            <td>tongji university</td>
+        </tr>
+        <tr>
+            <td>gf</td>
+            <td>suzhou university</td>
+        </tr>
+    </table>
+</div>
+<hr />
+
+</body>
+</html>
