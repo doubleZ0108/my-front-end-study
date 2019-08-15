@@ -2,6 +2,8 @@ table{
     margin: 20px;
 }
 
+
+
 /*表格边框*/
 table.border, table.border th, table.border td{
     border: blue solid 1px;
@@ -11,14 +13,12 @@ table#collapse{
     border-collapse: collapse;      /*显示为单线条边框*/
 }
 
+table#spacing{
+    border-collapse: separate;
+    border-spacing: 10px 30px;
+}
 
-/*表格的高度和宽度*/
-table.frame{
-    width: 100%;
-}
-table.frame th{
-    height: 100px;
-}
+
 
 
 /*文本对齐*/
@@ -29,10 +29,40 @@ table.position td{
 }
 
 
+
+
+/*空单元*/
+table.empty{
+    border-collapse: separate;
+    empty-cells: hide;
+}
+
+
+
 /*表格内容与边框的距离*/
 table.padding td{
     padding: 15px;
 }
+
+
+
+
+/*表格标题的位置*/
+table.caption-bottom caption{
+    caption-side: bottom;
+}
+
+
+
+
+/*表格的高度和宽度*/
+table.frame{
+    width: 100%;
+}
+table.frame th{
+    height: 100px;
+}
+
 
 
 /*表格颜色*/
@@ -46,3 +76,5 @@ table.color th{
 table.color td{
     background-color: #5599ff;
 }
+
+
