@@ -1,0 +1,48 @@
+table{
+    margin: 20px;
+}
+
+/*表格边框*/
+table.border, table.border th, table.border td{
+    border: blue solid 1px;
+}
+
+table#collapse{
+    border-collapse: collapse;      /*显示为单线条边框*/
+}
+
+
+/*表格的高度和宽度*/
+table.frame{
+    width: 100%;
+}
+table.frame th{
+    height: 100px;
+}
+
+
+/*文本对齐*/
+table.position td{
+    height: 50px;
+    text-align: right;          /*水平方向对齐方式*/
+    vertical-align: bottom;     /*垂直方向对齐方式*/
+}
+
+
+/*表格内容与边框的距离*/
+table.padding td{
+    padding: 15px;
+}
+
+
+/*表格颜色*/
+table.color, table.color th, table.color td{
+    border: #4a51ff solid 1px;
+}
+table.color th{
+    background-color: blue;
+    color: white;
+}
+table.color td{
+    background-color: #5599ff;
+}
