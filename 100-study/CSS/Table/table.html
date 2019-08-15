@@ -38,7 +38,7 @@ table.border, table.border th, table.border td{
     </table>
     <hr />
 
-    <h2>collapse 折叠</h2>
+    <h2>border-collapse 折叠</h2>
     <label>单线条边框(折叠边框)</label>
     <xmp>
 table#collapse{
@@ -57,24 +57,26 @@ table#collapse{
             <td>12</td>
         </tr>
     </table>
-</div>
-<hr />
+    <hr />
 
-<div style="background-color: #84baed">
-    <h2>height width 表格宽度和高度</h2>
-    <label>设置表格的高度 和 表头的高度</label>
-    <table class="frame" border="1">
+    <h2>border-spacing 表格边框之间的空白</h2>
+    <label>水平方向空隙为10px，垂直方向空隙为30px</label>
+    <xmp>
+table#spacing{
+    border-collapse: separate;
+    border-spacing: 10px 30px;
+}
+    </xmp>
+    <table id="spacing" class="border">
         <tr>
-            <th>Name</th>
-            <th>School</th>
+            <td>00</td>
+            <td>01</td>
+            <td>02</td>
         </tr>
         <tr>
-            <td>zz</td>
-            <td>tongji university</td>
-        </tr>
-        <tr>
-            <td>gf</td>
-            <td>suzhou university</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
         </tr>
     </table>
 </div>
@@ -101,6 +103,26 @@ table.position td{
         <tr>
             <td>gf</td>
             <td>suzhou university</td>
+        </tr>
+    </table>
+</div>
+<hr />
+
+<div style="background-color: #a18eb2">
+    <h2>空单元</h2>
+    <xmp>
+table.empty{
+    border-collapse: separate;
+    empty-cells: hide;
+}
+    </xmp>
+    <table class="empty" border="1">
+        <tr>
+            <td>00</td>
+            <td>01</td>
+        </tr>
+        <tr>
+            <td>10</td>
         </tr>
     </table>
 </div>
@@ -150,6 +172,69 @@ table.padding td{
 </div>
 <hr />
 
+<div style="background-color: #ff5157;color: white;">
+    <h2>caption-side 表格标题的位置</h2>
+    <xmp>
+默认情况的标题位置
+    </xmp>
+    <table border="1">
+        <caption>这里是标题</caption>
+        <tr>
+            <th>Name</th>
+            <th>School</th>
+        </tr>
+        <tr>
+            <td>zz</td>
+            <td>tongji university</td>
+        </tr>
+        <tr>
+            <td>gf</td>
+            <td>suzhou university</td>
+        </tr>
+    </table>
+    <hr />
+    <xmp>
+table.caption-bottom caption{
+    caption-side: bottom;
+}
+    </xmp>
+    <table class="caption-bottom" border="1">
+        <caption>这里是标题</caption>
+        <tr>
+            <th>Name</th>
+            <th>School</th>
+        </tr>
+        <tr>
+            <td>zz</td>
+            <td>tongji university</td>
+        </tr>
+        <tr>
+            <td>gf</td>
+            <td>suzhou university</td>
+        </tr>
+    </table>
+</div>
+
+<div style="background-color: #84baed">
+    <h2>height width 表格宽度和高度</h2>
+    <label>设置表格的高度 和 表头的高度</label>
+    <table class="frame" border="1">
+        <tr>
+            <th>Name</th>
+            <th>School</th>
+        </tr>
+        <tr>
+            <td>zz</td>
+            <td>tongji university</td>
+        </tr>
+        <tr>
+            <td>gf</td>
+            <td>suzhou university</td>
+        </tr>
+    </table>
+</div>
+<hr />
+
 <div style="background-color: #c1ffd3">
     <h2>background-color 表格颜色</h2>
     <table class="color" border="1">
@@ -168,6 +253,8 @@ table.padding td{
     </table>
 </div>
 <hr />
+
+
 
 </body>
 </html>
