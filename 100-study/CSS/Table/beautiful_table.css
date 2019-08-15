@@ -1,0 +1,26 @@
+table.mytable{
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    width: 50%;
+    border-collapse: collapse;
+}
+
+table.mytable th, table.mytable td{
+    font-size: 1em;
+    border: #98bf21 solid 1px;
+    padding: 10px;
+}
+
+
+table.mytable th{
+    font-size: 1.1em;
+    background-color: #A7C942;
+    color: white;
+}
+
+tr.light td{
+    background-color: #ffffff;
+}
+
+tr.dark td{
+    background-color: #EAF2D3;
+}
