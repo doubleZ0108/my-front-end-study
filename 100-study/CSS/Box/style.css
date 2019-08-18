@@ -23,3 +23,105 @@ h6{
     padding-bottom: 2ex;
     padding-left: 5%;
 }
+
+
+/*边框样式*/
+div.border p{
+    width: 20%;
+    padding: 5px;
+}
+p.dotted{
+    border-style: dotted;
+}
+p.dashed{
+    border-style: dashed;
+}
+p.solid{
+    border-style: solid;
+}
+p.double{
+    border-style: double;
+}
+p.groove{
+    border-style: groove;
+}
+p.ridge{
+    border-style: ridge;
+}
+p.inset{
+    border-style: inset;
+}
+p.outset{
+    border-style: outset;
+}
+p.inherit{
+    border-style: inherit;
+}
+
+
+/*每一边设置不同的边框*/
+p.mix4{
+    border-style: dotted solid double dashed;
+}
+p.mix4{
+    border-top-style: dotted;
+    border-right-style: solid;
+    border-bottom-style: double;
+    border-left-style: dashed;
+}
+p.mix3{
+    border-style: dashed solid double;
+}
+p.mix2{
+    border-style: dashed solid;
+}
+
+
+/*把图片链接边框设置为outset，使之看上去像是凸起按钮*/
+a:link img{
+    height: 100px;
+    width: 100px;
+    border-style: outset;
+}
+
+
+/*边框的宽度*/
+p.thin{
+    border-style: solid;
+    border-width: thin;
+}
+p.thick{
+    border-style: solid;
+    border-width: thick;
+}
+
+p.mix-width{
+    border-style: solid;
+    border-width: 15px 5px 20px 50px;
+}
+p.mix-width{
+    border-style: solid;
+    border-top-width: 15px;
+    border-right-width: 5px;
+    border-bottom-width: 20px;
+    border-left-width: 50px;
+}
+
+
+/*边框的颜色*/
+p.mix-color{
+    width: 500px;
+    border-style: solid;
+    border-width: 10px;
+    border-color: blue rgb(25%,35%,45%) #909090 red;
+}
+
+/*透明边框*/
+a.transparent:link, a.transparent:visited{
+    border-style: solid;
+    border-width: 5px;
+    border-color: transparent;
+}
+a.transparent:hover{
+    border-color: gray;
+}
