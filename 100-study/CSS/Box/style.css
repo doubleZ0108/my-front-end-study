@@ -16,12 +16,12 @@ h5{
     padding: 10px 0.25em 2ex 5%;
 }
 
-/*使用单边属性设置*/
 h6{
     padding-top: 10px;
     padding-right: 0.25em;
     padding-bottom: 2ex;
-    padding-left: 5%;
+    padding-left: 5%;/*使用单边属性设置*/
+
 }
 
 
