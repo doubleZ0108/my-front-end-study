@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>框模型</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <style>
+        label{
+            font-weight: bold;
+            font-size: large;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div style="background-color: lightpink" class="padding">
+    <h2>padding 内边框</h2>
+    <ul>
+        <li>定义元素边框和元素内容之间的空白区域</li>
+        <li>接受
+            <ul>
+                <li>数值</li>
+                <li>百分比: 上下内边距和左右内边距都是相对于父元素的width计算的
+                    <div style="background-color: rebeccapurple;width: 200px;height: 200px;color: white;">
+                        <p class="percentage">这个段落的↕️↔️内边距都是200px*20%</p>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li>不允许使用负值</li>
+    </ul>
+
+    <hr />
+
+    <ul>
+        <li>按照 ⬆️➡️⬇️⬅️的顺序设置
+            <xmp>
+                h5{
+                padding: 10px 0.25em 2ex 5%;
+                }
+            </xmp>
+        </li>
+        <li>使用单边属性设置
+            <xmp>
+                h6{
+                padding-top: 10px;
+                padding-right: 0.25em;
+                padding-bottom: 2ex;
+                padding-bottom: 5%;
+                }
+            </xmp>
+        </li>
+    </ul>
+</div>
+<hr />
+
+</body>
+</html>
