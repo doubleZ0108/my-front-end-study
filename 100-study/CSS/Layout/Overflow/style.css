@@ -1,0 +1,18 @@
+.board{
+    height: 200px;
+    width: 200px;
+    background-color: burlywood;
+    margin: 30px;
+}
+
+#board-scroll{
+    overflow: scroll;
+}
+
+#board-auto{
+    overflow: auto;
+}
+
+#board-hidden{
+    overflow: hidden;
+}
