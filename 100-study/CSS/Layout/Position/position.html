@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Positioning</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+<h1>定位</h1>
+
+<h2>position 定位类型</h2>
+<table border="1" style="border-collapse: collapse;">
+    <tr>
+        <th>值</th>
+        <th>描述</th>
+    </tr>
+    <tr>
+        <td>absolute</td>
+        <td>绝对定位，相对于最近的祖先元素(非static定位的祖先)定位，如果没有则就是相对于body定位</td>
+    </tr>
+    <tr>
+        <td>fixed</td>
+        <td>固定定位，相对于浏览器窗口进行定位</td>
+    </tr>
+    <tr>
+        <td>relative</td>
+        <td>相对定位</td>
+    </tr>
+    <tr>
+        <td>static</td>
+        <td>默认值，没有定位(忽略top,bottom,left,right以及z-index声明)</td>
+    </tr>
+</table>
+
+<h3>absolute 绝对定位</h3>
+<p>div1设置为absolute定位；div2设置为absolute定位，👈相对于祖先div1偏60px，👆相对于祖先div偏30px</p>
+<div id="div1">div1
+    <div id="div2">div2</div>
+</div>
+<br /><br /><br /><br /><br /><hr />
+
+
+<h3>fixed 固定定位</h3>
+<p>div3为fixed定位，相对于浏览器窗口👈偏100px，👆偏650px</p>
+<p>且滚动界面时，div3仍相对于屏幕静止</p>
+<div id="div3">div3</div>
+<br /><br /><br /><br /><br /><hr />
+
+
+
+<h3>relative 相对定位</h3>
+<p>div4为默认布局；div5/div6为relative布局</p>
+<p>div5相对于div4，👈偏30px</p>
+<p>div6相对于div4👈偏20px；相对于div5👆偏10px</p>
+<div id="div4">div4</div>
+<div id="div5">div5</div>
+<div id="div6">div6</div>
+<br /><br /><br /><br /><br /><hr />
+
+
+</body>
+</html>
