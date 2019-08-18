@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>框模型</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <style>
+        label{
+            font-weight: bold;
+            font-size: large;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div style="background-color: #8ec8f9" class="border">
+    <h2>border 边框</h2>
+
+    <h3>将所有属性写在一个属性中</h3>
+    <xmp>
+        p{
+        border: red solid 1px;
+        }
+    </xmp>
+    <hr />
+
+    <div style="background-color: #6aaff9">
+        <h3>border-style 边框的样式</h3>
+        <p class="dotted">dotted 点状</p>
+        <p class="dashed">dashed 虚线</p>
+        <p class="solid">solid 实线</p>
+        <p class="double">double 双线</p>
+        <p class="groove">groove 3D凹槽</p>
+        <p class="ridge">ridge 3D垄状</p>
+        <p class="inset">inset 3Dinset</p>
+        <p class="outset">outset 3Doutset</p>
+        <p class="inherit">inherit 从父元素继承边框样式</p>
+        <hr />
+
+        <h3>每一边设置不同的边框</h3>
+        <xmp>
+            p.mix4{
+            border-style: dotted solid double dashed;
+            }
+            p.mix4{
+            border-top-style: dotted;
+            border-right-style: solid;
+            border-bottom-style: double;
+            border-left-style: dashed;
+            }
+        </xmp>
+        <p class="mix4">mix4「dotted solid double dashed」</p>
+        <p class="mix3">mix3「dashed solid double」</p>
+        <p class="mix2">mix2「dashed solid」</p>
+        <hr />
+
+        <h3>可以把图片链接边框设置为outset，使之看上去像是凸起按钮</h3>
+        <xmp>
+            a:link img{
+            border-style: outset;
+            }
+        </xmp>
+        <a href="https://github.com/doubleZ0108"><img src="Resources/img/icon.jpg" /></a>
+    </div>
+    <hr />
+
+    <div style="background-color: #378ff9">
+        <h3>border-width 边框的宽度</h3>
+        <label>可以指定长度值；也可以使用3个关键词：thin medium thick</label>
+        <xmp>
+            p.thick{
+            border-style: solid;
+            border-width: thick;
+            }
+
+            p.mix-width{
+            border-style: solid;
+            border-width: 15px 5px 20px 50px;
+            }
+        </xmp>
+        <p class="thin">thin</p>
+        <p class="thick">thick</p>
+        <p class="mix-width">mix-width「15px 5px 20px 50px」</p>
+
+        <hr />
+        <label>⚠️：如果直接写p{border-width: 20px;} 是不会有任何效果的，因为如果不指定style，则边框默认为none，根本没有边框，更不用说20像素了</label>
+    </div>
+    <hr />
+
+    <div style="background-color: #62c0f9">
+        <h3>border-color 边框的颜色</h3>
+        <p class="mix-color">mix-color「blue rgb(25%,35%,45%) #909090 red」</p>
+        <hr />
+
+        <label>透明边框</label>
+        <a class="transparent" href="#">This is a transparent link.</a>
+    </div>
+
+</div>
+
+
+</body>
+</html>
