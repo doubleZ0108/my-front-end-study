@@ -1,0 +1,54 @@
+/*定位类型*/
+/*绝对定位*/
+#div1{
+    height: 50px;
+    width: 100px;
+    background-color: yellow;
+    position: absolute;
+    /*position: fixed;*/
+}
+#div2{
+    height: 50px;
+    width: 50px;
+    background-color: red;
+
+    position: absolute;
+    left: 60px;
+    top: 30px;
+}
+
+
+/*固定布局*/
+#div3{
+    height: 100px;
+    width: 80px;
+    background-color: blue;
+
+    position: fixed;
+    left: 100px;
+    top: 600px;
+}
+
+/*相对布局*/
+#div4{
+    height: 50px;
+    width: 50px;
+    background-color: green;
+}
+#div5{
+    height: 50px;
+    width: 50px;
+    background-color: yellow;
+
+    position: relative;
+    left: 30px;
+}
+#div6{
+    height: 50px;
+    width: 50px;
+    background-color: red;
+
+    position: relative;
+    left: 20px;
+    top: 10px;
+}
