@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>z-index</title>
+    <style>
+        div{
+            height: 200px;
+        }
+
+        img.up{
+            position: absolute;
+            z-index: -1;
+        }
+        img.down{
+            position: absolute;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+<h1>z-index 元素的堆叠顺序</h1>
+<p>设置一个定位元素沿z轴的位置，z轴为垂直延伸到显示区的轴。如果为正数，则离用户更近</p>
+<ul>
+    <li>较高堆叠顺序的元素处在上面</li>
+    <li>元素可拥有负的z-index属性值</li>
+    <lī>仅能在定位元素上奏效(例如position: absolute;)</lī>
+</ul>
+<hr />
+
+<h2>图片衬于文字下</h2>
+<xmp>
+img.up{
+    position: absolute;
+    z-index: -1;
+}
+</xmp>
+<div>
+    <img class="up" src="Resources/img/flower.png" />
+    <p>
+        这里是一大段文字.........<br />
+        这里是一大段文字.........<br />
+        这里是一大段文字.........<br />
+        这里是一大段文字.........<br />
+        这里是一大段文字.........<br />
+    </p>
+</div>
+<hr />
+
+
+<h2>图片衬于文字上</h2>
+<div>
+    <img class="down" src="Resources/img/flower.png" />
+    <p>
+        这里是一大段文字.........<br />
+        这里是一大段文字.........<br />
+        这里是一大段文字.........<br />
+        这里是一大段文字.........<br />
+        这里是一大段文字.........<br />
+    </p>
+</div>
+
+
+</body>
+</html>
