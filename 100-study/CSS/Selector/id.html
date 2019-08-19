@@ -7,25 +7,31 @@
 </head>
 <body>
 
-<h3>id选择器</h3>
-<p>以 # 定义</p>
+<h2>id选择器</h2>
+<ul>
+    <li>以 # 定义</li>
+    <li>只能在文档中使用一次</li>
+    <li>不能使用id词列表（不允许有空格分隔的词列表）</li>
+</ul>
 <xmp>
     #redp{
-    color: red;
+        color: red;
     }
 
     <p id="redp">This is a red paragraph.</p>
 </xmp>
 <p id="redp">This is a red paragraph.</p>
-<br />
-<p>id选择器经常与派生选择器共同使用</p>
+<hr />
+
+
+<h3>id选择器经常与派生选择器共同使用</h3>
 <xmp>
     #reddiv p{
-    ...
+        ...
     }
 
     #reddiv table{
-    ...
+        ...
     }
 </xmp>
 <hr />
