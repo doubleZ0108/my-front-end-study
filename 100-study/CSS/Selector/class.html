@@ -7,11 +7,16 @@
 </head>
 <body>
 
-<h3>类选择器</h3>
+<h2>类选择器</h2>
 <p>以 . 定义，类名不能以数字开头</p>
 <xmp>
+    *.center{
+        text-align: center;
+    }
+    可以简写成
+
     .center{
-    text-align: center;
+        text-align: center;
     }
 
     <h6 class="center">This H6 will be center-aligned.</h6>
@@ -19,21 +24,46 @@
 </xmp>
 <h6 class="center">This H6 will be center-aligned.</h6>
 <p class="center">This paragraph will also be center-aligned.</p>
-<p>类选择器也经常与派生选择器共同使用</p>
+<hr />
+
+
+<h3>类选择器也经常与派生选择器共同使用</h3>
 <xmp>
-    类名为center的更大元素内部的表格单元的样式
+    类名为center的表格元素内部的表格单元的样式
     .center td{
-    ...
-    }
-</xmp>
-<p>类选择器还常基于元素选择</p>
-<xmp>
-    只有类名为center的表格单元生效，类名为center的段落标签不受影响
-    td.center{
-    ...
+        ...
     }
 </xmp>
 <hr />
+
+
+<h3>类选择器还常基于元素选择</h3>
+<xmp>
+    只有类名为center的表格单元生效，类名为center的段落标签不受影响
+    td.center{
+        ...
+    }
+</xmp>
+<hr />
+
+
+<h3>多类选择器</h3>
+<p>一个class值中可以包含一个词列表，每个词之间用空格分隔</p>
+<xmp>
+    p.important{
+        font-weight: bold;
+    }
+    p.warning{
+        color: red;
+    }
+    p.important.warning{             /*⚠️这里两个类没有空格*/
+        background-color: yellow;
+    }
+</xmp>
+<p class="important">This is paragraph is important.</p>
+<p class="warning">This is paragraph is warning.</p>
+<p class="important warning">This is paragraph is both important and warning.</p>
+<p class="important warning urgent">This is paragraph is 「important & warning & urgent」.</p>
 
 </body>
 </html>
