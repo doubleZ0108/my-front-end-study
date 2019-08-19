@@ -9,7 +9,8 @@ Table of Contents
          * [图像浮于段落右侧](#图像浮于段落右侧)
          * [段落首字母浮于段落左侧](#段落首字母浮于段落左侧)
          * [用列表创建水平菜单](#用列表创建水平菜单)
-      * [溢出处理](#溢出处理)
+      * [clear 清除浮动](#clear-清除浮动)
+      * [overflow 溢出处理](#overflow-溢出处理)
       * [z-index 堆叠顺序](#z-index-堆叠顺序)
       * [clip 设置元素的形状](#clip-设置元素的形状)
       
@@ -21,15 +22,21 @@ Table of Contents
 
 ## float 浮动
 
+![float](ScreenShots/float.png)
+
 ### 图像浮于段落右侧
 
 ### 段落首字母浮于段落左侧
 
 ### 用列表创建水平菜单
 
-![float](ScreenShots/float.png)
+![float_application](ScreenShots/float_application.png)
 
-## 溢出处理
+## clear 清除浮动
+
+![clear](ScreenShots/clear.png)
+
+## overflow 溢出处理
 
 ![overflow](ScreenShots/overflow.gif)
 
