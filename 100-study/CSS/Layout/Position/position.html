@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <title>Positioning</title>
     <link rel="stylesheet" href="static/css/style.css">
+    <style>
+        label{
+            font-weight: bold;
+            font-size: large;
+            display: block;
+        }
+    </style>
 </head>
 <body>
 
@@ -17,7 +24,7 @@
     </tr>
     <tr>
         <td>absolute</td>
-        <td>绝对定位，相对于最近的祖先元素(非static定位的祖先)定位，如果没有则就是相对于body定位</td>
+        <td>绝对定位，相对于最近的以定位祖先元素(可以理解为非static定位的祖先)定位，如果没有则就是相对于body定位</td>
     </tr>
     <tr>
         <td>fixed</td>
@@ -32,8 +39,10 @@
         <td>默认值，没有定位(忽略top,bottom,left,right以及z-index声明)</td>
     </tr>
 </table>
+<hr />
 
 <h3>absolute 绝对定位</h3>
+<label>绝对定位的元素框从文档流中完全删除，所占的空间会关闭，就好像该元素原来不存在一样</label>
 <p>div1设置为absolute定位；div2设置为absolute定位，👈相对于祖先div1偏60px，👆相对于祖先div偏30px</p>
 <div id="div1">div1
     <div id="div2">div2</div>
@@ -50,6 +59,7 @@
 
 
 <h3>relative 相对定位</h3>
+<label>无论是否进行移动，元素仍然占据原来的空间；移动元素会导致覆盖其他框</label>
 <p>div4为默认布局；div5/div6为relative布局</p>
 <p>div5相对于div4，👈偏30px</p>
 <p>div6相对于div4👈偏20px；相对于div5👆偏10px</p>
