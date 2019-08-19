@@ -7,10 +7,10 @@
 </head>
 <body>
 
-<h3>属性选择器</h3>
+<h2>属性选择器</h2>
 <xmp>
     [words]{
-    color: blue;
+        color: blue;
     }
 
     <p words="这个段落有words属性">这个段落有words属性</p>
@@ -20,94 +20,106 @@
 <a words="" href="https://github.com/doubleZ0108/">这个链接有words属性</a>
 <hr />
 
+<h3>让有链接的a标签才变为红色</h3>
+<xmp>
+    a.attribute[href]{
+        color: red;
+    }
+    a.attribute[href][alt]{
+        background-color: yellow;
+    }
+</xmp>
+<a class="attribute" href="https://github.com/doubleZ0108" >这个链接有 href</a>
+<br />
+<a class="attribute" alt="这个链接有 alt">这个链接有 alt</a>
+<br />
+<a class="attribute" href="#" alt="这个链接有「href & name」">这个链接有「href & alt」</a>
+<hr />
+
 
 <h3>属性和值选择器</h3>
 <xmp>
     [school=tongji]{
-    color: lightblue;
+        color: lightblue;
+    }
+    [school=tongji][name=zz]{
+        background-color: aquamarine;
     }
 
-    <p school="tongji">这是带tongji属性值的段落</p>
-    <a school="tongji" href="https://github.com/doubleZ0108/">这是带tongji属性值的链接</a>
-    <p school="qinghua">这个不带tongji属性值</p>
 </xmp>
-<p school="tongji">这是带tongji属性值的段落</p>
-<a school="tongji" href="https://github.com/doubleZ0108/">这是带tongji属性值的链接</a>
-<p school="qinghua">这个不带tongji属性值</p>
+<p school="tongji">这是school属性值为tongji的段落</p>
+<a school="tongji" href="https://github.com/doubleZ0108/">这是school属性值为tongji的链接</a>
+<p school="qinghua">这是school属性值为qinghua的段落</p>
+<p school="tongji" name="zz">这是school属性值为tongji，name属性值为zz的段落</p>
 <hr />
 
 
-<h3>属性和值选择器 - 多个值</h3>
-<ul>
-    <li>选择属性值中包含指定词汇的属性
-        <xmp>
-            [title~=hello]{
-            color: green;
-            }
 
-            <p title="hello world">hello world</p>
-            <a title="欢迎你来到 hello" href="https://github.com/doubleZ0108/">欢迎你来到 hello</a>
+<h3>属性和值选择器 - 部分属性值选择</h3>
+<ul>
+    <li>[=]: 必须完全匹配</li>
+    <li>[~=]: 选择属性值中包含指定词汇的属性
+        <xmp>
+        [title~=hello]{
+            color: green;
+        }
+
+        <p title="hello world">hello world</p>
+        <a title="欢迎你来到 hello" href="https://github.com/doubleZ0108/">欢迎你来到 hello</a>
         </xmp>
         <p title="hello world">hello world</p>
         <a title="欢迎你来到 hello" href="https://github.com/doubleZ0108/">欢迎你来到 hello</a>
     </li>
-    <li>选择属性值以指定开头的属性，盖茨必须是这个那个单词
+    <li>[^=]: 匹配属性值以指定值开头的元素
         <xmp>
-            [content|=en]{
-            color: coral;
-            }
-
-            <p content="en">en</p>
-            <p content="en-our">en-our</p>
-            <p content="en this">en this</p>
-            <p content="us-en">us-en</p>
-        </xmp>
-        <p content="en">en</p>
-        <p content="en-our">en-our</p>
-        <p content="en this">en this</p>
-        <p content="us-en">us-en</p>
-    </li>
-    <li>匹配属性值以指定值开头的元素
-        <xmp>
-            [dict^=man]{
+        [dict^=man]{
             color: deeppink;
-            }
-
-            <p dict="man">man</p>
-            <p dict="man-this">man-this</p>
-            <p dict="man this">man this</p>
+        }
         </xmp>
         <p dict="man">man</p>
         <p dict="man-this">man-this</p>
         <p dict="man this">man this</p>
     </li>
-    <li>匹配属性值以指定值结尾的元素
+    <li>[$=]: 匹配属性值以指定值结尾的元素
         <xmp>
-            [list$=boy]{
+        [list$=boy]{
             color: navy;
-            }
-
-            <p list="boy">boy</p>
-            <p list="this-boy">this-boy</p>
-            <p list="this boy">this boy</p>
+        }
         </xmp>
         <p list="boy">boy</p>
         <p list="this-boy">this-boy</p>
         <p list="this boy">this boy</p>
     </li>
-    <li>匹配属性值包含指定值
+    <li>[*=]: 匹配属性值包含指定值
         <xmp>
-            [set*=child]{
+        [set*=child]{
             color: yellowgreen;
-            }
-
-            <p set="this-child-that">this-child-that</p>
-            <p set="this-child">this-child</p>
-            <p set="child-that">child-that</p>
+        }
         </xmp>
         <p set="this-child-that">this-child-that</p>
         <p set="this-child">this-child</p>
         <p set="child-that">child-that</p>
+    </li>
+    <li>[|=]: 选择属性值以en或en-开头的所有元素
+        <xmp>
+        [content|=en]{
+            color: coral;
+        }
+        </xmp>
+        <p content="en">en</p>
+        <p content="en-our">en-our</p>
+        <p content="en this">en this</p>
+        <p content="us-en">us-en</p>
+        <br />
+        <div style="background-color: lightpink">
+        <p>假设有很多图片，命名规则都是figure-1.jpg figure-2.png等等</p>
+        <xmp>
+        可以使用如下选择器匹配所有图像
+        img[src|=figure]{
+            ...
+        }
+        </xmp>
+        </div>
     </li>
 </ul>
 <hr />
@@ -116,14 +128,14 @@
 <h3>表单的样式</h3>
 <xmp>
     input[type="text"]{
-    display: block;
-    background-color: yellow;
-    margin-bottom: 10px;
+        display: block;
+        background-color: yellow;
+        margin-bottom: 10px;
     }
     input[type="button"]{
-    display: block;
-    background-color: aqua;
-    margin-left: 10px;
+        display: block;
+        background-color: aqua;
+        margin-left: 10px;
     }
 
     <input type="text" />
