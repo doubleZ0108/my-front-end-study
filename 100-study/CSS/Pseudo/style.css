@@ -18,12 +18,6 @@ a:active{
 }
 
 
-/*:focus 当输入框获取焦点时*/
-input:focus{
-    background-color: aquamarine;
-}
-
-
 /*:first-child 首个子对象生效*/
 h6:first-child{
     color:green;
@@ -39,4 +33,32 @@ ul.first-child li:first-child{
 q:lang(this){
     quotes: "~~" "~~";
     background-color: lightgoldenrodyellow;
+}
+
+
+/*:before 在元素的内容前面插入新内容*/
+h4.before:before{
+    content: url("../../Resources/img/flower_icon.png");
+}
+
+/*:after 在元素的内容之后插入新内容*/
+h4.after:after{
+    content: url("../../Resources/img/flower_icon.png");
+}
+
+
+/*:focus 当输入框获取焦点时*/
+input:focus{
+    background-color: aquamarine;
+}
+
+
+/*:first-line 文本的首行*/
+p.first-line:first-line{
+    color: brown;
+}
+
+/*:first-letter 文本的首字母*/
+p.first-letter:first-letter{
+    font-size: xx-large;
 }
