@@ -1,30 +1,43 @@
 # Selector 选择器
 
-- [派生选择器(上下文选择器)](#contextual)
-- [id选择器](#id)
-- [class选择器](#class)
-- [属性选择器](#attribute)
+Table of Contents
+=================
 
-<a name="contextual"></a>
-
-## 派生选择器(上下文选择器)
-
-![contextual](ScreenShots/contextual.png)
-
-<a name="id"></a>
+   * [Selector 选择器](#selector-选择器)
+      * [id选择器](#id选择器)
+      * [class类选择器](#class类选择器)
+      * [类型选择器](#类型选择器)
+      * [属性选择器](#属性选择器)
+      * [后代选择器](#后代选择器)
+      * [子元素选择器](#子元素选择器)
+      * [相邻兄弟选择器](#相邻兄弟选择器)
+      
+      
 
 ## id选择器
 
 ![id](ScreenShots/id.png)
 
-<a name="class"></a>
-
-## class选择器
+## class类选择器
 
 ![class](ScreenShots/class.png)
 
-<a name="attribute"></a>
+## 类型选择器
+
+![type](ScreenShots/type.png)
 
 ## 属性选择器
 
 ![attribute](ScreenShots/attribute.png)
+
+## 后代选择器
+
+![descendant](ScreenShots/descendant.png)
+
+## 子元素选择器
+
+![child](ScreenShots/child.png)
+
+## 相邻兄弟选择器
+
+![AdiacentSibling](ScreenShots/AdiacentSibling.png)
