@@ -1,22 +1,48 @@
-li strong{
-    font-style: italic;     /*只有li后面的strong会拥有这个属性*/
-}
-
+/******** id选择器 ********/
 #redp{
     color: red;
 }
 
+
+
+/******** class 类选择器 ********/
 .center{
     text-align: center;
 }
 
+/*多类选择器*/
+p.important{
+    font-weight: bold;
+}
+p.warning{
+    color: red;
+}
+p.important.warning{             /*⚠️这里两个类没有空格*/
+    background-color: yellow;
+}
+
+
+/******** attribute 属性选择器 ********/
 [words]{
     color: blue;
 }
 
+
+a.attribute[href]{
+    color: red;
+}
+a.attribute[href][alt]{
+    background-color: yellow;
+}
+
+
 [school=tongji]{
     color: lightblue;
 }
+[school=tongji][name=zz]{
+    background-color: aquamarine;
+}
+
 
 [title~=hello]{
     color: green;
@@ -48,4 +74,30 @@ input[type="button"]{
     display: block;
     background-color: aqua;
     margin-left: 10px;
+}
+
+
+/******** 后代选择器 ********/
+li strong{
+    font-style: italic;     /*只有li后面的strong会拥有这个属性*/
+}
+
+ul em{
+    color: red;
+}
+
+
+/******** 子元素选择器 ********/
+p > strong{
+    background-color: yellow;
+}
+
+
+/******** 相邻兄弟选择器 ********/
+h6 + p{
+    margin-top: 50px;
+}
+
+li + li{
+    color: blue;
 }
