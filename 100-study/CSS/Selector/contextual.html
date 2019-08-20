@@ -2,15 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>派生选择器</title>
+    <title>后代选择器</title>
     <link rel="stylesheet" href="static/css/style.css" />
 </head>
 <body>
 
-<h3>派生选择器（上下文选择器）</h3>
+<h2>后代选择器 (包含选择器)(上下文选择)</h2>
+<p>选择器中包含多个空格分隔的，空格可理解为"。。。在。。。中找到 / 。。。作为。。。的后代(从➡️到⬅️读)"</p>
+<p>两个元素之间的层次间隔可以是无限的</p>
+
+
 <xmp>
     li strong{
-    font-style: italic;     /*只有li后面的strong会拥有这个属性*/
+        font-style: italic;     /*只有li后面的strong会拥有这个属性*/
     }
 
     <p><strong>我是粗体字，不是斜体字，因为我不在列表中，这个规则对我不起作用</strong></p>
@@ -25,6 +29,29 @@
     <li>我是正常的字体</li>
 </ul>
 <hr />
+
+<h3>多层嵌套</h3>
+<xmp>
+
+</xmp>
+<ul>
+    <li>00
+        <ol>
+            <li>10</li>
+            <li>11
+                <ol>
+                    <li>30</li>
+                    <li><em>31我的li里面包了em</em></li>
+                </ol>
+            </li>
+            <li>12</li>
+        </ol>
+    </li>
+    <li>01</li>
+    <li>02</li>
+</ul>
+<hr />
+
 
 </body>
 </html>
