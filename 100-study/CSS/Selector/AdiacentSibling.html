@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>相邻兄弟选择器</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+<h2>相邻兄弟选择器</h2>
+<p>选择紧接在某个元素后的元素，且二者有相同的父元素</p>
+
+<xmp>
+    h6 + p{
+        margin-top: 50px;
+    }
+</xmp>
+<h6>这里是六号标题</h6>
+<p>这里是紧临六号标题的段落</p>
+<h5>这里是五号标题</h5>
+<p>这里是紧临五号标题的段落</p>
+<hr />
+
+
+<xmp>
+    每个列表的第一个列表项不会被选上
+    li + li{
+        color: blue;
+    }
+</xmp>
+<div>
+    <ul>
+        <li>000</li>
+        <li>001</li>
+        <li>002</li>
+    </ul>
+    <ol>
+        <li>100</li>
+        <li>101</li>
+        <li>102</li>
+    </ol>
+</div>
+
+</body>
+</html>
