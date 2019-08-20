@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>子元素选择器</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+<h2>子元素选择器</h2>
+<p>只能选择作为某元素子元素的东西</p>
+
+<xmp>
+    p > strong{
+        background-color: yellow;
+    }
+</xmp>
+<p><strong>p -> strong中的内容</strong></p>
+<p><em><strong>p -> em -> strong 中的内容</strong></em></p>
+<hr />
+
+
+<h3>结合后代选择器和子选择器</h3>
+<p>选择class=company的表格中的td的子元素p</p>
+<xmp>
+    table.company td > p{
+        ...
+    }
+</xmp>
+<hr />
+
+
+</body>
+</html>
