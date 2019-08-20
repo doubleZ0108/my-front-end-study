@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类 & 伪元素</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+<h2>伪类 & 伪元素</h2>
+<hr />
+
+<div style="background-color: lightgoldenrodyellow">
+    <h3>锚伪类</h3>
+    <ul>
+        <li>a:link{}    未访问的链接</li>
+        <li>a:hover{}   已访问的链接</li>
+        <li>a:visited{} 鼠标移动到链接傻姑娘</li>
+        <li>a:active{}  选定的链接(比如拖拽时)</li>
+        <li>⚠️顺序必须是 link, visited >> hover >> active   (>>表示早于)</li>
+    </ul>
+    <a href="###">添加伪类样式的链接</a>
+</div>
+<hr />
+
+
+<div style="background-color: lightblue">
+    <h3>:first-child 首个子对象生效</h3>
+    <p>如果这个元素是某个元素的第一个儿子，那么被选中</p>
+    <b>⚠️ p:first-child 是指选中作为某个元素第一个子元素的段落；不是只所有段落的第一个子元素</b>
+
+    <xmp>
+        h6:first-child{}
+    </xmp>
+    <div>
+        <h6>我是div中的第一个元素 - h6</h6>
+        <h6>我是div中的第二个元素 - h6</h6>
+    </div>
+
+    <hr />
+
+
+    <xmp>
+        ul.first-child li:first-child{}
+    </xmp>
+    <ul class="first-child">
+        <li>00 第一个元素</li>
+        <li>01
+            <ul class="first-child">
+                <li>10 第一个元素</li>
+                <li>11</li>
+                <li>12</li>
+            </ul>
+        </li>
+        <li>02</li>
+    </ul>
+</div>
+<hr />
+
+
+<div style="background-color: lightsalmon">
+    <h3>:lang 为不同的语言定义特殊的规则</h3>
+    <p>为值为this的lang属性的q元素定义引号的类型</p>
+    <xmp>
+        q:lang(this){
+        quotes: "~~" "~~";
+        }
+    </xmp>
+    <p>xxxxx<q lang="this">段落中的引用</q>xxxxxx</p>
+</div>
+<hr />
+
+<div style="background-color: #aceea1">
+    <h3>:before 在元素的内容前面插入新内容</h3>
+    <xmp>
+    h4.before:before{
+        content: url("../../Resources/img/flower_icon.png");
+    }
+    </xmp>
+    <h4 class="before">我是一个四号标题</h4>
+
+    <hr />
+    <h3>:after 在元素的内容之后插入新内容</h3>
+    <xmp>
+    h4.after:after{
+        content: url("../../Resources/img/flower_icon.png");
+    }
+    </xmp>
+    <h4 class="after">我是一个四号标题</h4>
+
+</div>
+<hr />
+
+
+<h3>:focus 当输入框获取焦点时</h3>
+<xmp>
+    input:focus{}
+</xmp>
+<input type="text" />
+<hr />
+
+
+<div style="background-color: lightgray">
+    <h3>:first-line 文本的首行</h3>
+    <p>最好自己设置换行，要不每个浏览器尺寸不一样就容易很怪</p>
+    <b>⚠️只能用于块级元素</b>
+    <xmp>
+        p.first-line:first-line{}
+    </xmp>
+    <p class="first-line">
+        这里是段落的第一行<br />
+        这里是段落的第二行<br />
+        这里是段落的第三行<br />
+    </p>
+    <hr />
+
+    <h3>:first-letter 文本的首字母</h3>
+    <b>⚠️只能用于块级元素</b>
+    <p class="first-letter">This is a long long ........................................................ long long sentence.</p>
+</div>
+<hr />
+
+</body>
+</html>
