@@ -1,0 +1,42 @@
+/*链接中的伪类*/
+a:link{
+    color: lightblue;
+    text-decoration: none;
+}
+a:hover{
+    color: blue;
+    text-decoration: underline;
+    background-color: yellow;
+    font-size: 150%;
+}
+a:visited{
+    color: red;
+    text-decoration: line-through;
+}
+a:active{
+    color: purple;
+}
+
+
+/*:focus 当输入框获取焦点时*/
+input:focus{
+    background-color: aquamarine;
+}
+
+
+/*:first-child 首个子对象生效*/
+h6:first-child{
+    color:green;
+}
+
+ul.first-child li:first-child{
+    font-weight: bold;
+    background-color: lightpink;
+}
+
+
+/*为值为this的lang属性的q元素定义引号的类型*/
+q:lang(this){
+    quotes: "~~" "~~";
+    background-color: lightgoldenrodyellow;
+}
