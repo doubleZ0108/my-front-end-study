@@ -1,0 +1,55 @@
+p.auto{
+    cursor: auto;
+}
+
+p.default{
+    cursor: default;
+}
+
+p.crosshair{
+    cursor: crosshair;
+}
+
+p.pointer{
+    cursor: pointer;
+}
+
+p.move{
+    cursor: move;
+}
+
+p.text{
+    cursor: text;
+}
+
+p.wait{
+    cursor: wait;
+}
+
+p.help{
+    cursor: help;
+}
+
+p.n-resize{
+    cursor: n-resize;
+}
+
+p.e-resize{
+    cursor: e-resize;
+}
+
+p.s-resize{
+    cursor: s-resize;
+}
+
+p.w-resize{
+    cursor: w-resize;
+}
+
+p.sw-resize{
+    cursor: sw-resize;
+}
+
+p.nwse-resize{
+    cursor: nwse-resize;
+}
