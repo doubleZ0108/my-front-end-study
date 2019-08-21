@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>水平对齐</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+<h1>水平对齐块级元素</h1>
+
+<div style="background-color: lightgreen">
+    <h2>margin实现水平对齐</h2>
+    <p>将⬅️➡️外边距设置为auto</p>
+    <b>如果宽度为100%，则没有对齐效果</b>
+    <xmp>
+    .center{
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    </xmp>
+    <div class="center">
+        <p>这是一个居中的段落,这是一个居中的段落,这是一个居中的段落,这是一个居中的段落,这是一个居中的段落,
+            这是一个居中的段落,这是一个居中的段落,这是一个居中的段落,这是一个居中的段落</p>
+    </div>
+</div>
+<hr />
+
+<div style="background-color: lightgray">
+    <h2>position进行⬅️➡️对齐</h2>
+    <p>使用绝对定位</p>
+    <b>但是要⚠️绝对定位的元素会从正常流中删除，后面的东西会顶上来</b>
+    <xmp>
+    .right{
+        position: absolute;
+        right: 0px;
+        width: 50%;
+    }
+    </xmp>
+    <div class="right">
+        <p>这是一个右对齐的段落，这是一个右对齐的段落，这是一个右对齐的段落，这是一个右对齐的段落，
+            这是一个右对齐的段落，这是一个右对齐的段落，这是一个右对齐的段落，这是一个右对齐的段落</p>
+    </div>
+</div>
+<br /><br /><br /><br />
+<hr />
+
+<div style="background-color: lightsalmon">
+    <h2>float进行⬅️➡️对齐</h2>
+    <b>最后添加空div进行清除浮动</b>
+    <xmp>
+    .float{
+        float: right;
+        width: 50%;
+    }
+
+    .clear{
+        clear: both;
+    }
+
+    <div class="clear"></div>
+    </xmp>
+    <div class="float">
+        <p>这是一个右对齐的段落，这是一个右对齐的段落，这是一个右对齐的段落，这是一个右对齐的段落，
+            这是一个右对齐的段落，这是一个右对齐的段落，这是一个右对齐的段落，这是一个右对齐的段落</p>
+    </div>
+    <div class="clear"></div>
+</div>
+
+</body>
+</html>
