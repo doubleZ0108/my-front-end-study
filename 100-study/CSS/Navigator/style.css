@@ -1,0 +1,80 @@
+/*垂直导航栏*/
+ul.vertical{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.vertical a{
+    display: block;
+    font-weight: bold;
+    color: #FFFFFF;
+    width: 120px;
+    text-align: center;
+    padding: 4px;
+    margin: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+ul.vertical a:link, ul.vertical a:visited{
+    background-color: #bebebe;
+}
+ul.vertical a:hover, ul.vertical a:active{
+    background-color: #8395cc;
+}
+
+
+
+/*水平导航栏 - inline*/
+ul.horizontal{
+    list-style-type: none;
+    margin: 0;
+    padding: 6px 0;     /*如果只设置a的内边距而不设置ul的内边距，那么链接会出现在ul元素之外*/
+}
+
+ul.horizontal li{
+    display: inline;
+}
+
+ul.horizontal a{
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 6px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+ul.horizontal a:link, ul.horizontal a:visited{
+    background-color: #bebebe;
+}
+ul.horizontal a:hover, ul.horizontal a:active{
+    background-color: #8395cc;
+}
+
+
+/*水平导航栏 - float*/
+ul.float{
+    float: left;
+
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+ul.float li{
+    display: inline;
+}
+
+ul.float a{
+    float: left;
+
+    width: 24%;
+    text-decoration: none;
+    color: white;
+    background-color: blueviolet;
+    margin-right: 1%;
+    text-align: center;
+}
+ul.float a:hover{
+    background-color: purple;
+}
