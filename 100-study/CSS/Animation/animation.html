@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+<h1>动画</h1>
+<p>@keyframes用于创建动画，规定某项CSS样式，就能创建由当前样式逐渐改为新样式的动画效果</p>
+<p>创建@keyframes后，要把他捆绑到某个选择器上，并规定动画的名称和时长</p>
+<b>动画完成时会回到最初的样式</b>
+
+<p>animation: name duration time-function delay iteration-count direction</p>
+<ul>
+    <li>iteration-count: 动画播放的次数
+        <ul>
+            <li>infinite：无限次播放</li>
+        </ul>
+    </li>
+
+    <li>direction: 是否轮流反向播放动画
+        <ul>
+            <li>alternate：轮流反向播放</li>
+        </ul>
+    </li>
+
+</ul>
+
+<h2>颜色渐变转换</h2>
+<div class="color"></div>
+<br />
+<div class="color2"></div>
+<hr />
+
+<h2>同时改变背景色和位置</h2>
+<b>位置的改变要把position设为relative</b>
+<div class="multi"></div>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+</body>
+</html>
