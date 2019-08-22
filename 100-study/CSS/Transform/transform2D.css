@@ -1,0 +1,55 @@
+div{
+    width: 100px;
+    height: 80px;
+    margin: 20px;
+}
+
+div.translate{
+    background-color: yellow;
+
+    transform: translate(20px, 50px);
+    -ms-transform: translate(20px, 50px);   /*IE 9*/
+    -moz-transform: translate(20px, 50px);     /*Firefox*/
+    -webkit-transform: translate(20px, 50px);   /*Safari & Chrome*/
+    -o-transform: translate(20px, 50px);   /*Opera*/
+}
+
+div.rotate{
+    background-color: aqua;
+
+    transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+}
+
+div.scale1{
+    background-color: green;
+    margin: 150px;
+
+    transform: scale(2,4);
+    -ms-transform: scale(2,4);
+    -moz-transform: scale(2,4);
+    -webkit-transform: scale(2,4);
+    -o-transform: scale(2,4);
+}
+div.scale2{
+    background-color: green;
+
+    transform: scale(0.5,0.8);
+    -ms-transform: scale(0.5,0.8);
+    -moz-transform: scale(0.5,0.8);
+    -webkit-transform: scale(0.5,0.8);
+    -o-transform: scale(0.5,0.8);
+}
+
+div.skew{
+    background-color: orange;
+
+    transform: skew(10deg,30deg);
+    -ms-transform: skew(10deg,30deg);
+    -moz-transform: skew(10deg,30deg);
+    -webkit-transform: skew(10deg,30deg);
+    -o-transform: skew(10deg,30deg);
+}
