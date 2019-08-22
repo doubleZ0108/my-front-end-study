@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文本CSS3</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+<h1>文本CSS3</h1>
+
+<h2>text-shadow 文本阴影</h2>
+<p>text-shadow: h-shadow v-shadow blur color;</p>
+<ul>
+    <li>h-shadow: 水平阴影的位置</li>
+    <li>v-shadow: 垂直阴影的位置</li>
+    <li>blur: 模糊的距离(可选)</li>
+</ul>
+
+<div class="text-shadow">
+    <ul>
+        <li><p class="text-shadow">文本阴影效果</p></li>
+        <li><p class="text-shadow-blur">带模糊的文本阴影效果</p></li>
+        <li>
+            <xmp>
+p.text-shadow-white{
+    color: white;
+    text-shadow: 2px 2px 4px black;
+}
+            </xmp>
+            <p class="text-shadow-white">白色文本的阴影效果</p>
+        </li>
+        <li>
+            <xmp>
+p.text-shadow-lamp{
+    color: red;
+    text-shadow: 0 0 3px yellow;
+}
+            </xmp>
+            <p class="text-shadow-lamp">霓虹灯效果的文本阴影效果</p>
+        </li>
+    </ul>
+
+
+
+
+</div>
+
+
+<hr />
+
+<h2>word-wrap 自动换行</h2>
+<p>文本太长可能超出某个区域，可使用word-wrap进行强制换行</p>
+<b>但这意味着可能会对单词进行拆分</b>
+
+<xmp>
+    p.word-wrap{
+        word-break: break-word;
+    }
+</xmp>
+<div class="long-word">
+    <p class="normal">This paragraphy contains a very long words: thisisaverylongverylongverylongverylongword.
+        普通处理只会在可以断的地方换行，所以会出界</p>
+    <p class="word-wrap">This paragraphy contains a very long words: thisisaverylongverylongverylongverylongword.
+        使用word-wrap后会强制换行，不会出界，但是可能把有意义的单词拆到两行了</p>
+</div>
+
+
+</body>
+</html>
