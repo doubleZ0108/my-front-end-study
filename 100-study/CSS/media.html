@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>媒介类型</title>
+</head>
+<body>
+
+
+<h1>媒介类型</h1>
+<table border="1" style="border-collapse: collapse">
+    <tr>
+        <th>媒介类型</th>
+        <th>描述</th>
+    </tr>
+    <tr>
+        <td>all</td>
+        <td>所有媒介设备</td>
+    </tr>
+    <tr>
+        <td>screen</td>
+        <td>电脑显示器</td>
+    </tr>
+    <tr>
+        <td>handheld</td>
+        <td>小的手持设备</td>
+    </tr>
+    <tr>
+        <td>print</td>
+        <td>打印机</td>
+    </tr>
+    <tr>
+        <td>tv</td>
+        <td>电视</td>
+    </tr>
+    <tr>
+        <td>projection</td>
+        <td>方案展示(如.打印机🖨️)</td>
+    </tr>
+    <tr>
+        <td>aural</td>
+        <td>语音和视频合成器</td>
+    </tr>
+    <tr>
+        <td>braille</td>
+        <td>盲人用点字法触觉回馈设备</td>
+    </tr>
+    <tr>
+        <td>embossed</td>
+        <td>扉页的盲人用点字法打印机</td>
+    </tr>
+    <tr>
+        <td>tty</td>
+        <td>固定密度字母栅格媒介(如.电传打字机和终端)</td>
+    </tr>
+</table>
+
+<h2>针对不同媒介使用不同样式</h2>
+<xmp>
+    @media screen{
+        p{...}
+    }
+
+    @media handheld {
+        p{...}
+    }
+
+    @media print, tv {
+        p{...}
+    }
+</xmp>
+
+</body>
+</html>
