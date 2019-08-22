@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>背景CSS3</title>
+</head>
+<body>
+
+<h1>背景CSS3</h1>
+
+<h2>background-size 规定背景图片的尺寸</h2>
+<p>对背景图片进行拉伸，使其完全填充内容区域</p>
+<xmp>
+    div{
+        background: url("");
+        background-size: 40% 100%;
+        -moz-background-size: 40% 100%; /*old Firefox*/
+        background-repeat: no-repeat;
+    }
+</xmp>
+<hr />
+
+
+<h2>background-origin 规定背景图片的定位区域</h2>
+<p>如果内容有外边框，背景图片延伸到什么位置(不做展示，没那么重要)</p>
+<ul>
+    <li>content-box</li>
+    <li>padding-box</li>
+    <li>border-box</li>
+</ul>
+<img src="https://www.w3school.com.cn/i/background-origin.gif" />
+<hr />
+
+
+
+</body>
+</html>
