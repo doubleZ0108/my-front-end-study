@@ -1,0 +1,33 @@
+/*text-shadow 文本阴影*/
+div.text-shadow p{
+    font-size: 30px;
+    font-weight: bold;
+}
+p.text-shadow{
+    text-shadow: 5px 5px red;
+}
+
+p.text-shadow-blur{
+    text-shadow: 5px 5px 5px red;
+}
+
+p.text-shadow-white{
+    color: white;
+    text-shadow: 2px 2px 4px black;
+}
+
+p.text-shadow-lamp{
+    color: red;
+    text-shadow: 0 0 3px yellow;
+}
+
+
+/*word-wrap 自动换行*/
+div.long-word p{
+    border: black solid 1px;
+    width: 200px;
+}
+
+p.word-wrap{
+    word-break: break-word;
+}
