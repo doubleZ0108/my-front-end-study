@@ -1,0 +1,28 @@
+div.img{
+    margin: 3px;
+    border: #bebebe solid 1px;
+    height: auto;
+    width: auto;
+    float: left;
+    text-align: center;
+}
+
+div.img img{
+    height: 160px;
+    width: 160px;
+    display: inline;
+    margin: 3px;
+    border: #bebebe solid 1px;
+}
+
+div.img a:hover img{
+    border: black solid 1px;
+}
+
+div.desc{
+    text-align: center;
+    font-weight: normal;
+    width: 150px;
+    font-size: 12px;
+    margin: 10px 5px;
+}
