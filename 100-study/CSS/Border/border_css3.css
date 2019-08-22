@@ -34,4 +34,7 @@ p.border-image2{
     text-align: center;
     width: 200px;
     border-image: url("../../Resources/img/her.jpg") 100 round;
+    -moz-border-image: url("../../Resources/img/her.jpg") 100 round;          /*old Firefox*/
+    -webkit-border-image: url("../../Resources/img/her.jpg") 5 round;       /*Safari & Chrome*/
+    -o-border-image: url("../../Resources/img/her.jpg") 100 round;            /*Opera*/
 }
