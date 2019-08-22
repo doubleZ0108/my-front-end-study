@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>过渡</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+<h1>过渡</h1>
+<p>元素从一种样式逐渐改变为另一种的效果</p>
+<ul>
+    <li>规定效果添加到哪个CSS属性上</li>
+    <li>规定效果时长(否则默认时间为0s，相当于没有效果)</li>
+</ul>
+
+<h2>过渡属性</h2>
+<p>transition: property duration timing-function delay</p>
+<ul>
+    <li>property: 过渡效果的CSS属性名称</li>
+    <li>duration: 效果时长</li>
+    <li>timing-function: 速度曲线
+        <ul>
+            <li>linear: 相同速率</li>
+            <li>🙆‍♂️ease: 慢-快-慢</li>
+            <li>ease-in: 慢速开始</li>
+            <li>🙆‍♂️ease-out: 慢速结束</li>
+            <li>ease-in-out: 慢速开始和结束</li>
+        </ul>
+    </li>
+    <li>delay: 延时多久开始</li>
+</ul>
+<hr />
+
+
+<h2>width 过渡</h2>
+<p>width 过渡</p>
+<div class="width"></div>
+<hr />
+
+
+<h2>多项改变</h2>
+<p>宽度，高度，转换同时改变</p>
+<div class="multi">6</div>
+
+</body>
+</html>
