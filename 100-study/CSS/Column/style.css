@@ -1,0 +1,13 @@
+p.newspaper{
+    column-count: 3;
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+
+    column-gap: 40px;
+    -moz-column-gap: 40px;
+    -webkit-column-gap: 40px;
+
+    column-rule: 3px outset #ff0000;
+    -moz-column-rule: 3px outset #ff0000;
+    -webkit-column-rule: 3px outset #ff0000;
+}
