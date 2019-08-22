@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>边框CSS3</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+<h1>边框CSS3</h1>
+
+<h2>border-radius 圆角边框</h2>
+<xmp>
+    p.border-radius{
+        border: #a1a1a1 solid 2px;
+        border-radius: 25px;
+        -moz-border-radius: 25px;   /*old Firefox*/
+    }
+</xmp>
+<p class="border-radius">圆角边框</p>
+<hr />
+
+<h2>边框阴影</h2>
+<xmp>
+    div.box-shadow{
+        box-shadow: 10px 10px 5px #888888;
+    }
+</xmp>
+<div class="box-shadow"></div>
+<hr />
+
+<h2>边框图片</h2>
+<xmp>
+    p.border-image1{
+        border: transparent solid 15px;
+        border-image: url("../../Resources/img/flower_icon.png") 30 round;
+        -moz-border-image: url("../../Resources/img/flower_icon.png") 30 round;          /*old Firefox*/
+        -webkit-border-image: url("../../Resources/img/flower_icon.png") 30 round;       /*Safari & Chrome*/
+        -o-border-image: url("../../Resources/img/flower_icon.png") 30 round;            /*Opera*/
+    }
+</xmp>
+<p class="border-image1">边框图片1</p>
+<p class="border-image2">边框图片2</p>
+
+
+</body>
+</html>
