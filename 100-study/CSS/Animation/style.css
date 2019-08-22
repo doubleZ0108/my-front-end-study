@@ -1,0 +1,108 @@
+div{
+    height: 100px;
+    width: 100px;
+    background-color: black;
+}
+
+@keyframes colorchange {
+    from{background-color: red;}
+    to{background-color: yellow;}
+}
+@-moz-keyframes colorchange {
+    from{background-color: red;}
+    to{background-color: yellow;}
+}
+@-webkit-keyframes colorchange {
+    from{background-color: red;}
+    to{background-color: yellow;}
+}
+@-o-keyframes colorchange {
+    from{background-color: red;}
+    to{background-color: yellow;}
+}
+
+div.color{
+    animation: colorchange 5s;
+    -moz-animation: colorchange 5s;
+    -webkit-animation: colorchange 5s;
+    -o-animation: colorchange 5s;
+}
+
+/*********************************************/
+
+@keyframes colorchange2 {
+    0% {background-color: green;}
+    25% {background-color: yellow;}
+    50% {background-color: blue;}
+    75% {background-color: red;}
+    100% {background-color: silver;}
+}
+@-moz-keyframes colorchange2 {
+    0% {background-color: green;}
+    25% {background-color: yellow;}
+    50% {background-color: blue;}
+    75% {background-color: red;}
+    100% {background-color: silver;}
+}
+@-webkit-keyframes colorchange2 {
+    0% {background-color: green;}
+    25% {background-color: yellow;}
+    50% {background-color: blue;}
+    75% {background-color: red;}
+    100% {background-color: silver;}
+}
+@-o-keyframes colorchange2 {
+    0% {background-color: green;}
+    25% {background-color: yellow;}
+    50% {background-color: blue;}
+    75% {background-color: red;}
+    100% {background-color: silver;}
+}
+
+div.color2{
+    animation: colorchange2 10s;
+    -moz-animation: colorchange2 10s;
+    -webkit-animation: colorchange2 10s;
+    -o-animation: colorchange2 10s;
+}
+
+/*********************************************/
+
+
+@keyframes multianimation {
+    0% {background-color: green; left: 0px; top: 0px;}
+    25% {background-color: yellow; left: 200px; top: 0px;}
+    50% {background-color: blue; left: 200px; top: 200px;}
+    75% {background-color: red; left: 0px; top: 200px;}
+    100% {background-color: silver; left: 0px; top: 0px;}
+}
+@-moz-keyframes multianimation {
+    0% {background-color: green; left: 0px; top: 0px;}
+    25% {background-color: yellow; left: 200px; top: 0px;}
+    50% {background-color: blue; left: 200px; top: 200px;}
+    75% {background-color: red; left: 0px; top: 200px;}
+    100% {background-color: silver; left: 0px; top: 0px;}
+}
+@-webkit-keyframes multianimation {
+    0% {background-color: green; left: 0px; top: 0px;}
+    25% {background-color: yellow; left: 200px; top: 0px;}
+    50% {background-color: blue; left: 200px; top: 200px;}
+    75% {background-color: red; left: 0px; top: 200px;}
+    100% {background-color: silver; left: 0px; top: 0px;}
+}
+@-o-keyframes multianimation {
+    0% {background-color: green; left: 0px; top: 0px;}
+    25% {background-color: yellow; left: 200px; top: 0px;}
+    50% {background-color: blue; left: 200px; top: 200px;}
+    75% {background-color: red; left: 0px; top: 200px;}
+    100% {background-color: silver; left: 0px; top: 0px;}
+}
+
+div.multi{
+    position: relative;
+
+    animation: multianimation 2s infinite alternate;
+    -moz-animation: multianimation 2s infinite alternate;
+    -webkit-animation: multianimation 2s infinite alternate;
+    -o-animation: multianimation 2s infinite alternate;
+}
