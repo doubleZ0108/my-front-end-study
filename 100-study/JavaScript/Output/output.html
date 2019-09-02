@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>输出</title>
+    <script src="static/js/common.js"></script>
+</head>
+<body>
+
+<h1>输出</h1>
+<h2>innerHTML 写入HTML元素</h2>
+<p id="innerHTML"></p>
+<hr />
+
+
+<h2>document.write() 写入HTML输出</h2>
+<script>
+    document.write("这里是HTML-body中内嵌的-script document.write 的元素");
+</script>
+
+<p>如果在HTML文档完全加载后使用document.write()将删除所有以后的HTML</p>
+<button onclick="btnClick();">点我重新写HTML</button>
+<hr />
+
+
+<h2>window.alert() 警告框⚠️</h2>
+<button onclick="alertClick();">警告⚠️</button>
+
+</body>
+</html>
