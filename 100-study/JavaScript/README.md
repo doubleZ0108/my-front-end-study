@@ -1,28 +1,53 @@
-# JavaScript 学习
+# 提取RGB图片的三个通道
 
-## 使用
+Table of Contents
+=================
 
-- 把脚本置于<body>元素的底部，可改善显示速度，因为脚本编译会拖慢显示
+   * [提取RGB图片的三个通道](#提取rgb图片的三个通道)
+      * [原图](#原图)
+      * [提取后的结果](#提取后的结果)
+      * [三色灰度图](#三色灰度图)
+         * [R](#r)
+         * [G](#g)
+         * [B](#b)
+      * [主要函数](#主要函数)
+         * [imread: 读取图片文件](#imread-读取图片文件)
+         * [imwrite：将矩阵写出成图片文件](#imwrite将矩阵写出成图片文件)
+         * [imshow：将矩阵绘制成图片](#imshow将矩阵绘制成图片)
+         
+         
 
-  ```html
-  <!DOCTYPE html>
-  <html>
-    <head>
-    </head>
-    <body>
-      
-      <script>
-      function myFunc(){
-        
-      }
-      </script>
-    </body>
-  </html>
-  ```
+## 原图
 
-## 输出
+![her](Resources/her.jpg)
 
-- `window.alert()`: 写入警告框⚠️
-- `document.write()`: 写入HTML输出
-- `innerHTML`: 写入HTML元素
-- `console.log()`: 写入浏览器控制台
+## 提取后的结果
+
+![result](Resources/result.png)
+
+## 三色灰度图
+
+⚠️任何一个通道的图像仍然是灰度图，因为每个通道都是一个值，所以Img_R相当于是一个二维矩阵
+
+### R
+
+![her_R](Resources/her_R.jpg)
+
+### G
+
+![her_G](Resources/her_G.jpg)
+
+### B
+
+![her_B](Resources/her_B.jpg)
+
+------
+
+## 主要函数
+
+### imread: 读取图片文件
+
+### imwrite：将矩阵写出成图片文件
+
+### imshow：将矩阵绘制成图片
+
