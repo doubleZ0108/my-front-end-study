@@ -398,6 +398,51 @@ console.log(people.firstname);
 console.log(people.FullName());
 ```
 
+#### 日期
+
+- `new Date()`: 用当前日期和时间创建日期对象
+- `new Date(year,month,day,hours,minutes,seconds,milliseconds)`: 指定日期
+- `new Date(milliseconds)`: 如果只有一个参数的话会将其视为毫秒，只从1970-1-1起算的偏移量
+
+##### 输出格式
+
+- `toString()`: Wed Sep 04 2019 18:17:49 GMT+0800 (中国标准时间)
+- `toUTCString()`: Wed, 04 Sep 2019 10:17:49 GMT
+- `toDateString()`: Wed Sep 04 2019
+
+##### 格式化
+
+| 类型     | 实例                         |
+| -------- | ---------------------------- |
+| ISO日期  | '2019-09-04'                 |
+| 短日期   | '2019/09/04'                 |
+| 长日期   | 'Sep 4 2019'                 |
+| 完整日期 | 'Wednesday September 4 2019' |
+
+- 无论输入格式如何，默认都是按照全文本字符串格式
+
+##### 获取
+
+使用时要先初始化一个日期时间对象
+
+| 方法                | 描述                   | 取值范围            |
+| ------------------- | ---------------------- | ------------------- |
+| `getFullYear()`     | 年                     | 四位年份            |
+| `getMonth()`        | 月                     | 0～11               |
+| `getDate()`         | 日                     | 1～31               |
+| `getDay()`          | 星期                   | 0～6（0表示星期日） |
+| `getHours()`        | 小时                   | 0～23               |
+| `getMinutes()`      | 分钟                   | 0～59               |
+| `getSeconds()`      | 秒                     | 0～59               |
+| `getMilliseconds()` | 毫秒                   | 0～999              |
+| `getTime()`         | 从1970-1-1以来的毫秒数 |                     |
+
+------
+
+#### Math
+
+
+
 ------
 
 ### undefined
