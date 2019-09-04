@@ -214,6 +214,8 @@
 
 ### 布尔值
 
+
+
 ------
 
 ### 数组
@@ -441,7 +443,19 @@ console.log(people.FullName());
 
 #### Math
 
+- `Math.PI`: 3.141592653589793
+- `Math.round()`: 返回x四舍五入最接近的整数
+- `Math.pow(x,y)`
+- `Math.sqrt()`
+- `Math.abs()`
+- `Math.ceil()`，`Math.floor()`
+- `Math.min(参数1,参数2,...)`: 查找参数列表中最小的值
+- `Math.random()`: 产生[0,1)间的随机数
 
+##### 随机数
+
+- `[min,max)`：`Math.floor(Math.random() * (max-min)) + min`
+- `[min,max]`: `Math.floor(Math.random() * (max-min+1)) + min`
 
 ------
 
