@@ -22,6 +22,17 @@
   </html>
   ```
 
+- 严格模式：在js文件开头添加`"use strict";`
+
+  - [ ] 不声明变量的情况下使用变量 `x = 5`
+  - [ ] 删除变量 `delete x`，删除函数，删除不可删除的属性
+  - [ ] 重复参数命名
+  - [ ] 写入只读属性
+  - [ ] 写入只能获取的属性
+  - [ ] with语句
+  - [ ] ······
+  - [ ] 
+
 ------
 
 ## 输出方式
@@ -34,6 +45,67 @@
 ------
 
 ## 变量
+
+### 定义
+
+- `var`: 使用var声明变量时，在块{}中声明的变量可以在块外访问
+
+  var声明的全局变量属于window对象，可使用window.全局变量名使用
+
+  ```javascript
+  var x = 10;
+  //x的值为10
+  {
+    var x = 6;
+    //x的值为6
+  }
+  //x的值为6
+  ```
+
+  ```javascript
+  for(var i=0;i<10;++i){
+    
+  }
+  //i的值为10
+  ```
+
+- `let`: let声明全局变量不属于window对象
+
+  ```javascript
+  let i = 100;
+  for(let i=0;i<10;++i){
+    
+  }
+  //i的值为100
+  ```
+
+- `const`: 不是定义常量值，而是定义对值的常量引用
+
+  ```javascript
+  /*将原始值赋给常量，就不能改变原始值*/
+  const PI = 2.1415;
+  PI = PI + 10;		//error
+  
+  /*可以更改常量对象的属性*/
+  const people = {name:'zz',age:19};
+  people.name = 'yT';		//可以更改属性
+  people.score = 95.5;	//可以添加属性
+  people = {name:'yT',age:19};		//error
+  
+  /*可以更改常量数组中的元素，但是不能为常量数组赋值*/
+  ```
+
+**同一作用域下：**
+
+- [x] var重新声明var
+- [ ] var重新声明let
+- [ ] let重新声明var
+- [ ] let重新声明let
+- [ ] let重新声明变量
+- [ ] const重新声明var或let
+- [ ] const重新声明const
+
+- var声明的变量会提升到顶端，let声明不可以；在声明let变量之前使用会导致`ReferenceError`
 
 ### 命名规则
 
@@ -456,6 +528,39 @@ console.log(people.FullName());
 
 - `[min,max)`：`Math.floor(Math.random() * (max-min)) + min`
 - `[min,max]`: `Math.floor(Math.random() * (max-min+1)) + min`
+
+------
+
+#### this
+
+- 类的方法中：所有者对象
+- 单独的情况：全局对象`[object Window]`
+- 函数中：全局对象
+  - 严格模式：undefined
+- 事件中：接收事件的元素
+
+##### 显示函数绑定
+
+`call()`和`apply()`可以讲对象b作为参数调用对象a的方法
+
+```javascript
+let people1 = {
+  name: 'zz',
+  age: '18',
+  message: function () {
+    return this.name + ' ' + this.age;
+  }
+};
+
+let people2 = {
+  name: 'yT',
+  age: 19
+};
+
+people1.message.apply(people2);		//yT 19
+```
+
+
 
 ------
 
