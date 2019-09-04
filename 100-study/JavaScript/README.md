@@ -503,7 +503,7 @@ console.log(typeof people);	//object
 
 ## 逻辑
 
-#### switch
+### switch
 
 case🏷️使用`===`进行比较
 
@@ -511,7 +511,7 @@ case🏷️使用`===`进行比较
 
 ## 循环
 
-#### for/in循环
+### for/in循环
 
 ```javascript
 //例.遍历对象
@@ -578,6 +578,72 @@ for(x in people){
   }while(result);
   ```
 
-  
+------
+
+## 异常处理
+
+### Error对象
+
+| 属性    | 描述     |
+| ------- | -------- |
+| name    | 错误名   |
+| message | 错误信息 |
+
+| 错误名         | 描述                        |
+| -------------- | --------------------------- |
+| EvalError      | 在`eval()`函数中发生的错误  |
+| RangeError     | 超出数字范围的错误          |
+| ReferenceError | 非法引用                    |
+| SyntaxError    | 语法错误                    |
+| TypeError      | 类型错误                    |
+| URIError       | 在`encodeURI()`中发生的错误 |
+
+```javascript
+/*范围错误*/
+let num = 1;
+try{
+  num.toPrecision(500);		//toPrecision() argument must be between 1 and 100
+}
+catch(e){
+  console.log(e.name, e.message);
+}
+
+/*引用错误*/
+let x;
+try{
+  x = y + 1;		//y is not defined
+}
+catch(e){
+  console.log(e.name, e.message);
+}
+
+/*类型错误*/
+let a = 1;
+try{
+  a.toUpperCase();		//a.toUpperCase is not a function 整数不能转换成大些
+}
+catch(e){
+  console.log(e.name, e.message);
+}
+```
+
+- 抛出并捕获异常
+
+  ```javascript
+  try {
+    if(text==''){
+      throw 'empty string';
+    }
+    else if(isNaN(text)){
+      throw 'not a number';
+    }
+  }
+  catch (e) {
+    console.log(e);
+  }
+  finally {
+    console.log('无论如何都会执行这里的代码');
+  }
+  ```
 
   
