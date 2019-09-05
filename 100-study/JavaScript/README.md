@@ -459,16 +459,28 @@
 let people = {
   firstname: 'Zhang',
   lastname: 'Zhe',
+
+  get FirstName(){    //不能和变量名一样
+    return 'The first name is ' + this.firstname;
+  },
+  set LastName(value){
+    this.lastname = value.toUpperCase();
+  },
+
   FullName: function () {
     return this.firstname + ' ' + this.lastname;    //this关键字
   }
-}
+};
 
 /*访问对象属性*/
 console.log(people["firstname"]);
 console.log(people.firstname);
 
-// /*访问对象方法*/
+/*设置属性值*/
+people.lastname = 'zz';			//zz
+people.LastName = 'abc';		//ABC
+
+/*访问对象方法*/
 console.log(people.FullName());
 ```
 
@@ -584,6 +596,14 @@ console.log(people);				//null
 console.log(typeof people);	//object
 ```
 
+- 测试对象不存在且为空
+
+  ```javascript
+  if(typeof obj!=="undefined" && obj!==null){}
+  ```
+
+  
+
 ------
 
 ## 函数
@@ -603,6 +623,8 @@ console.log(typeof people);	//object
   }
   */
   ```
+
+- 如果调用函数时缺少一个参数，则这个缺失的参数会被设置为`undefined`
 
 ------
 
@@ -751,4 +773,84 @@ catch(e){
   }
   ```
 
-  
+------
+
+## 表单
+
+- 获取表单中某一项的值
+
+  ```html
+  <form name='nyForm' onsubmit='myFormSubmit();' method='post'>
+    <input type='text' name='mynum' />
+  </form>
+  ```
+
+  ```javascript
+  let text = document.forms['myForm']['mynum'].value;
+  ```
+
+### 约束验证DOM
+
+**obj的合法值属性**
+
+| 属性                | 描述                                                         |
+| ------------------- | ------------------------------------------------------------ |
+| checkValidity()     | 浏览器自动判断是否为有效输入，*如果放在form里则由浏览器自动输出提示信息* |
+| setCustomValidity() | 设置`validationMessage`属性                                  |
+| validationMessage   | 浏览器自己写的错误信息                                       |
+
+**obj.validity的合法值属性**
+
+| 属性            | 描述                                       |
+| --------------- | ------------------------------------------ |
+| customError     | 自定义的合法性消息                         |
+| patternMismatch | 是否匹配其pattern属性                      |
+| rangeOverflow   | 元素值是否大于max属性                      |
+| rangeUnderflow  | 元素值是否小于min属性                      |
+| stepMismatch    | 是否符合指定的间隔值                       |
+| tooLong         | 元素值是否超过其maxLength属性              |
+| typeMismatch    | type为email或url时，输入值是否为正确的类型 |
+| valueMissing    | 元素是否没有值                             |
+| valid           | 元素值是否为有效的                         |
+
+```javascript
+let numobj = document.forms['myform']['mynum'];
+
+if(!numobf.checkValidity()){
+  //放在表单里submit的信息，浏览器会自动输出提示信息
+}
+else{
+  concole.log('数字正确.');
+}
+```
+
+```javascript
+let numobj = document.getElementById('mynum');
+
+if(!numobj.checkValidity()){
+  alert(numobj.validationMessage);		//浏览器自己写的错误信息
+}
+else{
+  concole.log('数字正确.');
+}
+```
+
+```javascript
+let numobj = document.getElementById('mynum');
+
+if(numobj.validity.rangeOverflow){
+  alert('值太大');
+}
+else{
+  console.log('数字正确.');
+}
+```
+
+
+
+------
+
+## JSON
+
+- `JSON.parse()`: 将接收到的JSON文本转换为JS对象
+- `JSON.stringify()`: 将JS对象转换为字符串
