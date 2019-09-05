@@ -1,4 +1,4 @@
-# JavaScript 芝士点🧀️
+# bJavaScript 芝士点🧀️
 
 [TOC]
 
@@ -690,6 +690,108 @@ console.log(typeof people);	//object
   ```
 
 - 如果调用函数时缺少一个参数，则这个缺失的参数会被设置为`undefined`
+
+### 函数定义
+
+- 用变量保存函数
+
+  ```javascript
+  let x = function(a,b){return a*b;};
+  let y = x(3,4);
+  ```
+
+- Functiono构造器
+
+  ```javascript
+  var myFunc = new Function('a','b','return a*b;');
+  let y = myFunc(3,4);
+  ```
+
+#### 自调用函数
+
+声明完了马上调用，只能使用一次
+
+```javascript
+let y = (function(a,b){
+  return a*b;
+})(3,4);
+```
+
+#### 箭头函数
+
+```javascript
+const func = (x,y) => {return x*y;};
+let y = func(3,4);		//函数表达式始终是常量值，所以使用const更安全
+let y = func(3,4);
+```
+
+### 函数参数
+
+- js不会对接收到的参数进行数量检查和类型检查
+
+  - 如果缺少参数，则剩余的形参为`undefined`
+
+  - 如果传递的参数过多，则可以使用`arguments`对象找到这些参数
+
+    ```javascript
+    let x = mySum(1,45,-34,90,34,-56);
+    
+    function mySum() {
+      let sum = 0;
+      for(let i=0;i<arguments.length;++i){
+        sum += arguments[i];
+      }
+    
+      return sum;
+    }
+    ```
+
+- **参数通过值传递，函数内的修改不会影响原值**
+
+  **对象通过引用传递，调用的函数内会修改原始值的**
+
+  ```javascript
+  function myFunc(p) {
+    p.name = 'yT';
+    return;
+  }
+  
+  let people = {
+    name: 'zz',
+    age: 19
+  };
+  
+  myFunc(people);
+  console.log(people);		//yT
+  ```
+
+### 方法重用
+
+在不同对象上使用方法
+
+- `call()`：接收参数列表
+- `apply()`: 接收数组形式的参数
+
+```javascript
+let people = {
+  FullName: function(age, city){
+    return this.firstname + this.lastname + age + city;
+  }
+};
+
+let p1 = {
+  firstname: 'Zhang',
+  lastname: 'Zheng'
+};
+let p2 = {
+  firstname: 'Zhang',
+  lastname: 'YiTeng'
+};
+
+/*调用*/
+people.FullName.call(p1, 19, 'Tonghua');
+people.FullName.apply(p2,[19, 'Taiyuan']);
+```
 
 ------
 
