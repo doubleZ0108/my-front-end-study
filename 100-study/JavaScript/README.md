@@ -1103,7 +1103,7 @@ elem.visibility = 'visible';
 | document.lastModified | 文档更新的日期和时间      |
 | document.readyState   | 文档的(加载)状态          |
 
-### DOM动画
+### DOM  动画
 
 ```javascript
 let myframe = setInterval(frame, 5);
@@ -1117,7 +1117,60 @@ function frame(){
 }
 ```
 
+### DOM 事件
 
+- 页面加载/离开后
+
+  ```javascript
+  window.onload = function () {
+  
+  };
+  
+  window.onunload = function () {
+    //alert('真的要退出么');  不会阻止用户退出
+  };
+  ```
+
+- 图像加载后
+
+- 鼠标事件
+
+  - `onmousedown()`: 🖱️被点击(一直按住不放也是这个)
+
+  - `onmouseup()`: 🖱️被释放
+
+  - `onclick()`: 🖱️点击完成后触发
+
+  - `onmouseover()`: 🖱️移至元素上
+
+  - `onmouseover()`: 🖱️从元素上离开
+
+    ```javascript
+    //<div onmouseover="mymouseOver(this);" onmouseout="mymouseOut(this);">把鼠标移上来试试</div>
+    
+    function mymouseOver(elem){
+      elem.style.backgroundColor = '#ADD8E6'
+      elem.innerText = '🍒';
+    }
+    function mymouseOut(elem) {
+      elem.style.backgroundColor = '#FFA07A'
+      elem.innerText = '把鼠标移上来试试';
+    }
+    ```
+
+- 输入字段被改变时
+
+  ```javascript
+  //<input type="text" onchange="UpperCase(this);" />
+  
+  function UpperCase(elem) {
+    elem.value = elem.value.toUpperCase();
+  }
+  ```
+
+- 提交表单
+
+- 键盘按键
 
 ------
 
