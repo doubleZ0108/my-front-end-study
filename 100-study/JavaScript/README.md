@@ -455,6 +455,60 @@
 
 ### 对象
 
+- 所有JS对象都是从原型继承属性和方法，`Object.prototype`位于原型继承链的顶端
+
+#### 对象创建
+
+```javascript
+let people = {
+  firstname: 'Zhang',
+  lastname: 'Zhe'，
+  FullName: function () {
+    return this.firstname + ' ' + this.lastname;    //this关键字
+  }
+};
+
+let people = new Object();
+people.firstname = 'Zhang';
+people.lastname = 'Zhe';
+
+/*访问对象属性*/
+console.log(people["firstname"]);
+console.log(people.firstname);
+
+/*访问对象方法*/
+console.log(people.FullName());
+```
+
+- 对象是易变的：它们通过引用来寻址，而非值；**把对象a赋给b，对b的任何修改都相当于直接对a的修改**
+
+#### 遍历对象
+
+```javascript
+let people = {
+  firstname: 'Zhang',
+  lastname: 'Zhe'
+};
+
+for(attr in people){
+  console.log(attr, people[attr]);
+}
+```
+
+#### 添加属性
+
+```javascript
+people.newattr = 'new';
+```
+
+#### 删除属性
+
+```javascript
+delete people.属性名;
+```
+
+#### 对象访问器
+
 ```javascript
 let people = {
   firstname: 'Zhang',
@@ -466,23 +520,35 @@ let people = {
   set LastName(value){
     this.lastname = value.toUpperCase();
   },
-
-  FullName: function () {
+  
+  get FullName() {
     return this.firstname + ' ' + this.lastname;    //this关键字
   }
 };
-
-/*访问对象属性*/
-console.log(people["firstname"]);
-console.log(people.firstname);
 
 /*设置属性值*/
 people.lastname = 'zz';			//zz
 people.LastName = 'abc';		//ABC
 
-/*访问对象方法*/
-console.log(people.FullName());
+/*以属性形式访问方法*/
+people.FullName;
 ```
+
+#### 构造器
+
+```javascript
+function People(firstname, lastname) {
+  this.firstName = firstname;
+  this.LastName = lastname;
+}
+
+let zz = new People('Zhang','Zhe');
+```
+
+- 给某个实例化的对象添加属性或方法不会改变原始的类
+- 不可以直接给原始的类添加方法和属性，要通过构造函数；或是使用`prototype`添加新属性（略）
+
+------
 
 #### 日期
 
@@ -572,8 +638,6 @@ let people2 = {
 people1.message.apply(people2);		//yT 19
 ```
 
-
-
 ------
 
 ### undefined
@@ -615,12 +679,13 @@ console.log(typeof people);	//object
       return 'hello world';
   }
   
-  console.log(myfunc());	//hello world
+  console.log(myfunc());	//hello world -> 调用函数
   console.log(myfunc);
   /*
   ƒ myfunc() {
       return 'hello world';
   }
+  -> 返回函数定义
   */
   ```
 
