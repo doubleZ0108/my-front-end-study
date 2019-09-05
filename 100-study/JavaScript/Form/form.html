@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <title>表单验证</title>
+    <script src="static/js/common.js"></script>
+</head>
+<body>
+
+<h1>表单验证</h1>
+
+<h2>必须填写姓名</h2>
+<form name="myForm" onsubmit="myFormSubmit();" method="post">
+    姓名:<input type="text" name="myname" />
+    <input type="submit" value="submit" />
+</form>
+<hr />
+
+<h2>输入的数字必须在1~10之间</h2>
+<form name="myForm2" onsubmit="myFormSubmit2();" method="post">
+    请输入1～10的数字:<input type="number" name="mynum" />
+    <input type="submit" value="submit" />
+</form>
+<hr />
+
+<h2>约束验证DOM</h2>
+请输入1～10的数字:<input id="mynum2" type="number" min="1" max="10"/>
+<button onclick="btnClick();">click</button>
+<hr />
+
+请输入小于100的数字:<input id="mynum3" type="number" max="100" />
+<button onclick="btnClick2();">click</button>
+<hr />
+
+
+
+</body>
+</html>
