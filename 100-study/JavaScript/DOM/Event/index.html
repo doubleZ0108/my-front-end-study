@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <title>HTML DOM</title>
+    <script src="static/js/common.js"></script>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+<h1>DOM 事件</h1>
+
+<h1 onclick="changeText(this);">点我切换文本</h1>
+<hr />
+
+<div onmouseover="mymouseOver(this);" onmouseout="mymouseOut(this);"
+style="background-color: lightsalmon;height: 100px;width: 100px;text-align: center;">把鼠标移上来试试</div>
+<hr />
+
+
+
+
+失去焦点时会自动变成大写: <input type="text" onchange="UpperCase(this);" />
+<hr />
+
+</body>
+</html>
