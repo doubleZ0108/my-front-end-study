@@ -1,4 +1,4 @@
-# bJavaScript 芝士点🧀️
+# JavaScript 芝士点🧀️
 
 [TOC]
 
@@ -1010,6 +1010,110 @@ if(numobj.validity.rangeOverflow){
 }
 else{
   console.log('数字正确.');
+}
+```
+
+------
+
+## HTML DOM
+
+文档对象模型 Document Object Model
+
+### DOM能力(动态)
+
+- 改变HTML元素
+- 改变HTML属性
+- 改变CSS样式
+- 删除HTML元素和属性
+- 添加HTML元素和属性
+- 响应事件
+- 创建新事件
+
+### DOM文档
+
+文档对象是网页中所有其他对象的拥有者
+
+### 查找
+
+如果未找到元素，返回`null`
+
+| 方法                                       | 作用                  |
+| ------------------------------------------ | --------------------- |
+| document.getElementById(id)                | 通过元素id查找元素    |
+| document.getElementsByTagName(tagname)     | 通过标签名查找元素    |
+| docnment.getElementsByClassName(classname) | 通过类名查找元素      |
+| document.querySelectorAll(selector_name)   | 通过匹配指定CSS选择器 |
+
+```javascript
+/*返回所有p标签*/
+document.getElementsByTagName('p');
+
+/*例如查找class='intro'的所有<p>元素*/
+document.querySelectorAll('p.intro');
+```
+
+### 改变
+
+| 方法                           | 作用              |
+| ------------------------------ | ----------------- |
+| elem.innerHTML = html content  | 改变元素的HTML    |
+| elem.attribute = value         | 改变属性值        |
+| elem.setAttrubute(attr, value) | 改变属性值gaibian |
+| elem.style.property = style    | 改变样式          |
+
+```javascript
+/*动态更改图片*/
+//<img id="myimg" src="Resources/img/icon.jpg" />
+document.getElementById('myimg').src = '././Resources/img/flower_icon.png';
+
+/*改变文本颜色*/
+document.getElementById('myp').style.color = 'red';
+
+/*隐藏文本*/
+elem.visibility = 'hidden';
+/*显示文本*/
+elem.visibility = 'visible';
+```
+
+### 添加和删除
+
+| 方法                         | 作用         |
+| ---------------------------- | ------------ |
+| document.createElement(elem) | 创建HTML元素 |
+| document.appendChild(elem)   | 添加HTML元素 |
+| document.removeChild(elem)   | 删除HTML元素 |
+| document.replaceChild(elem)  | 替换HTML元素 |
+
+### 添加事件处理程序
+
+| 方法                        | 作用                            |
+| --------------------------- | ------------------------------- |
+| elem.onclick = function(){} | 向元素的onclick事件添加处理程序 |
+
+### HTML对象(少部分)
+
+| 属性                  | 描述                      |
+| --------------------- | ------------------------- |
+| document.domain       | 文档服务器的域名          |
+| document.anchors      | 拥有name属性的所有<a>标签 |
+| document.forms        | 所有<form>元素            |
+| document.images       | 所有<img>元素             |
+| document.cookie       | 文档的cookie              |
+| document.URL          | 文档e的完整URL            |
+| document.lastModified | 文档更新的日期和时间      |
+| document.readyState   | 文档的(加载)状态          |
+
+### DOM动画
+
+```javascript
+let myframe = setInterval(frame, 5);
+
+function frame(){
+  if(/*测试是否完成*/){
+    clearInterval(myframe);
+  }else{
+    /*改变元素样式*/
+  }
 }
 ```
 
