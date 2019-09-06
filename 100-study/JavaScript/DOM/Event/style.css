@@ -1,0 +1,15 @@
+div#container{
+    position: relative;
+
+    height: 400px;
+    width: 400px;
+    background-color: lightpink;
+}
+
+div#myanimation{
+    position: absolute;
+
+    height: 50px;
+    width: 50px;
+    background-color: lightblue;
+}
