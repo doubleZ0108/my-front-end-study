@@ -104,7 +104,6 @@
 - [ ] let重新声明变量
 - [ ] const重新声明var或let
 - [ ] const重新声明const
-
 - var声明的变量会提升到顶端，let声明不可以；在声明let变量之前使用会导致`ReferenceError`
 
 ### 命名规则
@@ -689,6 +688,8 @@ console.log(typeof people);	//object
   */
   ```
 
+```
+  
 - 如果调用函数时缺少一个参数，则这个缺失的参数会被设置为`undefined`
 
 ### 函数定义
@@ -698,7 +699,7 @@ console.log(typeof people);	//object
   ```javascript
   let x = function(a,b){return a*b;};
   let y = x(3,4);
-  ```
+```
 
 - Functiono构造器
 
@@ -1092,16 +1093,18 @@ elem.visibility = 'visible';
 
 ### HTML对象(少部分)
 
-| 属性                  | 描述                      |
-| --------------------- | ------------------------- |
-| document.domain       | 文档服务器的域名          |
-| document.anchors      | 拥有name属性的所有<a>标签 |
-| document.forms        | 所有<form>元素            |
-| document.images       | 所有<img>元素             |
-| document.cookie       | 文档的cookie              |
-| document.URL          | 文档e的完整URL            |
-| document.lastModified | 文档更新的日期和时间      |
-| document.readyState   | 文档的(加载)状态          |
+| 属性                     | 描述                      |
+| ------------------------ | ------------------------- |
+| document.documentElement | 完整文档                  |
+| document.bodu            | 文档的body部分            |
+| document.domain          | 文档服务器的域名          |
+| document.anchors         | 拥有name属性的所有<a>标签 |
+| document.forms           | 所有<form>元素            |
+| document.images          | 所有<img>元素             |
+| document.cookie          | 文档的cookie              |
+| document.URL             | 文档e的完整URL            |
+| document.lastModified    | 文档更新的日期和时间      |
+| document.readyState      | 文档的(加载)状态          |
 
 ### DOM  动画
 
@@ -1121,9 +1124,13 @@ function frame(){
 
 - 页面加载/离开后
 
+  常用来检查cookie
+
   ```javascript
   window.onload = function () {
-  
+  	if(navigator.cookieEnabled == true){
+      //Cookie已启用
+    }
   };
   
   window.onunload = function () {
@@ -1143,7 +1150,7 @@ function frame(){
 
   - `onmouseover()`: 🖱️移至元素上
 
-  - `onmouseover()`: 🖱️从元素上离开
+  - `onmouseout()`: 🖱️从元素上离开
 
     ```javascript
     //<div onmouseover="mymouseOver(this);" onmouseout="mymouseOut(this);">把鼠标移上来试试</div>
@@ -1170,7 +1177,116 @@ function frame(){
 
 - 提交表单
 
+- 获得到焦点/失去焦点
+
+  ```javascript
+  //<input type="text" onfocusin="focusChange(this, true);" onfocusout="focusChange(this,false);"/>
+  
+  function focusChange(elem, focus_flag) {
+    if(focus_flag){
+      elem.style.backgroundColor = 'lightpink';
+    }else{
+      elem.style.backgroundColor = 'white';
+    }
+  }
+  ```
+
 - 键盘按键
+
+### DOM 事件监听器
+
+`addEventListener(event, function, useCapture)`: 为元素附加事件处理程序而不会覆盖已有的事件处理程序
+
+`removeEventListener(event, function)`：删除指定的事件处理程序*(无法删除匿名函数指定的事件监听器，因为这两个参数是必须的)*
+
+- `event`: 事件的类型(`click`,  `mousedown`, `mousemove`等)
+
+- `function`: 事件发生是调用的函数
+
+- `useCapture`: 布尔值，使用事件冒泡还是事件捕获
+
+  ```javascript
+  let x = document.getElementById('elem');
+  x.addEventListener(
+  	"click", function(){
+      //TODO
+    }
+  );
+  x.removeEventListener("click")
+  
+  ```
+
+#### 在Windows对象上添加事件监听器
+
+```javascript
+/*调整浏览器大小时触发*/
+window.addEventListener("resize", function () {
+  console.log('window resize...');
+});
+```
+
+#### 事件冒泡/捕获
+
+- 冒泡：先处理最内侧元素的事件，再依次处理外侧的(默认情况 -> useCapture设为false)
+- 捕获：先处理最外侧元素的事件，再依次处理内侧的(useCapture设为true)
+
+### DOM 导航🧭
+
+|       节点属性        |
+| :-------------------: |
+|     `parentNode`      |
+| `childNodes[nodenum]` |
+|     `firstChild`      |
+|      `lastChild`      |
+|     `nextSibling`     |
+|   `previousSibling`   |
+
+⚠️元素节点不包含该标签中的文本
+
+**`innerHTML` <=> 访问首子节点的`nodeValue`**
+
+> 例. <p id='elem'>text</p>
+>
+> ```javascript
+> let x = document.getElementById('elem');
+> 
+> x.innerHTML <=> x.childNodes[0].nodeValue <=> x.firstChild.nodeValue
+> ```
+
+| 名称      | 作用                   |
+| --------- | ---------------------- |
+| nodeName  | 节点的名称**(只读的)** |
+| nodeValue | 节点的值               |
+| nodeType  | 节点的类型**(只读的)** |
+
+```javascript
+//<p id='elem' class='para'>this is a text</p>
+let x = document.getElementById('elem');
+let x_attr_class = x.getAttributeNode('class');
+let x_text = x.firstChild;
+
+/*nodeName*/
+x.nodeName		//P		元素节点返回大写的标签名
+x_attr_class.nodeName		//class		属性节点返回属性名
+x.firstChild.nodeName		//#text		文本节点总是#text
+document.nodeName		//#document		文档节点总是#document
+
+/*nodeValue*/
+x.nodeValue		//null		元素节点为null
+x_attr_class.nodeValue		//para		属性节点返回属性值
+x.text.nodeValue		//this is a text		文本节点返回文本
+```
+
+| 属性值             | 类型 | 例子                     |
+| ------------------ | ---- | ------------------------ |
+| ELEMENT_NODE       | 1    | <p>text</p>              |
+| ATTRIBUTE_NODE     | 2    | class='container'        |
+| TEXT_NODE          | 3    | this is a text           |
+| COMMENT_NODE       | 4    | <!-- this is comment --> |
+| DOCUMENT_NODE      | 5    | <html>的父               |
+| DOCUMENT_TYPE_NODE | 6    | <!DOCTYPE html>          |
+
+
 
 ------
 
