@@ -1286,7 +1286,72 @@ x.text.nodeValue		//this is a text		文本节点返回文本
 | DOCUMENT_NODE      | 5    | <html>的父               |
 | DOCUMENT_TYPE_NODE | 6    | <!DOCTYPE html>          |
 
+### DOM 节点
 
+#### 创建HTML元素
+
+```html
+<div id="container">
+    <p id="child">text</p>
+</div>
+```
+
+```javascript
+let container = document.getElementById('container');
+let child = document.getElementById('child');
+
+let para = document.createElement('p');
+let node = document.createTextNode('这里是文本');
+```
+
+- `appendChild()`: 追加新元素作为父元素的最后一个子
+
+  ```javascript
+  para.appendChild(node);
+  container.appendChild(para);
+  ```
+
+- `insertBefore()`: 指定在某个儿子元素之前插入
+
+  ```javascript
+  para.appendChild(node);
+  container.insertBefore(para, child);
+  ```
+
+#### 删除HTML元素
+
+`removeChild()`
+
+⚠️HTML加载完之后元素的`firstChild`和`lastChild`是一段空白
+
+```html
+<div id="container">
+    <p id="child">text</p>
+</div>
+```
+
+![image.png](https://upload-images.jianshu.io/upload_images/12014150-b9d213b553b0d35f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+```javascript
+/*删除第一个子*/
+function removefirstChild_btnClick() {
+  let container = document.getElementById('container');
+  let firstChild = container.firstChild;
+
+  container.removeChild(firstChild);
+}
+```
+
+```javascript
+/*通过自己找到父节点并删除自己*/
+//不可以在不引用父节点的情况下删除该元素
+function removebyitself_btnClick() {
+  let child = document.getElementById('container');
+  let parent = child.parentNode;
+
+  parent.removeChild(child);
+}
+```
 
 ------
 
