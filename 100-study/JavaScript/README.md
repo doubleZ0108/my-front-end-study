@@ -1364,7 +1364,119 @@ for(let i=0;i<myCollection.length;++i){
 }
 ```
 
+------
 
+## HTML BOM
+
+浏览器对象模型(Browser Object Model)
+
+### Window
+
+所有全局的JS对象(全局变量、全局函数)都自动成为window对象的成员
+
+#### 窗口尺寸
+
+以像素返回尺寸，不包括工具栏和滚动条
+
+|         属性         |
+| :------------------: |
+| `window.innerWidth`  |
+| `window.innerHeight` |
+
+```javascript
+/*兼容所有浏览器*/
+let w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+let h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+```
+
+#### 其他方法
+
+| 方法                | 作用             |
+| ------------------- | ---------------- |
+| `window.open()`     | 打开新窗口       |
+| `window.close()`    | 关闭当前窗口     |
+| `window.resizeTo()` | 重新调整当前窗口 |
+
+### Screen
+
+| 属性                        | 描述     |
+| --------------------------- | -------- |
+| `window.screen.width`       | 屏幕宽度 |
+| `window.screen.height`      | 屏幕高度 |
+| `window.screen.availWidth`  | 可用宽度 |
+| `window.screen.availHeight` | 可用高度 |
+| `window.screen.colorDepth`  | 色深     |
+| `window.screen.pixelDepth`  | 像素深度 |
+
+### Location
+
+| 属性/方法                  | 描述                                |
+| -------------------------- | ----------------------------------- |
+| `window.location.href`     | 当前页面的URL                       |
+| `window.location.hostname` | 因特网主机名                        |
+| `window.location.pathname` | 路径名                              |
+| `window.location.protocol` | 当前页面的web协议（http: /https: ） |
+| `window.location.port`     | 端口号                              |
+| `window.location.assign()` | 加载新文档                          |
+
+### History
+
+| 方法                       | 作用                       |
+| -------------------------- | -------------------------- |
+| `window.history.back()`    | 等同于在浏览器点击后退按钮 |
+| `window.history.forward()` | 等同于在浏览器点击前进按钮 |
+
+### Navigator
+
+| 属性                             | 描述            |
+| -------------------------------- | --------------- |
+| `window.navigator.cookieEnabled` | cookiei是否启用 |
+| `window.navigator.platform`      | 操作系统        |
+| `window.navigator.language`      | 浏览器语言      |
+| `window.navigator.onLine`        | 浏览器是否在线  |
+| `window.navigator.javaEnabled`   | Java是否启用    |
+
+### 弹出框
+
+#### 警告框⚠️
+
+**确保消息传递给用户**
+
+用户需要点击“确定”来继续
+
+```javascript
+alert("警告框⚠️内容.....");
+```
+
+#### 确认框
+
+**希望用户验证或接收某个东西**
+
+用户点击“确定”返回true，点击“取消”返回false
+
+```javascript
+let flag = confirm('确认框内容.....');
+if(flag){
+  //TODO
+}else{
+  //NOT TODO
+}
+```
+
+#### 提示框
+
+**希望用户输入某个值**
+
+用户点击“确定”返回输入值，点击“取消”返回null
+
+```javascript
+let name = prompt('请输入姓名','张三');	//提示 默认值
+if(name!==null){
+  console.log(name);
+}else{
+  //重新输入
+}
+```
 
 ------
 
