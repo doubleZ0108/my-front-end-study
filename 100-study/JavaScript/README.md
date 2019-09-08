@@ -1353,6 +1353,19 @@ function removebyitself_btnClick() {
 }
 ```
 
+### DOM 集合
+
+`getElementByTagName()`方法返回`HTML Collection`对象，类似于数组，但并不是数组，可以遍历列表并通过索引访问元素，但不能使用其他的数组方法
+
+```javascript
+let myCollection = document.getElementByTagName('p');
+for(let i=0;i<myCollection.length;++i){
+  myCollection[i].style.backgroundColor = 'red'.
+}
+```
+
+
+
 ------
 
 ## JSON
