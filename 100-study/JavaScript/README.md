@@ -1502,6 +1502,94 @@ if(name!==null){
 
 #### Cookie字符串
 
+设置了新的cookie，旧的cookie不会被覆盖，会存储多条不同的cookie；所以需要用JS函数搜素cookie字符串中的cookie值
+
+------
+
+## AJAX
+
+异步JS和XML (Asynchronous JavaScript And XML)
+
+**但是并不仅仅能传XML**
+
+- 不刷新页面更新网页
+- 在页面加载后从服务器请求/接收数据
+- 在后台像服务器发送数据
+
+### 工作流程
+
+1. 网页发生事件
+2. 由JavaScript创建`XMLHttpRequest`对象
+3. `XMLHttpRequest`对象向web服务器发送请求
+4. 服务器处理该请求
+5. 服务器将响应发送回网页
+6. 由JavaScript读取响应
+7. 有JavaScript执行动作
+
+![workflow](https://www.w3school.com.cn/i/ajax.gif)
+
+### XMLHttpRequest对象
+
+| 属性               | 描述                                                         |
+| ------------------ | ------------------------------------------------------------ |
+| onreadystatechange | 当readyState变化时被调用的函数                               |
+| readyState         | 0: 请求未初始化<br />1: 服务器建立已建立<br />2: 请求已收到<br />3: 正在处理请求<br />4: 请求已完成且响应已就绪 |
+| responseText       | 以字符串返回响应数据                                         |
+| responseXML        | 以XML返回响应数据                                            |
+| status             | 请求的状态号<br />200: "OK"<br />403: "Forbidden"<br />404: "Not Found" |
+| statusTest         | 返回状态文本                                                 |
+
+| 方法                                          | 描述                                                         |
+| :-------------------------------------------- | :----------------------------------------------------------- |
+| new XMLHttpRequest()                          | 创建新的 XMLHttpRequest 对象                                 |
+| send()                                        | 将请求发送到服务器，用于 GET 请求                            |
+| send(*string*)                                | 将请求发送到服务器，用于 POST 请求                           |
+| open(*method*, *url*, *async*, *user*, *psw*) | 规定请求<br />method：请求类型 GET 或 POST<br />url：文件位置<br />async：true（异步）或 false（同步）<br />user：可选的用户名称<br />psw：可选的密码 |
+| abort()                                       | 取消当前请求                                                 |
+| getAllResponseHeaders()                       | 返回头部信息                                                 |
+| getResponseHeader()                           | 返回特定的头部信息                                           |
+| setRequestHeader()                            | 向要发送的报头添加标签/值对                                  |
+
+------
+
+### 向服务器发送请求
+
+- GET比POST更简单更快；但POST更强大更安全(无大小限制)
+- 不要使用同步请求，如果服务器繁忙，应用程序会被挂起或停止
+
+#### GET
+
+将要发送的信息添加到URL中
+
+```javascript
+xhttp.open("GET", "buf.asp?user=doubleZ&num=" + Math.random(),true);
+xhttp.send();
+```
+
+#### POST
+
+在`send()`方法中规定需要发送的数据
+
+```javascript
+xhttp.open("POST", "buf.asp",true);
+xhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");		//如果需要像HTML表单那样POST数据，要添加一个HTTP头部
+xhttp.send("name=doubleZ&num="+Math.random());
+```
+
+------
+
+### 服务器响应
+
+```javascript
+xhttp.onreadystatechange = function () {
+  if(this.readyState==4 && this.status==200){
+    //TODO
+  }
+};
+```
+
+**AJAX与XML、PHP、ASP、数据库等交互（略）**
+
 ------
 
 ## JSON
