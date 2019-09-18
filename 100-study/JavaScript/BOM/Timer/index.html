@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>定时事件</title>
+    <script src="static/js/timer.js"></script>
+</head>
+<body>
+
+<h2>点击按钮，3秒后调用函数</h2>
+<button onclick="setTimeout(btnClick, 3000)">click</button>
+<hr />
+
+<h2>点击按钮之后，1秒中输出一次当前时间</h2>
+<button onclick="mytimer = setInterval(timeonBtnClick, 1000);">time on</button>
+<h2>点我停止获取事件</h2>
+<button onclick="timeoffBtnClick();">time off</button>
+<hr/>
+
+
+<h2>创建时钟</h2>
+<div id="clock"></div>
+
+</body>
+</html>
