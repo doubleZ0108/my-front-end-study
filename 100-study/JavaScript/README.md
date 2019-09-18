@@ -1,6 +1,101 @@
 # JavaScript 芝士点🧀️
 
-[TOC]
+Table of Contents
+=================
+
+   * [JavaScript 芝士点<g-emoji class="g-emoji" alias="cheese" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f9c0.png">🧀️</g-emoji>](#javascript-芝士点️)
+      * [使用位置](#使用位置)
+      * [输出方式](#输出方式)
+      * [变量](#变量)
+         * [定义](#定义)
+         * [命名规则](#命名规则)
+      * [运算符](#运算符)
+         * [比较运算符](#比较运算符)
+         * [类型运算符](#类型运算符)
+      * [数据类型](#数据类型)
+         * [字符串](#字符串)
+            * [字符串函数](#字符串函数)
+         * [数值](#数值)
+            * [NaN](#nan)
+            * [Infinity](#infinity)
+            * [进制](#进制)
+            * [数值方法](#数值方法)
+         * [布尔值](#布尔值)
+         * [数组](#数组)
+            * [数组创建](#数组创建)
+            * [数组方法](#数组方法)
+            * [识别数组](#识别数组)
+         * [对象](#对象)
+            * [对象创建](#对象创建)
+            * [遍历对象](#遍历对象)
+            * [添加属性](#添加属性)
+            * [删除属性](#删除属性)
+            * [对象访问器](#对象访问器)
+            * [构造器](#构造器)
+            * [日期](#日期)
+               * [输出格式](#输出格式)
+               * [格式化](#格式化)
+               * [获取](#获取)
+            * [Math](#math)
+               * [随机数](#随机数)
+            * [this](#this)
+               * [显示函数绑定](#显示函数绑定)
+         * [undefined](#undefined)
+         * [null](#null)
+      * [函数](#函数)
+            * [自调用函数](#自调用函数)
+            * [箭头函数](#箭头函数)
+         * [函数参数](#函数参数)
+         * [方法重用](#方法重用)
+      * [逻辑](#逻辑)
+         * [switch](#switch)
+      * [循环](#循环)
+         * [for/in循环](#forin循环)
+      * [正则表达式](#正则表达式)
+      * [异常处理](#异常处理)
+         * [Error对象](#error对象)
+      * [表单](#表单)
+         * [约束验证DOM](#约束验证dom)
+      * [HTML DOM](#html-dom)
+         * [DOM能力(动态)](#dom能力动态)
+         * [DOM文档](#dom文档)
+         * [查找](#查找)
+         * [改变](#改变)
+         * [添加和删除](#添加和删除)
+         * [添加事件处理程序](#添加事件处理程序)
+         * [HTML对象(少部分)](#html对象少部分)
+         * [DOM  动画](#dom--动画)
+         * [DOM 事件](#dom-事件)
+         * [DOM 事件监听器](#dom-事件监听器)
+            * [在Windows对象上添加事件监听器](#在windows对象上添加事件监听器)
+            * [事件冒泡/捕获](#事件冒泡捕获)
+         * [DOM 导航🧭](#dom-导航)
+         * [DOM 节点](#dom-节点)
+            * [创建HTML元素](#创建html元素)
+            * [删除HTML元素](#删除html元素)
+         * [DOM 集合](#dom-集合)
+      * [HTML BOM](#html-bom)
+         * [Window](#window)
+         * [Screen](#screen)
+         * [Location](#location)
+         * [History](#history)
+         * [Navigator](#navigator)
+         * [弹出框](#弹出框)
+            * [警告框<g-emoji class="g-emoji" alias="warning" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png">⚠️</g-emoji>](#警告框️)
+            * [确认框](#确认框)
+            * [提示框](#提示框)
+         * [定时事件](#定时事件)
+         * [Cookies](#cookies)
+            * [Cookie字符串](#cookie字符串)
+      * [AJAX](#ajax)
+         * [工作流程](#工作流程)
+         * [XMLHttpRequest对象](#xmlhttprequest对象)
+         * [向服务器发送请求](#向服务器发送请求)
+            * [GET](#get)
+            * [POST](#post)
+         * [服务器响应](#服务器响应)
+
+------
 
 ## 使用位置
 
@@ -21,7 +116,7 @@
     </body>
   </html>
   ```
-
+  
 - 严格模式：在js文件开头添加`"use strict";`
 
   - [ ] 不声明变量的情况下使用变量 `x = 5`
@@ -104,6 +199,7 @@
 - [ ] let重新声明变量
 - [ ] const重新声明var或let
 - [ ] const重新声明const
+
 - var声明的变量会提升到顶端，let声明不可以；在声明let变量之前使用会导致`ReferenceError`
 
 ### 命名规则
@@ -195,6 +291,7 @@
   let str1 = "It's alright.";
   let str2 = 'He say "OK"';
   ```
+  
 
 #### 字符串函数
 
@@ -643,11 +740,11 @@ people1.message.apply(people2);		//yT 19
 
 没有值的变量，其值是`undefined`，typeof返回也是`undefined`；可以使用`undefined`对变量进行清空
 
-```javascript
+  ```javascript
 let people;
 console.log(people);				//undefined
 console.log(typeof people);	//undefined
-```
+  ```
 
 ### null
 
@@ -687,7 +784,6 @@ console.log(typeof people);	//object
   -> 返回函数定义
   */
   ```
-
 ```
   
 - 如果调用函数时缺少一个参数，则这个缺失的参数会被设置为`undefined`
@@ -1592,7 +1688,6 @@ xhttp.onreadystatechange = function () {
 
 ------
 
-## JSON
+## 
 
-- `JSON.parse()`: 将接收到的JSON文本转换为JS对象
-- `JSON.stringify()`: 将JS对象转换为字符串
+  
