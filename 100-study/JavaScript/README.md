@@ -1374,7 +1374,7 @@ for(let i=0;i<myCollection.length;++i){
 
 所有全局的JS对象(全局变量、全局函数)都自动成为window对象的成员
 
-#### 窗口尺寸
+**窗口尺寸**
 
 以像素返回尺寸，不包括工具栏和滚动条
 
@@ -1389,7 +1389,7 @@ let w = window.innerWidth || document.documentElement.clientWidth || document.bo
 let h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 ```
 
-#### 其他方法
+**其他方法**
 
 | 方法                | 作用             |
 | ------------------- | ---------------- |
@@ -1477,6 +1477,30 @@ if(name!==null){
   //重新输入
 }
 ```
+
+------
+
+### 定时事件
+
+- `setTimeout(function, milliseconds)`: 等待一段时间后执行函数
+- `setInterval(function, milliseconds)`: 持续重复执行该函数
+- `clearTimeout()`: 停止定时事件执行
+
+------
+
+### Cookies
+
+在网页中存储用户信息
+
+- `docunemt.cookie = "username=double Z; expires=有效日期(UTC时间); path=/";`: 创建/修改cookie
+  - 第二个参数默认浏览器关闭时会删除cookie
+  - 第三个参数默认cookie属于当前页
+- `document.cookie`: 读取cookie会在一条字符串中返回所有cookie
+- `document.cookie = "username=;expires=过去的时间;path=/;": 删除cookie
+  - 将第二个参数设置为过去的时间
+  - 要指定路径
+
+#### Cookie字符串
 
 ------
 
