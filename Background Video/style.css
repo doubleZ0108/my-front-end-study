@@ -1,0 +1,55 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(9,9,9);
+}
+
+/*将视频作为背景*/
+video{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    /* -webkit-filter: grayscale(100%);    !*灰度*/
+}
+
+#title{
+    text-align: center;
+    border-radius: 20px;
+    width: 500px;
+    height: 150px;
+    font-size: 80px;
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;         /*原始时不显示文字*/
+    transition: opacity .3s linear;
+    z-index: -1;
+
+    /*渐变显示文字的特效*/
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+
+#title:hover{
+    box-shadow: 0 0 6px #dcdcdc;
+}
+
+#title.show{
+    opacity: 1;         /*显示文字*/
+    z-index: 1;
+}
+
+#title p{
+    margin: 0;
+    margin-top: 10px;
+}
