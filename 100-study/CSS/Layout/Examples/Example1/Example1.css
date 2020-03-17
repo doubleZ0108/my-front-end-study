@@ -1,0 +1,31 @@
+.list-container{
+    background: beige;
+    width: 80%;
+    height: 400px;
+
+    /* 子元素居中 */
+    display:flex;
+    justify-content:center;
+    align-items:center
+}
+
+.list{
+    background: lightblue;
+    width: 30%;
+    height: 80%;
+    /*display: inline-block;*/
+    margin: 2%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-item {
+    background: lightcoral;
+    width: 80%;
+    height: 80%;
+    display: block;
+
+    text-align: center;
+}
