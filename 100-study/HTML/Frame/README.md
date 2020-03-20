@@ -24,16 +24,16 @@
 
 ## 内联框架
 
-![内联框架](Screenshots/内联框架.gif)
+![内联框架](Screenshots/inline.gif)
 
 <a name="导航栏"></a>
 
 ## 导航栏
 
-![导航栏](Screenshots/导航栏.gif)
+![导航栏](Screenshots/navigation.gif)
 
 <a name="目录"></a>
 
 ## 目录
 
-![目录](Screenshots/目录.gif)
+![目录](Screenshots/catalogue.gif)
