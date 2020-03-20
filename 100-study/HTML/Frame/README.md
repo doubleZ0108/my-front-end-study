@@ -12,7 +12,7 @@
 
 ## 垂直框架
 
-![frame_cols](ScreenShots/frame_cols.gif)
+![frame_cols](ScreenShots/frame_col.gif)
 
 <a name="混合框架"></a>
 
